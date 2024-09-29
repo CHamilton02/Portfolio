@@ -1,30 +1,54 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <nav class="navbar">
+    <div class="name-and-icon">
+      <img :src="RightIndex" class="icon" />
+      <h1 class="name">Camdyn Hamilton</h1>
+    </div>
+    <div class="sections">
+      <h2 v-for="section in sections" class="section">{{ section }}</h2>
+    </div>
+  </nav>
 </template>
 
+<script setup lang="ts">
+import RightIndex from "./assets/index-pointing-right.png";
+import LeftIndex from "./assets/index-pointing-left.png";
+import { ref } from "vue";
+
+const sections = ref(["Home", "About", "Projects", "Contact Me"]);
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #685343;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.name-and-icon {
+  display: flex;
+  margin-left: 0.5rem;
+  align-items: center;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.icon {
+  width: auto;
+  height: 2rem;
+  padding-right: 0.5rem;
+}
+.name {
+}
+.sections {
+  display: flex;
+  margin-right: 0.5rem;
+}
+.section {
+  margin-left: 1rem;
+}
+.section:hover {
+  color: #FFE2D6;
+  cursor: pointer;
 }
 </style>
