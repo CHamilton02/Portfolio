@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav>
     <div class="name-and-icon">
       <img :src="RightIndex" class="icon" />
       <h1 class="name">Camdyn Hamilton</h1>
@@ -18,7 +18,7 @@ const sections = ref(["Home", "About", "Projects", "Contact Me"]);
 </script>
 
 <style>
-.navbar {
+nav {
   display: flex;
   justify-content: space-between;
   position: absolute;
