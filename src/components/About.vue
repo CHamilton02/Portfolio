@@ -38,6 +38,7 @@ const showCat = ref(false);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  color: #413429;
   &__profile-picture {
     margin-left: 5rem;
     display: flex;
