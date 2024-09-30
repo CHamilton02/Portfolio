@@ -1,18 +1,8 @@
 <template>
   <nav>
-    <div
-      class="name-and-icon"
-      @mouseover="japaneseName = true"
-      @mouseleave="japaneseName = false"
-    >
-      <img :src="RightIndex" class="icon" />
-      <Transition name="slide-fade" mode="out-in">
-        <h1 class="name" v-if="japaneseName">ハミルトンキャムデン</h1>
-        <h1 class="name" v-else>Camdyn Hamilton</h1>
-      </Transition>
-    </div>
+    <h1 class="name">Camdyn Hamilton</h1>
     <div class="sections">
-      <h2 v-for="section in sections" class="section">{{ section }}</h2>
+      <button v-for="section in sections" class="section">{{ section }}</button>
     </div>
   </nav>
 </template>
@@ -27,48 +17,33 @@ const japaneseName = ref(false);
 
 <style>
 nav {
-  display: flex;
-  justify-content: space-between;
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
-  /* background-color: #685343; */
-  height: 5rem;
-  align-items: center;
-  padding: 0 2rem 0 2rem;
-}
-.name-and-icon {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.icon {
-  width: auto;
-  height: 2rem;
-  padding-right: 0.5rem;
+.name {
+  color: #FFE2D6;
 }
 .sections {
   display: flex;
+  justify-content: center;
 }
 .section {
-  margin-left: 1rem;
-  transition: color 0.25s;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  background-color: #FFE2D6;
+  color: #514033;
+  border: none;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  transition: background-color 0.25s;
+  margin-right: 2rem;
 }
 .section:hover {
-  color: #ffe2d6;
+  background-color: #FCBD9D;
   cursor: pointer;
-}
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter,
-.slide-fade-leave-to {
-  transform: translateX(-10px);
-  opacity: 0;
 }
 </style>
