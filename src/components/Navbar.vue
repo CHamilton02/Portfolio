@@ -11,7 +11,7 @@
 import RightIndex from "../assets/index-pointing-right.png";
 import { ref } from "vue";
 
-const sections = ref(["Home", "About", "Projects", "Contact Me"]);
+const sections = ref(["About", "Experience", "Contact Me"]);
 const japaneseName = ref(false);
 </script>
 
@@ -23,6 +23,7 @@ nav {
   right: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .name {
@@ -31,6 +32,7 @@ nav {
 .sections {
   display: flex;
   justify-content: center;
+  gap: 2rem;
 }
 .section {
   font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -40,7 +42,6 @@ nav {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 1rem;
   transition: background-color 0.25s;
-  margin-right: 2rem;
 }
 .section:hover {
   background-color: #FCBD9D;
