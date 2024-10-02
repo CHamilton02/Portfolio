@@ -1,9 +1,6 @@
 <template>
   <nav>
-    <h1 class="name">Camdyn Hamilton</h1>
-    <div class="sections">
-      <button v-for="section in sections" class="section">{{ section }}</button>
-    </div>
+      <h2 v-for="section in sections" class="section">{{ section }}</h2>
   </nav>
 </template>
 
@@ -22,29 +19,21 @@ nav {
   left: 0;
   right: 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+  height: 8rem;
+  width: 100vw;
 }
 .name {
   color: #FFE2D6;
 }
-.sections {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
 .section {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
-  background-color: #FFE2D6;
-  color: #514033;
-  border: none;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 1rem;
-  transition: background-color 0.25s;
+  color: #896d55;
+  transition: color 0.25s;
 }
 .section:hover {
-  background-color: #FCBD9D;
+  color: #FCBD9D;
   cursor: pointer;
 }
 </style>
