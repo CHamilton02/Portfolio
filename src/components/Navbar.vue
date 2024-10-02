@@ -5,11 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import RightIndex from "../assets/index-pointing-right.png";
 import { ref } from "vue";
 
 const sections = ref(["About", "Experience", "Contact Me"]);
-const japaneseName = ref(false);
 </script>
 
 <style>
