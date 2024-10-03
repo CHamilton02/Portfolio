@@ -44,8 +44,7 @@ const showCat = ref(false);
 
 <style lang="scss" scoped>
 .about {
-  position: relative;
-  top: -3rem;
+  padding-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
