@@ -4,9 +4,9 @@
       <h1>Hello, I'm Camdyn!👋</h1>
       <h2>Student/Full-Stack Developer 💻</h2>
       <p>
-        Currently working at RBC as a Developer co-op on the UX-Force team! 🏦
+        Currently working at RBC as a Developer co-op on the UX-Force team!
       </p>
-      <p>I'm also a Computer Science student at York University. 🏫</p>
+      <p>I'm also a Computer Science student at York University.</p>
       <div class="socials">
         <a href="https://www.linkedin.com/in/c-hamilton02/">
           <img :src="LinkedIn" class="socials__icon"/>
