@@ -18,6 +18,7 @@ nav {
   gap: 3rem;
   height: 8rem;
   width: 100vw;
+  background-color: #413429;
 }
 .name {
   color: #FFE2D6;
