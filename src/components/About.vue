@@ -18,13 +18,13 @@
     </div>
     <div class="about__profile-picture">
       <img
-        v-if="!showCat"
+        v-show="!showCat"
         src="../assets/Profile Picture.jpg"
         class="profile-picture"
         @click="showCat = true"
       />
       <img
-        v-else
+        v-show="showCat"
         src="../assets/Totoro.png"
         class="profile-picture"
         @click="showCat = false"
