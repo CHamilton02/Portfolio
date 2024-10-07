@@ -1,7 +1,6 @@
 <template>
   <Navbar />
-  <div class="spacer navbar-waves">
-  </div>
+  <div class="spacer navbar-waves"></div>
   <About />
   <div class="spacer experience-top-waves"></div>
   <div class="dummy-experience">To be filled later</div>
