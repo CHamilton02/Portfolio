@@ -18,7 +18,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  height: 8rem;
+  height: 15vh;
   width: 100vw;
 }
 
