@@ -1,7 +1,7 @@
 <template>
   <div id="background" class="background"></div>
   <Navbar @toggleAbout="handleToggleAbout" @toggleExperience="handleToggleExperience"
-    @toggleContact="handleToggleContact" />
+    @toggleContact="handleToggleContact" :activeSection="currentActiveSection" />
   <About v-show="currentActiveSection === 'About'" />
   <Experience v-show="currentActiveSection === 'Experience'" />
   <Contact v-show="currentActiveSection === 'Contact'" />
