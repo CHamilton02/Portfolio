@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <h2 v-for="section in sections" class="section">{{ section }}</h2>
+    <h2 v-for="(section, index) in sections" class="section" :class="{ 'active-section': activeSection === index }">{{
+      section }}</h2>
   </nav>
 </template>
 
@@ -8,6 +9,7 @@
 import { ref } from "vue";
 
 const sections = ref(["About", "Experience", "Contact Me"]);
+const activeSection = ref(0);
 </script>
 
 <style>
@@ -32,5 +34,9 @@ nav {
 .section:hover {
   color: #FCBD9D;
   cursor: pointer;
+}
+
+.active-section {
+  color: #ff3f81;
 }
 </style>

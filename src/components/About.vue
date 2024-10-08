@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="about__profile-picture">
-      <img v-show="!showCat" src="../assets/Profile Picture.jpg" class="profile-picture" @click="showCat = true" />
+      <img v-show="!showCat" src="../assets/Profile Picture.png" class="profile-picture" @click="showCat = true" />
       <img v-show="showCat" src="../assets/Totoro.png" class="profile-picture" @click="showCat = false" />
       <p>(click image for a surprise 🐈)</p>
     </div>
@@ -56,6 +56,7 @@ onMounted(() => {
 
   &__name {
     line-height: 1.2;
+    color: #ff3f81;
   }
 
   &__profile-picture {
@@ -67,7 +68,7 @@ onMounted(() => {
 }
 
 .profile-picture {
-  height: 30rem;
+  height: 25rem;
   width: auto;
   object-fit: cover;
   border-radius: 50%;
