@@ -1,21 +1,40 @@
 <template>
   <div id="background" class="background"></div>
-  <Navbar />
-  <About />
+  <Navbar @toggleAbout="handleToggleAbout" @toggleExperience="handleToggleExperience"
+    @toggleContact="handleToggleContact" />
+  <About v-show="currentActiveSection === 'About'" />
+  <Experience v-show="currentActiveSection === 'Experience'" />
+  <Contact v-show="currentActiveSection === 'Contact'" />
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
+import Experience from './components/Experience.vue'
+import Contact from './components/Contact.vue'
 //@ts-ignore
 import NET from 'vanta/dist/vanta.net.min'
-// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
+
+const currentActiveSection = ref<"About" | "Experience" | "Contact">('About');
+
 onMounted(() => {
   NET({
     el: '#background'
   })
 })
+
+function handleToggleAbout() {
+  currentActiveSection.value = "About";
+}
+
+function handleToggleExperience() {
+  currentActiveSection.value = "Experience";
+}
+
+function handleToggleContact() {
+  currentActiveSection.value = "Contact";
+}
 </script>
 
 <style scoped>

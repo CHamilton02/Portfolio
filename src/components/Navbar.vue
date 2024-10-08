@@ -1,14 +1,15 @@
 <template>
   <nav>
-    <h2 v-for="(section, index) in sections" class="section" :class="{ 'active-section': activeSection === index }">{{
-      section }}</h2>
+    <h2 v-for="(section, index) in sections" class="section" :class="{ 'active-section': activeSection === index }"
+      @click="$emit(`toggle${section}`)">{{
+        section }}</h2>
   </nav>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 
-const sections = ref(["About", "Experience", "Contact Me"]);
+const sections = ref(["About", "Experience", "Contact"]);
 const activeSection = ref(0);
 </script>
 
