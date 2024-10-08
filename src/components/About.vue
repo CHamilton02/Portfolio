@@ -49,11 +49,10 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .about {
-  margin: -10rem 0 -10rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #413429;
+  color: white;
 
   &__name {
     line-height: 1.2;
