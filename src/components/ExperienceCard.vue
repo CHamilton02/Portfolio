@@ -25,8 +25,8 @@
 <style lang="scss">
 .experience-card {
     display: flex;
-    background-color: #23153c;
-    border: solid;
+    // background-color: #23153c;
+    // border: solid;
     padding: 1rem;
     border-color: #ff3f81;
     border-radius: 1rem;
@@ -34,7 +34,7 @@
 
     &__dates {
         font-size: 0.80rem;
-        width: 31rem;
+        min-width: 9rem;
         margin-right: 2rem;
         color: #ff3f81;
     }
