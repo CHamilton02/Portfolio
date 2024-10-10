@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <h2 v-for="section in sections" class="section" :class="{ 'active-section': activeSection === section }"
+    <h2 v-for="section in sections"
+      :class="{ 'active-section': activeSection === section, 'section': activeSection !== section }"
       @click="$emit(`toggle${section}`)">{{
         section }}</h2>
   </nav>
@@ -35,9 +36,13 @@ nav {
   transition: color 0.25s;
 }
 
+.section:hover,
+.active-section:hover {
+  cursor: pointer;
+}
+
 .section:hover {
   color: #ff73a4;
-  cursor: pointer;
 }
 
 .active-section {
