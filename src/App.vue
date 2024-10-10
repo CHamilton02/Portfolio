@@ -1,10 +1,12 @@
 <template>
   <div id="background" class="background"></div>
-  <Navbar @toggleAbout="handleToggleAbout" @toggleExperience="handleToggleExperience"
-    @toggleContact="handleToggleContact" :activeSection="currentActiveSection" />
-  <About v-show="currentActiveSection === 'About'" />
-  <Experience v-show="currentActiveSection === 'Experience'" />
-  <Contact v-show="currentActiveSection === 'Contact'" />
+  <div class="app-container">
+    <Navbar @toggleAbout="handleToggleAbout" @toggleExperience="handleToggleExperience"
+      @toggleContact="handleToggleContact" :activeSection="currentActiveSection" />
+    <About v-show="currentActiveSection === 'About'" />
+    <Experience v-show="currentActiveSection === 'Experience'" />
+    <Contact v-show="currentActiveSection === 'Contact'" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -48,5 +50,11 @@ function handleToggleContact() {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 </style>
