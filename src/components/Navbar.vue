@@ -1,9 +1,15 @@
 <template>
   <nav>
-    <h2 v-for="section in sections"
-      :class="{ 'active-section': activeSection === section, 'section': activeSection !== section }"
-      @click="$emit(`toggle${section}`)">{{
-        section }}</h2>
+    <h2
+      v-for="section in sections"
+      :class="{
+        'active-section': activeSection === section,
+        section: activeSection !== section,
+      }"
+      @click="$emit(`toggle${section}`)"
+    >
+      {{ section }}
+    </h2>
   </nav>
 </template>
 
@@ -11,12 +17,14 @@
 import { ref, PropType } from "vue";
 
 const props = defineProps({
-  activeSection: String as PropType<"About" | "Experience" | "Contact">
-})
+  activeSection: String as PropType<
+    "Home" | "About" | "Experience" | "Contact"
+  >,
+});
 
-console.log(props.activeSection)
+console.log(props.activeSection);
 
-const sections = ref(["About", "Experience", "Contact"]);
+const sections = ref(["Home", "About", "Experience", "Contact"]);
 </script>
 
 <style>
@@ -28,7 +36,7 @@ nav {
 }
 
 .name {
-  color: #FFE2D6;
+  color: #ffe2d6;
 }
 
 .section {

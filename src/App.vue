@@ -1,33 +1,39 @@
 <template>
   <div id="background" class="background"></div>
   <div class="app-container">
-    <Navbar @toggleAbout="handleToggleAbout" @toggleExperience="handleToggleExperience"
-      @toggleContact="handleToggleContact" :activeSection="currentActiveSection" />
-    <About v-show="currentActiveSection === 'About'" />
+    <Navbar
+      @toggleHome="handleToggleHome"
+      @toggleExperience="handleToggleExperience"
+      @toggleContact="handleToggleContact"
+      :activeSection="currentActiveSection"
+    />
+    <Home v-show="currentActiveSection === 'Home'" />
     <Experience v-show="currentActiveSection === 'Experience'" />
     <Contact v-show="currentActiveSection === 'Contact'" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import Navbar from './components/Navbar.vue'
-import About from './components/About.vue'
-import Experience from './components/Experience.vue'
-import Contact from './components/Contact.vue'
+import { ref, onMounted } from "vue";
+import Navbar from "./components/Navbar.vue";
+import Home from "./components/Home.vue";
+import Experience from "./components/Experience.vue";
+import Contact from "./components/Contact.vue";
 //@ts-ignore
-import NET from 'vanta/dist/vanta.net.min'
+import NET from "vanta/dist/vanta.net.min";
 
-const currentActiveSection = ref<"About" | "Experience" | "Contact">('About');
+const currentActiveSection = ref<"Home" | "About" | "Experience" | "Contact">(
+  "Home"
+);
 
 onMounted(() => {
   NET({
-    el: '#background'
-  })
-})
+    el: "#background",
+  });
+});
 
-function handleToggleAbout() {
-  currentActiveSection.value = "About";
+function handleToggleHome() {
+  currentActiveSection.value = "Home";
 }
 
 function handleToggleExperience() {

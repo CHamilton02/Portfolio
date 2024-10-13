@@ -1,14 +1,12 @@
 <template>
-  <div class="about">
+  <div class="home">
     <div>
-      <h1>Hello, I'm
-        <span id="name" class="about__name">
-        </span>
+      <h1>
+        Hello, I'm
+        <span id="name" class="home__name"> </span>
       </h1>
       <h2>Student/Full-Stack Developer 💻</h2>
-      <p>
-        Currently working at RBC as a Developer co-op on the UX-Force team!
-      </p>
+      <p>Currently working at RBC as a Developer co-op on the UX-Force team!</p>
       <p>I'm also a Computer Science student at York University.</p>
       <div class="socials">
         <a href="https://www.linkedin.com/in/c-hamilton02/">
@@ -19,9 +17,19 @@
         </a>
       </div>
     </div>
-    <div class="about__profile-picture">
-      <img v-show="!showCat" src="../assets/Profile Picture.png" class="profile-picture" @click="showCat = true" />
-      <img v-show="showCat" src="../assets/Totoro.png" class="profile-picture" @click="showCat = false" />
+    <div class="home__profile-picture">
+      <img
+        v-show="!showCat"
+        src="../assets/Profile Picture.png"
+        class="profile-picture"
+        @click="showCat = true"
+      />
+      <img
+        v-show="showCat"
+        src="../assets/Totoro.png"
+        class="profile-picture"
+        @click="showCat = false"
+      />
       <p>(click image for a surprise 🐈)</p>
     </div>
   </div>
@@ -29,8 +37,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import LinkedIn from '../assets/LinkedIn Logo.png';
-import GitHub from '../assets/Github Logo.png';
+import LinkedIn from "../assets/LinkedIn Logo.png";
+import GitHub from "../assets/Github Logo.png";
 import TypeIt from "typeit";
 
 const showCat = ref(false);
@@ -40,15 +48,16 @@ onMounted(() => {
     strings: "Camdyn",
     speed: 400,
     waitUntilVisible: true,
-    loop: true
-  }).go()
+    loop: true,
+  })
+    .go()
     .delete(6)
     .type("キャムデン");
-})
+});
 </script>
 
 <style lang="scss" scoped>
-.about {
+.home {
   display: flex;
   align-items: center;
   justify-content: center;
