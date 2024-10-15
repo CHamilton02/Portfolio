@@ -51,13 +51,13 @@
 .contact {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .contact-container {
   display: flex;
   flex-direction: column;
-  padding: 0 3rem 0 3rem;
-  max-width: 60rem;
 
   &__message {
     font-size: 8rem;

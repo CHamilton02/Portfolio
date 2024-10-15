@@ -1,6 +1,9 @@
 <template>
-  <div class="experience-card-container">
-    <ExperienceCard v-for="experience in experiences" :experience />
+  <div class="experience">
+    <h2 class="experience__title">My Experience</h2>
+    <div class="experience__card-container">
+      <ExperienceCard v-for="experience in experiences" :experience />
+    </div>
   </div>
 </template>
 
@@ -27,35 +30,50 @@ const experiences = ref([
   {
     date: "JUL. 2024",
     title: "SportIQs",
-    description: "A Sports trivia website (made with React)",
-    skills: ["JavaScript", "React"],
+    description:
+      "Developed a sports trivia game using React, featuring interactive quizzes across various sports categories. Utilized Vite for efficient builds and fast development cycles, with deployment on GitHub Pages for easy access. Implemented state management to ensure smooth user interactions and seamless quiz progress tracking.",
+    skills: ["JavaScript", "React", "Vite"],
   },
   {
     date: "MAY 2024 - JUN. 2024",
     title: "Djibouti",
     description:
-      "Produced an interactive web game using HTML, CSS, and JavaScript, inspired by the popular online game Wordle, with a unique country theme.",
-    skills: ["HTML", "CSS", "JavaScript"],
+      "Created an interactive web-based game inspired by Wordle, where users guess country names. Leveraged JavaScript classes to manage data and user interactions. Utilized Jasmine for unit and integration testing, ensuring the game’s functionality worked as intended and provided an engaging experience.",
+    skills: ["HTML", "CSS", "JavaScript", "Jasmine"],
+  },
+  {
+    date: "MAY 2024",
+    title: "Password Manager",
+    description:
+      "Built a secure password manager using Python, incorporating encryption techniques to protect user data. Applied cryptographic methods such as password-based key derivation and the Fernet encryption scheme for enhanced security. Designed a user-friendly interface with Tkinter, allowing for efficient password management, viewing, and generation.",
+    skills: ["Python", "Base64.py", "Cryptography.py", "Tkinter.py"],
   },
   {
     date: "MAR. 2024 - MAY 2024",
     title: "Front-End Developer",
     organization: "Stone Row Farm Inc.",
     description:
-      "Developed various business web pages by creating and maintaining code using HTML/CSS, Bootstrap, and JavaScript. Communicated with company owners to gather feedback and refine interface designs, proposing innovative solutions to meet evolving requirements.",
+      "Developed and maintained business web pages using HTML, CSS, Bootstrap, and JavaScript to enhance the company’s online presence. Worked closely with the company owners to gather feedback, iterating on the interface to meet evolving needs. Proposed and implemented UI/UX improvements that aligned the design with business goals and enhanced the user experience.",
     skills: ["HTML", "CSS", "Bootstrap"],
   },
 ]);
 </script>
 
 <style lang="scss">
-.experience-card-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-evenly;
-  gap: 2rem;
-  align-items: center;
-  padding-bottom: 1rem;
+.experience {
+  &__title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  &__card-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    max-width: 60rem;
+  }
 }
 </style>

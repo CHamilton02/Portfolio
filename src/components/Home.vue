@@ -62,7 +62,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   color: white;
-  height: 85vh;
+  height: 90vh;
 
   &__name {
     line-height: 1.2;

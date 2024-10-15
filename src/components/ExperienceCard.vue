@@ -38,7 +38,6 @@ defineProps({
 .experience-card {
   display: flex;
   padding: 1rem;
-  width: 50rem;
 
   &__dates {
     font-size: 0.8rem;

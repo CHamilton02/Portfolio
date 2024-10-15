@@ -50,7 +50,10 @@
             >I'd love to chat about how I can contribute to your company!</span
           >
         </p>
-        <button class="about__container__button">
+        <button
+          class="about__container__button"
+          @click="$emit('toggleExperience')"
+        >
           Check out what I've worked on!
         </button>
       </div>
@@ -64,8 +67,10 @@
 .about {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0 3rem 0 3rem;
+  height: 100vh;
+  margin-bottom: 2rem;
 
   &__title {
     font-size: 2.5rem;
@@ -73,7 +78,6 @@
 
   &__container {
     display: flex;
-    width: 50rem;
 
     &__introduction {
       font-weight: bold;

@@ -2,21 +2,23 @@
   <div id="background" class="background"></div>
   <div class="app-container">
     <Navbar
-      @toggleHome="handleToggleHome"
-      @toggleAbout="handleToggleAbout"
-      @toggleExperience="handleToggleExperience"
-      @toggleContact="handleToggleContact"
-      :activeSection="currentActiveSection"
+      @toggleHome="scrollToElement('home-section')"
+      @toggleAbout="scrollToElement('about-section')"
+      @toggleExperience="scrollToElement('experience-section')"
+      @toggleContact="scrollToElement('contact-section')"
     />
-    <Home v-show="currentActiveSection === 'Home'" />
-    <About v-show="currentActiveSection === 'About'" />
-    <Experience v-show="currentActiveSection === 'Experience'" />
-    <Contact v-show="currentActiveSection === 'Contact'" />
+    <Home id="home-section" />
+    <About
+      id="about-section"
+      @toggleExperience="scrollToElement('experience-section')"
+    />
+    <Experience id="experience-section" />
+    <Contact id="contact-section" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { onMounted } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
@@ -25,30 +27,14 @@ import Contact from "./components/Contact.vue";
 //@ts-ignore
 import NET from "vanta/dist/vanta.net.min";
 
-const currentActiveSection = ref<"Home" | "About" | "Experience" | "Contact">(
-  "Home"
-);
-
 onMounted(() => {
   NET({
     el: "#background",
   });
 });
 
-function handleToggleHome() {
-  currentActiveSection.value = "Home";
-}
-
-function handleToggleAbout() {
-  currentActiveSection.value = "About";
-}
-
-function handleToggleExperience() {
-  currentActiveSection.value = "Experience";
-}
-
-function handleToggleContact() {
-  currentActiveSection.value = "Contact";
+function scrollToElement(elementId: string) {
+  document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
@@ -66,8 +52,10 @@ function handleToggleContact() {
 }
 
 .app-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0 3rem 0 3rem;
+  max-width: 60rem;
 }
 </style>
