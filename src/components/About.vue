@@ -50,10 +50,7 @@
             >I'd love to chat about how I can contribute to your company!</span
           >
         </p>
-        <button
-          class="about__container__button"
-          @click="$emit('toggleExperience')"
-        >
+        <button class="linkButton" @click="$emit('toggleExperience')">
           Check out what I've worked on!
         </button>
       </div>

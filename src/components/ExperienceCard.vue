@@ -1,6 +1,16 @@
 <template>
   <div class="experience-card">
-    <div class="experience-card__dates">{{ experience.date }}</div>
+    <div class="experience-card__dates-and-links">
+      <p class="experience-card__dates-and-links__dates">
+        {{ experience.date }}
+      </p>
+      <a v-show="experience.website" :href="experience.website">
+        <button class="linkButton">View Website</button>
+      </a>
+      <a v-show="experience.code" :href="experience.code">
+        <button class="linkButton">View Code</button>
+      </a>
+    </div>
     <div class="experience-card__details">
       <h2 class="experience-card__details__title">
         {{ experience.title }},
@@ -37,16 +47,29 @@ defineProps({
 <style lang="scss">
 .experience-card {
   display: flex;
+  height: 9rem;
   padding: 1rem;
+  align-items: stretch;
 
-  &__dates {
-    font-size: 0.8rem;
-    min-width: 9rem;
-    margin-right: 2rem;
-    color: #ff3f81;
+  &__dates-and-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    &__dates {
+      margin: 0;
+      font-size: 0.8rem;
+      min-width: 9rem;
+      margin-right: 2rem;
+      color: #ff3f81;
+    }
   }
 
   &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &__title {
       margin: 0;
       padding: 0;

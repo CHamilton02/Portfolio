@@ -19,12 +19,8 @@
           Social Links
         </h3>
         <div class="contact-container__socials-container__buttons">
-          <a class="contact-container__socials-container__buttons__button"
-            >LinkedIn</a
-          >
-          <a class="contact-container__socials-container__buttons__button"
-            >GitHub</a
-          >
+          <a class="linkButton">LinkedIn</a>
+          <a class="linkButton">GitHub</a>
         </div>
       </div>
 
@@ -33,12 +29,8 @@
           Contact Me!
         </h3>
         <div class="contact-container__socials-container__buttons">
-          <a class="contact-container__socials-container__buttons__button"
-            >Resume</a
-          >
-          <a class="contact-container__socials-container__buttons__button"
-            >Email</a
-          >
+          <a class="linkButton">Resume</a>
+          <a class="linkButton">Email</a>
         </div>
       </div>
     </div>
@@ -86,24 +78,10 @@
       font-size: 3rem;
       margin-bottom: 0.5rem;
     }
+
     &__buttons {
       display: flex;
       gap: 2rem;
-      &__button {
-        font-family: "Inter Tight", Arial, Helvetica, sans-serif;
-        color: white;
-        background-color: #23153c;
-        text-decoration: none;
-        border: solid;
-        border-color: #ff3f81;
-        border-width: 0.15rem;
-        border-radius: 1rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        transition: background-color 0.2s linear;
-      }
-      &__button:hover {
-        background-color: #ff3f81;
-      }
     }
   }
 

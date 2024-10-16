@@ -33,6 +33,8 @@ const experiences = ref([
     description:
       "Developed a sports trivia game using React, featuring interactive quizzes across various sports categories. Utilized Vite for efficient builds and fast development cycles, with deployment on GitHub Pages for easy access. Implemented state management to ensure smooth user interactions and seamless quiz progress tracking.",
     skills: ["JavaScript", "React", "Vite"],
+    website: "https://chamilton02.github.io/SportIQs/",
+    code: "https://github.com/CHamilton02/SportIQs",
   },
   {
     date: "MAY 2024 - JUN. 2024",
@@ -40,6 +42,8 @@ const experiences = ref([
     description:
       "Created an interactive web-based game inspired by Wordle, where users guess country names. Leveraged JavaScript classes to manage data and user interactions. Utilized Jasmine for unit and integration testing, ensuring the game’s functionality worked as intended and provided an engaging experience.",
     skills: ["HTML", "CSS", "JavaScript", "Jasmine"],
+    website: "https://chamilton02.github.io/Djibouti/",
+    code: "https://github.com/CHamilton02/Djibouti",
   },
   {
     date: "MAY 2024",
@@ -47,6 +51,7 @@ const experiences = ref([
     description:
       "Built a secure password manager using Python, incorporating encryption techniques to protect user data. Applied cryptographic methods such as password-based key derivation and the Fernet encryption scheme for enhanced security. Designed a user-friendly interface with Tkinter, allowing for efficient password management, viewing, and generation.",
     skills: ["Python", "Base64.py", "Cryptography.py", "Tkinter.py"],
+    code: "https://github.com/CHamilton02/Password-Manager",
   },
   {
     date: "MAR. 2024 - MAY 2024",

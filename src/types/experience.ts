@@ -1,7 +1,9 @@
 export interface ExperienceDetails {
-  date: String;
-  title: String;
-  organization?: String;
-  description: String;
-  skills: String[];
+  date: string;
+  title: string;
+  organization?: string;
+  description: string;
+  skills: string[];
+  website?: string;
+  code?: string;
 }
