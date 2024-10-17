@@ -57,6 +57,8 @@ watchEffect(() => {
   left: 1.5rem;
   width: max-content;
   &__image {
+    height: 2rem;
+    width: auto;
     z-index: 100;
     position: relative;
     cursor: pointer;
