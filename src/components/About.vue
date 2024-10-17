@@ -119,6 +119,15 @@
 @media only screen and (max-width: 56.25rem) {
   .about__container {
     display: block;
+    padding: 0 1rem 0 1rem;
+
+    &__introduction {
+      font-size: 1.25rem;
+    }
+
+    &__body {
+      margin: 1rem 0 0 0;
+    }
   }
 }
 </style>

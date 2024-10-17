@@ -7,7 +7,11 @@
     />
     <Transition name="slide-left-in">
       <div class="hamburger__sections" v-show="showNavbar">
-        <h1 v-for="section in sections" class="hamburger__sections__section">
+        <h1
+          v-for="section in sections"
+          class="hamburger__sections__section"
+          @click="toggleSection(section)"
+        >
           {{ section }}
         </h1>
       </div>
@@ -19,7 +23,23 @@
 import { ref, watchEffect } from "vue";
 
 const showNavbar = ref(false);
-const sections = ref(["Home", "About", "Experience", "Contact"]);
+const sections = ref<("Home" | "About" | "Experience" | "Contact")[]>([
+  "Home",
+  "About",
+  "Experience",
+  "Contact",
+]);
+const emit = defineEmits([
+  "toggleHome",
+  "toggleAbout",
+  "toggleExperience",
+  "toggleContact",
+]);
+
+function toggleSection(section: "Home" | "About" | "Experience" | "Contact") {
+  showNavbar.value = false;
+  emit(`toggle${section}`);
+}
 
 watchEffect(() => {
   if (showNavbar.value) {

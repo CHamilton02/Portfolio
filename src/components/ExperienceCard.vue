@@ -4,11 +4,15 @@
       <p class="experience-card__dates-and-links__dates">
         {{ experience.date }}
       </p>
-      <a v-show="experience.website" :href="experience.website">
-        <button class="linkButton">View Website</button>
+      <a
+        v-show="experience.website"
+        :href="experience.website"
+        class="linkButton"
+      >
+        View Website
       </a>
-      <a v-show="experience.code" :href="experience.code">
-        <button class="linkButton">View Code</button>
+      <a v-show="experience.code" :href="experience.code" class="linkButton">
+        View Code
       </a>
     </div>
     <div class="experience-card__details">
@@ -101,10 +105,14 @@ defineProps({
 }
 
 @media only screen and (max-width: 56.25rem) {
-  .experience-card,
-  .experience-card__dates-and-links {
+  .experience-card {
     display: block;
     height: auto;
+  }
+  .experience-card__dates-and-links {
+    flex-direction: row;
+    align-items: end;
+    margin-bottom: 0.5rem;
   }
 }
 </style>

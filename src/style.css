@@ -9,6 +9,7 @@ body {
 
 .linkButton {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
   color: white;
   background-color: #23153c;
   text-decoration: none;
@@ -17,7 +18,6 @@ body {
   border-width: 0.15rem;
   border-radius: 1rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  margin-top: 1rem;
   transition: background-color 0.2s linear;
 }
 

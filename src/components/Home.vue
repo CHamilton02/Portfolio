@@ -95,9 +95,6 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 56.25rem) {
-  .home {
-    height: auto;
-  }
   .home__profile-picture {
     display: none;
   }
@@ -105,6 +102,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 </style>

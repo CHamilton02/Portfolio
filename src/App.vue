@@ -1,6 +1,12 @@
 <template>
   <div id="background" class="background"></div>
-  <Hamburger class="hamburger" />
+  <Hamburger
+    class="hamburger"
+    @toggleHome="scrollToElement('home-section')"
+    @toggleAbout="scrollToElement('about-section')"
+    @toggleExperience="scrollToElement('experience-section')"
+    @toggleContact="scrollToElement('contact-section')"
+  />
   <div class="app-container">
     <Navbar
       @toggleHome="scrollToElement('home-section')"
