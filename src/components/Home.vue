@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div>
+    <div class="home__text">
       <h1>
         Hello, I'm
         <span id="name" class="home__name"> </span>
@@ -91,6 +91,17 @@ onMounted(() => {
     height: 2.5rem;
     width: auto;
     margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .home__profile-picture {
+    display: none;
+  }
+  .home__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

@@ -1,11 +1,13 @@
 <template>
   <div id="background" class="background"></div>
+  <Hamburger class="hamburger" />
   <div class="app-container">
     <Navbar
       @toggleHome="scrollToElement('home-section')"
       @toggleAbout="scrollToElement('about-section')"
       @toggleExperience="scrollToElement('experience-section')"
       @toggleContact="scrollToElement('contact-section')"
+      class="navbar"
     />
     <Home id="home-section" />
     <About
@@ -26,6 +28,7 @@ import Experience from "./components/Experience.vue";
 import Contact from "./components/Contact.vue";
 //@ts-ignore
 import NET from "vanta/dist/vanta.net.min";
+import Hamburger from "./components/Hamburger.vue";
 
 onMounted(() => {
   NET({
@@ -57,5 +60,17 @@ function scrollToElement(elementId: string) {
   align-items: center;
   padding: 0 3rem 0 3rem;
   max-width: 60rem;
+}
+
+@media only screen and (min-width: 56.26rem) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .navbar {
+    display: none;
+  }
 }
 </style>
