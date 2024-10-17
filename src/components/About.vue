@@ -115,4 +115,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 56.25rem) {
+  .about__container {
+    display: block;
+  }
+}
 </style>

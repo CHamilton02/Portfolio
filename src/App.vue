@@ -72,5 +72,9 @@ function scrollToElement(elementId: string) {
   .navbar {
     display: none;
   }
+
+  .app-container {
+    padding: 0;
+  }
 }
 </style>
