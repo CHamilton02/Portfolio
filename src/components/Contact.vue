@@ -126,7 +126,7 @@ import GitHub from "../assets/Github Logo.png";
       flex-direction: column;
       align-items: center !important;
       &__header {
-        font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 0.5rem;
       }
     }
@@ -138,7 +138,7 @@ import GitHub from "../assets/Github Logo.png";
   }
 
   .contact-button {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
   }
 }
