@@ -5,9 +5,13 @@
         Hello, I'm
         <span id="name" class="home__name"> </span>
       </h1>
-      <h2>Student/Full-Stack Developer 💻</h2>
-      <p>Currently working at RBC as a Developer co-op on the UX-Force team!</p>
-      <p>I'm also a Computer Science student at York University.</p>
+      <h2 class="home__title">Student/Full-Stack Developer</h2>
+      <h3 class="home__info">
+        Currently working at RBC as a Developer co-op on the UX-Force team!
+      </h3>
+      <h3 class="home__info">
+        Pursing a Bachelor of Science in Computer Science at York University.
+      </h3>
       <div class="socials">
         <a href="https://www.linkedin.com/in/c-hamilton02/" target="_blank">
           <img :src="LinkedIn" class="socials__icon" />
@@ -62,8 +66,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   color: white;
-  height: 90vh;
-  padding: 0 1rem 0 1rem;
+  min-height: 90vh;
 
   &__name {
     line-height: 1.2;
@@ -75,6 +78,15 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+  }
+
+  &__info {
+    font-size: 1rem;
+    font-weight: normal;
   }
 }
 
@@ -96,6 +108,11 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 56.25rem) {
+  .home {
+    padding: 0 0.5rem 0 0.5rem;
+    min-height: 100vh;
+  }
+
   .home__profile-picture {
     display: none;
   }

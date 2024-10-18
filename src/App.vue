@@ -71,7 +71,6 @@ function scrollToElement(elementId: string) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 3rem 0 3rem;
   max-width: 60rem;
 }
 @media only screen and (min-width: 56.26rem) {
@@ -83,10 +82,6 @@ function scrollToElement(elementId: string) {
 @media only screen and (max-width: 56.25rem) {
   .navbar {
     display: none;
-  }
-
-  .app-container {
-    padding: 0;
   }
 }
 </style>

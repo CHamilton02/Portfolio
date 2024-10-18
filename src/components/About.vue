@@ -1,11 +1,11 @@
 <template>
   <div class="about">
-    <h2 class="about__title">About Me!</h2>
+    <h2 class="header">About Me!</h2>
     <div class="about__body">
-      <p class="about__intro">
+      <h3 class="about__intro">
         Hey there! I'm Camdyn, and I love bringing ideas to life through code
         and teamwork!
-      </p>
+      </h3>
       <div class="about__content">
         <p class="about__text">
           My coding journey kicked off in 2018 during my first computer
@@ -61,11 +61,6 @@
   align-items: center;
   padding: 0 1rem;
 
-  &__title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-
   &__body {
     display: flex;
     gap: 2rem;
@@ -74,14 +69,15 @@
   &__intro {
     font-weight: bold;
     font-size: 2rem;
+    margin: 0;
   }
 
   &__content {
-    margin-top: 1rem;
+    margin: 0;
   }
 
   &__text {
-    margin: 1rem 0;
+    margin: 0;
   }
 
   .highlight {
@@ -108,19 +104,16 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
   .about {
     &__body {
       display: block;
       text-align: center;
     }
 
-    &__title {
-      font-size: 2rem;
-    }
-
     &__intro {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     &__cta {

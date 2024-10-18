@@ -4,22 +4,24 @@
       <p class="experience-card__dates-and-links__dates">
         {{ experience.date }}
       </p>
-      <a
-        v-show="experience.website"
-        :href="experience.website"
-        target="_blank"
-        class="link-button"
-      >
-        View Website
-      </a>
-      <a
-        v-show="experience.code"
-        :href="experience.code"
-        target="_blank"
-        class="link-button"
-      >
-        View Code
-      </a>
+      <div class="experience-card__dates-and-links__links">
+        <a
+          v-show="experience.website"
+          :href="experience.website"
+          target="_blank"
+          class="link-button"
+        >
+          View Website
+        </a>
+        <a
+          v-show="experience.code"
+          :href="experience.code"
+          target="_blank"
+          class="link-button"
+        >
+          View Code
+        </a>
+      </div>
     </div>
     <div class="experience-card__details">
       <h2 class="experience-card__details__title">
@@ -57,7 +59,7 @@ defineProps({
 <style lang="scss">
 .experience-card {
   display: flex;
-  height: 9rem;
+  min-height: 9rem;
   padding: 1rem;
   align-items: stretch;
 
@@ -66,13 +68,17 @@ defineProps({
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 100%;
     &__dates {
       margin: 0;
       font-size: 0.8rem;
       min-width: 9rem;
       margin-right: 2rem;
       color: #ff3f81;
+    }
+    &__links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 
@@ -88,10 +94,6 @@ defineProps({
       &__company {
         color: #ff3f81;
       }
-    }
-
-    &__description {
-      font-size: 0.9rem;
     }
 
     &__skills-container {
@@ -121,8 +123,19 @@ defineProps({
     flex-direction: row;
     align-items: end;
     margin-bottom: 0.5rem;
+
+    &__links {
+      flex-direction: row;
+      gap: 0.25rem;
+    }
   }
 
+  .link-button {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 25rem) {
   .link-button {
     font-size: 0.5rem;
   }

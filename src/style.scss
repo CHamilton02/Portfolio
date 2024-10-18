@@ -2,9 +2,19 @@ body {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
+  padding: 0 3rem 0 3rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.header {
+  margin: 0 0 1.5rem 0;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .link-button {
@@ -34,5 +44,33 @@ body {
     height: 2.5rem;
     width: auto;
     margin-right: 1rem;
+  }
+}
+
+footer {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 56.25rem) {
+  body {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  footer {
+    margin: 1rem 0 1rem 0;
+    font-size: 0.75rem;
   }
 }

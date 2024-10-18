@@ -1,6 +1,6 @@
 <template>
   <div class="experience">
-    <h2 class="experience__title">My Experience</h2>
+    <h2 class="header">My Experience</h2>
     <div class="experience__card-container">
       <ExperienceCard v-for="experience in experiences" :experience />
     </div>
@@ -84,8 +84,11 @@ const experiences = ref([
 
 @media only screen and (max-width: 56.25rem) {
   .experience {
-    width: 100vw;
     margin-top: 10rem;
+
+    &__title {
+      font-size: 2rem;
+    }
   }
 }
 </style>

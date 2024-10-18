@@ -35,6 +35,7 @@
         </div>
       </div>
     </div>
+    <footer>Website built with love by Camdyn Hamilton</footer>
   </div>
 </template>
 
@@ -45,10 +46,11 @@ import GitHub from "../assets/Github Logo.png";
 
 <style lang="scss">
 .contact {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 0 1rem 0 1rem;
 }
 
@@ -106,6 +108,7 @@ import GitHub from "../assets/Github Logo.png";
 
     &__message {
       text-align: center;
+      font-size: 3rem;
     }
 
     &__message2-container {
@@ -114,6 +117,7 @@ import GitHub from "../assets/Github Logo.png";
         text-align: center;
         width: auto;
         font-size: 0.8rem;
+        font-weight: normal;
       }
     }
 
@@ -128,12 +132,13 @@ import GitHub from "../assets/Github Logo.png";
     }
 
     &__contact-me-container {
+      margin-top: 1rem;
       margin-bottom: 2rem;
     }
   }
 
   .contact-button {
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
   }
 }

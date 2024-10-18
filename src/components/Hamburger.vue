@@ -56,6 +56,7 @@ watchEffect(() => {
   top: 1.5rem;
   left: 1.5rem;
   width: max-content;
+  height: 0;
   &__image {
     height: 2rem;
     width: auto;
