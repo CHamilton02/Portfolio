@@ -7,11 +7,17 @@
       <a
         v-show="experience.website"
         :href="experience.website"
+        target="_blank"
         class="link-button"
       >
         View Website
       </a>
-      <a v-show="experience.code" :href="experience.code" class="link-button">
+      <a
+        v-show="experience.code"
+        :href="experience.code"
+        target="_blank"
+        class="link-button"
+      >
         View Code
       </a>
     </div>

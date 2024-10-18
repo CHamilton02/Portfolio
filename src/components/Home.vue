@@ -9,10 +9,10 @@
       <p>Currently working at RBC as a Developer co-op on the UX-Force team!</p>
       <p>I'm also a Computer Science student at York University.</p>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/c-hamilton02/">
+        <a href="https://www.linkedin.com/in/c-hamilton02/" target="_blank">
           <img :src="LinkedIn" class="socials__icon" />
         </a>
-        <a href="https://github.com/CHamilton02">
+        <a href="https://github.com/CHamilton02" target="_blank">
           <img :src="GitHub" class="socials__icon" />
         </a>
       </div>

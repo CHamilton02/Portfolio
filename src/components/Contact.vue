@@ -16,8 +16,8 @@
 
       <div class="contact-container__contact-me-container">
         <a
-          href="../assets/Resume.pdf"
-          download="Camdyn Hamilton Resume"
+          href="/Portfolio/src/assets/Resume.pdf"
+          target="_blank"
           class="link-button contact-button"
           >Check Out My Resume!</a
         >
@@ -29,10 +29,10 @@
       <div class="contact-container__socials-container">
         <h3 class="contact-container__socials-container__header">Follow Me!</h3>
         <div class="socials">
-          <a>
+          <a href="https://www.linkedin.com/in/c-hamilton02/" target="_blank">
             <img :src="LinkedIn" class="socials__icon" />
           </a>
-          <a>
+          <a href="https://github.com/CHamilton02" target="_blank">
             <img :src="GitHub" class="socials__icon" />
           </a>
         </div>
@@ -51,7 +51,7 @@ import GitHub from "../assets/Github Logo.png";
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 1rem 0 1rem;
 }
 
@@ -104,8 +104,12 @@ import GitHub from "../assets/Github Logo.png";
 
 @media only screen and (max-width: 40rem) {
   .contact-container {
-    margin-top: 25rem;
-    margin-bottom: 5rem;
+    margin-top: 15rem;
+    margin-bottom: 3rem;
+
+    &__message {
+      text-align: center;
+    }
 
     &__message2-container {
       display: block;
