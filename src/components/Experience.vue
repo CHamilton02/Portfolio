@@ -81,4 +81,11 @@ const experiences = ref([
     max-width: 60rem;
   }
 }
+
+@media only screen and (max-width: 56.25rem) {
+  .experience {
+    width: 100vw;
+    margin-top: 10rem;
+  }
+}
 </style>

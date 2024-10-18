@@ -7,7 +7,7 @@ body {
   align-items: center;
 }
 
-.linkButton {
+.link-button {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
   color: white;
@@ -21,7 +21,7 @@ body {
   transition: background-color 0.2s linear;
 }
 
-.linkButton:hover {
+.link-button:hover {
   background-color: #ff3f81;
   cursor: pointer;
 }

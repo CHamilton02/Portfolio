@@ -19,8 +19,8 @@
           Social Links
         </h3>
         <div class="contact-container__socials-container__buttons">
-          <a class="linkButton">LinkedIn</a>
-          <a class="linkButton">GitHub</a>
+          <a class="link-button">LinkedIn</a>
+          <a class="link-button">GitHub</a>
         </div>
       </div>
 
@@ -29,8 +29,8 @@
           Contact Me!
         </h3>
         <div class="contact-container__socials-container__buttons">
-          <a class="linkButton">Resume</a>
-          <a class="linkButton">Email</a>
+          <a class="link-button">Resume</a>
+          <a class="link-button">Email</a>
         </div>
       </div>
     </div>
@@ -45,6 +45,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 0 1rem 0 1rem;
 }
 
 .contact-container {
@@ -90,6 +91,12 @@
     flex-direction: column !important;
     align-items: end !important;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .contact-container {
+    margin-top: 25rem;
   }
 }
 </style>

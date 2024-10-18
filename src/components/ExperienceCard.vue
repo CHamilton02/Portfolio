@@ -7,11 +7,11 @@
       <a
         v-show="experience.website"
         :href="experience.website"
-        class="linkButton"
+        class="link-button"
       >
         View Website
       </a>
-      <a v-show="experience.code" :href="experience.code" class="linkButton">
+      <a v-show="experience.code" :href="experience.code" class="link-button">
         View Code
       </a>
     </div>
@@ -90,6 +90,7 @@ defineProps({
 
     &__skills-container {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
 
       &__item {
@@ -108,11 +109,16 @@ defineProps({
   .experience-card {
     display: block;
     height: auto;
+    padding: 1rem;
   }
   .experience-card__dates-and-links {
     flex-direction: row;
     align-items: end;
     margin-bottom: 0.5rem;
+  }
+
+  .link-button {
+    font-size: 0.5rem;
   }
 }
 </style>

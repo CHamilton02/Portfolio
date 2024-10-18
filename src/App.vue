@@ -39,6 +39,13 @@ import Hamburger from "./components/Hamburger.vue";
 onMounted(() => {
   NET({
     el: "#background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.0,
+    minWidth: 200.0,
+    scale: 1.0,
+    scaleMobile: 1.0,
   });
 });
 
@@ -67,7 +74,6 @@ function scrollToElement(elementId: string) {
   padding: 0 3rem 0 3rem;
   max-width: 60rem;
 }
-
 @media only screen and (min-width: 56.26rem) {
   .hamburger {
     display: none;

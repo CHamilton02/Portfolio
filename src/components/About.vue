@@ -50,7 +50,7 @@
             >I'd love to chat about how I can contribute to your company!</span
           >
         </p>
-        <button class="linkButton" @click="$emit('toggleExperience')">
+        <button class="link-button" @click="$emit('toggleExperience')">
           Check out what I've worked on!
         </button>
       </div>
