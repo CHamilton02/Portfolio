@@ -15,8 +15,15 @@
       </div>
 
       <div class="contact-container__contact-me-container">
-        <a class="link-button contact-button">Check Out My Resume!</a>
-        <a class="link-button contact-button">Send Me An Email!</a>
+        <a
+          href="../assets/Resume.pdf"
+          download="Camdyn Hamilton Resume"
+          class="link-button contact-button"
+          >Check Out My Resume!</a
+        >
+        <a href="mailto:c02hamil@gmail.com" class="link-button contact-button"
+          >Send Me An Email!</a
+        >
       </div>
 
       <div class="contact-container__socials-container">
