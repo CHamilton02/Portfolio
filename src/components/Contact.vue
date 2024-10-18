@@ -15,10 +15,7 @@
       </div>
 
       <div class="contact-container__contact-me-container">
-        <a
-          href="/Portfolio/src/assets/Resume.pdf"
-          target="_blank"
-          class="link-button contact-button"
+        <a href="Resume.pdf" target="_blank" class="link-button contact-button"
           >Check Out My Resume!</a
         >
         <a href="mailto:c02hamil@gmail.com" class="link-button contact-button"
