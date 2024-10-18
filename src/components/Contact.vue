@@ -14,30 +14,30 @@
         </h3>
       </div>
 
-      <div class="contact-container__socials-container">
-        <h3 class="contact-container__socials-container__header">
-          Social Links
-        </h3>
-        <div class="contact-container__socials-container__buttons">
-          <a class="link-button">LinkedIn</a>
-          <a class="link-button">GitHub</a>
-        </div>
+      <div class="contact-container__contact-me-container">
+        <a class="link-button contact-button">Check Out My Resume!</a>
+        <a class="link-button contact-button">Send Me An Email!</a>
       </div>
 
-      <div class="contact-container__contact-me-container">
-        <h3 class="contact-container__contact-me-container__header">
-          Contact Me!
-        </h3>
-        <div class="contact-container__socials-container__buttons">
-          <a class="link-button">Resume</a>
-          <a class="link-button">Email</a>
+      <div class="contact-container__socials-container">
+        <h3 class="contact-container__socials-container__header">Follow Me!</h3>
+        <div class="socials">
+          <a>
+            <img :src="LinkedIn" class="socials__icon" />
+          </a>
+          <a>
+            <img :src="GitHub" class="socials__icon" />
+          </a>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import LinkedIn from "../assets/LinkedIn Logo.png";
+import GitHub from "../assets/Github Logo.png";
+</script>
 
 <style lang="scss">
 .contact {
@@ -75,14 +75,11 @@
   &__contact-me-container {
     display: flex;
     flex-direction: column;
-    &__header {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
+    gap: 1rem;
 
-    &__buttons {
-      display: flex;
-      gap: 2rem;
+    &__header {
+      font-size: 2.5rem;
+      margin: 0;
     }
   }
 
@@ -94,9 +91,42 @@
   }
 }
 
-@media only screen and (max-width: 56.25rem) {
+.contact-button {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 40rem) {
   .contact-container {
     margin-top: 25rem;
+    margin-bottom: 5rem;
+
+    &__message2-container {
+      display: block;
+      &__message2 {
+        text-align: center;
+        width: auto;
+        font-size: 0.8rem;
+      }
+    }
+
+    &__socials-container,
+    &__contact-me-container {
+      flex-direction: column;
+      align-items: center !important;
+      &__header {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__contact-me-container {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .contact-button {
+    font-size: 1.25rem;
+    text-align: center;
   }
 }
 </style>

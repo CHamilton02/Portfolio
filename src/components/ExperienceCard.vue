@@ -105,7 +105,7 @@ defineProps({
   }
 }
 
-@media only screen and (max-width: 56.25rem) {
+@media only screen and (max-width: 40rem) {
   .experience-card {
     display: block;
     height: auto;

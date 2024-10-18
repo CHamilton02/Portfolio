@@ -10,6 +10,7 @@ body {
 .link-button {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   font-size: 0.75rem;
+  font-weight: bold;
   color: white;
   background-color: #23153c;
   text-decoration: none;
@@ -24,4 +25,14 @@ body {
 .link-button:hover {
   background-color: #ff3f81;
   cursor: pointer;
+}
+
+.socials {
+  display: flex;
+
+  &__icon {
+    height: 2.5rem;
+    width: auto;
+    margin-right: 1rem;
+  }
 }

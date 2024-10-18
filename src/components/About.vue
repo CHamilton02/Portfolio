@@ -68,6 +68,7 @@
   align-items: center;
   height: 100vh;
   margin-bottom: 2rem;
+  padding: 0 1rem 0 1rem;
 
   &__title {
     font-size: 2.5rem;
@@ -116,7 +117,7 @@
   }
 }
 
-@media only screen and (max-width: 56.25rem) {
+@media only screen and (max-width: 40rem) {
   .about__container {
     display: block;
     padding: 0 1rem 0 1rem;
