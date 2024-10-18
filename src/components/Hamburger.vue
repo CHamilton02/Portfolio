@@ -76,6 +76,12 @@ watchEffect(() => {
     background-color: #ff3f81;
     &__section {
       font-size: 1.5rem;
+      transition: color 0.25s;
+    }
+
+    &__section:hover {
+      color: #e2e2e2;
+      cursor: pointer;
     }
   }
 }

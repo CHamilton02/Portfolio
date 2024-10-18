@@ -44,16 +44,8 @@ nav {
   transition: color 0.25s;
 }
 
-.section:hover,
-.active-section:hover {
-  cursor: pointer;
-}
-
 .section:hover {
   color: #ff73a4;
-}
-
-.active-section {
-  color: #ff3f81;
+  cursor: pointer;
 }
 </style>
