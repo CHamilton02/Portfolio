@@ -1,28 +1,17 @@
 <template>
   <nav>
-    <h2
+    <h1
       v-for="section in sections"
-      :class="{
-        'active-section': activeSection === section,
-        section: activeSection !== section,
-      }"
+      class="section"
       @click="$emit(`toggle${section}`)"
     >
       {{ section }}
-    </h2>
+    </h1>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref, PropType } from "vue";
-
-const props = defineProps({
-  activeSection: String as PropType<
-    "Home" | "About" | "Experience" | "Contact"
-  >,
-});
-
-console.log(props.activeSection);
+import { ref } from "vue";
 
 const sections = ref(["Home", "About", "Experience", "Contact"]);
 </script>
