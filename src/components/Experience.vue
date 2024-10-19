@@ -33,6 +33,7 @@ const experiences = ref([
     title: "Portfolio",
     description:
       "Developed a personal portfolio to showcase my software development skills. The portfolio highlights interactive animations using TypeScript, Vue.js, and Vanta.js, and features advanced JavaScript animation libraries like TypeIt to create engaging user experiences. Through this project, I demonstrated my ability to build visually dynamic, responsive web applications that emphasize both technical precision and creative design.",
+    code: "https://github.com/CHamilton02/Portfolio",
     skills: ["HTML", "SCSS", "Typeit", "TypeScript", "Vue", "Vanta"],
   },
   {
