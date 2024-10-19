@@ -106,7 +106,11 @@ onMounted(() => {
 
 @media only screen and (max-width: 56.25rem) {
   .home {
-    min-height: 100lvh;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .home__profile-picture {
