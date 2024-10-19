@@ -106,6 +106,7 @@ onMounted(() => {
 
 @media only screen and (max-width: 56.25rem) {
   .home {
+    height: auto;
     position: relative;
     left: 0;
     top: 0;
