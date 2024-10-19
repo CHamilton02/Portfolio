@@ -86,7 +86,7 @@
 
 @media (max-width: 40rem) {
   .about {
-    padding: 2.5rem 0.5rem 0 0.5rem;
+    padding: 1.5rem 0.5rem 0 0.5rem;
 
     &__body {
       display: block;

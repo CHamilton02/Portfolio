@@ -103,16 +103,6 @@ onMounted(() => {
   border-radius: 50%;
 }
 
-.socials {
-  display: flex;
-
-  &__icon {
-    height: 2.5rem;
-    width: auto;
-    margin-right: 1rem;
-  }
-}
-
 @media only screen and (max-width: 56.25rem) {
   .home {
     padding: 0 0.5rem 0 0.5rem;
