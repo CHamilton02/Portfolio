@@ -8,8 +8,10 @@
       <div class="contact-container__message2-container">
         <h3 class="contact-container__message2-container__message2">
           I'm always eager to grow and learn as a software developer, with the
-          goal of leading a team one day. Feel free to follow my journey through
-          my socials, and if you're interested in collaborating or offering
+          goal of leading a team one day. If you're considering hiring for a
+          co-op position next summer, I would love to connect and explore
+          potential opportunities. Feel free to follow my journey through my
+          socials, and if you're interested in collaborating or offering
           guidance, don't hesitate to reach out!
         </h3>
       </div>

@@ -41,11 +41,11 @@ h2 {
 
 .socials {
   display: flex;
+  gap: 1rem;
 
   &__icon {
     height: 2.5rem;
     width: auto;
-    margin-right: 1rem;
   }
 }
 

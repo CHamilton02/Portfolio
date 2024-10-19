@@ -17,22 +17,30 @@ const experiences = ref([
     title: "Developer Co-Op",
     organization: "RBC",
     description:
-      "Build and maintain critical components used to construct front-end components for various artificial intelligence and machine learning projects. Work closely in an agile environment with a cross-functional team consisting of designers, developers, and product managers to ensure web accessibility.",
-    skills: ["JavaScript", "TypeScript", "Vue", "Pinia"],
+      "Contributed to the development of an internal application powered by machine learning using TypeScript, Vue.js, and Pinia. In collaboration with a cross-functional team consisting of designers, developers, and product managers, I worked on delivering eight new full features that improved user interfaces and functionality. Operating in an agile environment, we ensured the application adhered to high standards of web accessibility and quality, allowing for smooth user experiences.",
+    skills: [
+      "Express.js",
+      "HTML",
+      "Node.js",
+      "Pinia",
+      "SCSS",
+      "TypeScript",
+      "Vue",
+    ],
   },
   {
-    date: "OCT. 2024 - PRESENT",
+    date: "SEP. 2024 - OCT. 2024",
     title: "Portfolio",
     description:
-      "Created to showcase my various talents in the Software Development field. Developed using TypeScript and Vue, along with various JavaScript animation libraries.",
-    skills: ["TypeScript", "Vue", "Typeit", "Vanta"],
+      "Developed a personal portfolio to showcase my software development skills. The portfolio highlights interactive animations using TypeScript, Vue.js, and Vanta.js, and features advanced JavaScript animation libraries like TypeIt to create engaging user experiences. Through this project, I demonstrated my ability to build visually dynamic, responsive web applications that emphasize both technical precision and creative design.",
+    skills: ["HTML", "SCSS", "Typeit", "TypeScript", "Vue", "Vanta"],
   },
   {
     date: "JUL. 2024",
     title: "SportIQs",
     description:
-      "Developed a sports trivia game using React, featuring interactive quizzes across various sports categories. Utilized Vite for efficient builds and fast development cycles, with deployment on GitHub Pages for easy access. Implemented state management to ensure smooth user interactions and seamless quiz progress tracking.",
-    skills: ["JavaScript", "React", "Vite"],
+      "Created SportIQs, a sports trivia game that leverages React to deliver interactive quizzes across various sports categories. Using Vite for fast and efficient builds, I ensured quick development cycles and seamless deployment on GitHub Pages. The project also featured state management techniques, which helped maintain smooth interactions and provided an engaging, responsive experience for users on various devices.",
+    skills: ["CSS", "HTML", "JavaScript", "React", "Vite"],
     website: "https://chamilton02.github.io/SportIQs/",
     code: "https://github.com/CHamilton02/SportIQs",
   },
@@ -40,8 +48,8 @@ const experiences = ref([
     date: "MAY 2024 - JUN. 2024",
     title: "Djibouti",
     description:
-      "Created an interactive web-based game inspired by Wordle, where users guess country names. Leveraged JavaScript classes to manage data and user interactions. Utilized Jasmine for unit and integration testing, ensuring the game’s functionality worked as intended and provided an engaging experience.",
-    skills: ["HTML", "CSS", "JavaScript", "Jasmine"],
+      "Built an interactive web-based game inspired by Wordle, where users guess country names. Leveraged JavaScript classes to manage data and user interactions. Utilized Jasmine for unit and integration testing, ensuring the game’s functionality worked as intended and provided an engaging experience.",
+    skills: ["CSS", "HTML", "JavaScript", "Jasmine"],
     website: "https://chamilton02.github.io/Djibouti/",
     code: "https://github.com/CHamilton02/Djibouti",
   },
@@ -49,8 +57,8 @@ const experiences = ref([
     date: "MAY 2024",
     title: "Password Manager",
     description:
-      "Built a secure password manager using Python, incorporating encryption techniques to protect user data. Applied cryptographic methods such as password-based key derivation and the Fernet encryption scheme for enhanced security. Designed a user-friendly interface with Tkinter, allowing for efficient password management, viewing, and generation.",
-    skills: ["Python", "Base64.py", "Cryptography.py", "Tkinter.py"],
+      "Engineered a secure password manager application using Python, implementing encryption techniques such as password-based key derivation and the Fernet encryption scheme to ensure data protection. I designed the user interface using Tkinter, providing a simple yet effective solution for managing and generating passwords, with a focus on balancing ease of use and security.",
+    skills: ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     code: "https://github.com/CHamilton02/Password-Manager",
   },
   {
@@ -58,8 +66,8 @@ const experiences = ref([
     title: "Front-End Developer",
     organization: "Stone Row Farm Inc.",
     description:
-      "Developed and maintained business web pages using HTML, CSS, Bootstrap, and JavaScript to enhance the company’s online presence. Worked closely with the company owners to gather feedback, iterating on the interface to meet evolving needs. Proposed and implemented UI/UX improvements that aligned the design with business goals and enhanced the user experience.",
-    skills: ["HTML", "CSS", "Bootstrap"],
+      "Developed business web pages using HTML, CSS, Bootstrap, and JavaScript. Collaborating with the business owners, I iterated on design feedback and proposed solutions to meet their evolving needs.",
+    skills: ["Bootstrap", "CSS", "HTML", "JavaScript"],
   },
 ]);
 </script>
