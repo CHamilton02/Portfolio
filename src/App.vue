@@ -84,7 +84,7 @@ function scrollToElement(elementId: string) {
   }
 
   .background {
-    height: 250rem;
+    height: 100lvh;
   }
 }
 </style>
