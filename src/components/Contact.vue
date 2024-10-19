@@ -8,25 +8,26 @@
       <div class="contact-container__message2-container">
         <h3 class="contact-container__message2-container__message2">
           I'm always eager to grow and learn as a software developer, with the
-          goal of leading a team one day. If you're considering hiring for a
-          co-op position next summer, I would love to connect and explore
-          potential opportunities. Feel free to follow my journey through my
-          socials, and if you're interested in collaborating or offering
-          guidance, don't hesitate to reach out!
+          ambition of leading a team one day. If you're considering hiring for a
+          co-op position next summer, I would love to connect with you and
+          explore potential opportunities. Feel free to follow my journey
+          through my social media accounts, and if you are interested in
+          collaborating or offering guidance, please don't hesitate to reach
+          out.
         </h3>
       </div>
 
       <div class="contact-container__contact-me-container">
         <a href="Resume.pdf" target="_blank" class="link-button contact-button"
-          >Check Out My Resume!</a
+          >Check Out My Resume</a
         >
         <a href="mailto:c02hamil@gmail.com" class="link-button contact-button"
-          >Send Me An Email!</a
+          >Send Me An Email</a
         >
       </div>
 
       <div class="contact-container__socials-container">
-        <h3 class="contact-container__socials-container__header">Follow Me!</h3>
+        <h3 class="contact-container__socials-container__header">Follow Me</h3>
         <div class="socials">
           <a href="https://www.linkedin.com/in/c-hamilton02/" target="_blank">
             <img :src="LinkedIn" class="socials__icon" />

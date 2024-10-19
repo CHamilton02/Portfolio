@@ -7,7 +7,7 @@
       </h1>
       <h2 class="home__title">Student/Full-Stack Developer</h2>
       <h3 class="home__info">
-        Currently working at RBC as a Developer Co-op on the UX-Force team!
+        Currently working at RBC as a Developer Co-op on the UX-Force team.
       </h3>
       <h3 class="home__info">
         Pursuing a Bachelor of Science in Computer Science at York University.

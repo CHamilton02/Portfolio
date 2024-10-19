@@ -1,17 +1,17 @@
 <template>
   <div class="about">
-    <h2 class="header">About Me!</h2>
+    <h2 class="header">About Me</h2>
     <div class="about__body">
       <h3 class="about__intro">
-        Hey there! I'm Camdyn, and I love bringing ideas to life through code
-        and teamwork!
+        Hey there, I'm Camdyn! I love bringing ideas to life through code and
+        being a teamplayer.
       </h3>
       <div class="about__content">
         <p class="about__text">
           My coding journey kicked off in 2018 during my first computer
-          programming class, and I’ve been hooked since. I've worked on projects
-          both academically and as a hobby, and now I’m gaining real-world
-          experience as a
+          programming class, and I’ve been hooked ever since. I've worked on
+          projects both academically and as a hobby, and now I’m gaining
+          real-world experience as a
           <span class="highlight">Developer Co-op</span> at
           <span class="highlight">RBC</span>.
         </p>
@@ -37,8 +37,8 @@
           I’m always eager to grow and would be thrilled to bring my passion and
           skills to your team through an exciting co-op opportunity. Feel free
           to reach out—<span class="highlight"
-            >I'd love to chat about how I can contribute to your company!</span
-          >
+            >I'd love to chat about how I can contribute to your company</span
+          >.
         </p>
         <div class="about__cta">
           <button class="link-button" @click="$emit('toggleExperience')">
