@@ -44,7 +44,6 @@ onMounted(() => {
     gyroControls: false,
     scale: 1.0,
     scaleMobile: 1.0,
-    // color: 0xb16ef5,
     color: 0x3e2a63,
   });
 });
@@ -85,7 +84,7 @@ function scrollToElement(elementId: string) {
   }
 
   .background {
-    height: 200vh;
+    height: 250rem;
   }
 }
 </style>
