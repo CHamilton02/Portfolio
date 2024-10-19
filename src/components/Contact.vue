@@ -45,10 +45,6 @@ import GitHub from "../assets/Github Logo.png";
 </script>
 
 <style lang="scss">
-.contact {
-  padding: 0 1rem 0 1rem;
-}
-
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -97,10 +93,6 @@ import GitHub from "../assets/Github Logo.png";
 }
 
 @media only screen and (max-width: 40rem) {
-  .contact {
-    padding: 0 0.5rem 0 0.5rem;
-  }
-
   .contact-container {
     margin-bottom: 3rem;
 

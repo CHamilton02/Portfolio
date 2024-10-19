@@ -67,7 +67,7 @@ const experiences = ref([
 <style lang="scss">
 .experience {
   padding-top: 1.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 
   &__title {
     font-size: 2.5rem;
@@ -81,14 +81,11 @@ const experiences = ref([
     gap: 2rem;
     align-items: center;
     margin-bottom: 4rem;
-    max-width: 60rem;
   }
 }
 
 @media only screen and (max-width: 56.25rem) {
   .experience {
-    margin: 5rem 0;
-
     &__title {
       font-size: 2rem;
     }

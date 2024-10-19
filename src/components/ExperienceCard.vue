@@ -60,7 +60,6 @@ defineProps({
 .experience-card {
   display: flex;
   min-height: 9rem;
-  padding: 1rem;
   align-items: stretch;
 
   &__dates-and-links {

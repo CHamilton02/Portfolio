@@ -54,7 +54,8 @@
 
 <style lang="scss" scoped>
 .about {
-  padding: 10rem 1rem;
+  padding-top: 1.5rem;
+  margin-bottom: 10rem;
   &__body {
     display: flex;
     gap: 2rem;
@@ -71,7 +72,7 @@
   }
 
   &__text {
-    margin: 0;
+    margin: 0 0 0.75rem 0;
   }
 
   .highlight {
@@ -86,7 +87,7 @@
 
 @media (max-width: 40rem) {
   .about {
-    padding: 1.5rem 0.5rem 0 0.5rem;
+    margin-bottom: 10rem;
 
     &__body {
       display: block;

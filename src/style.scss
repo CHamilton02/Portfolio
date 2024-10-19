@@ -2,7 +2,7 @@ body {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   color: white;
   margin: 0;
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem;
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -20,7 +20,7 @@ h2 {
 
 .link-button {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   color: white;
   background-color: #23153c;
@@ -58,7 +58,7 @@ footer {
 
 @media only screen and (max-width: 56.25rem) {
   body {
-    padding: 0;
+    padding: 0 0.5rem;
   }
 }
 

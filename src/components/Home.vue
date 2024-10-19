@@ -66,9 +66,10 @@ onMounted(() => {
 .home {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: white;
-  min-height: 90vh;
+  min-height: 95vh;
+  width: 100%;
 
   &__introduction {
     margin-top: 0;
@@ -105,7 +106,6 @@ onMounted(() => {
 
 @media only screen and (max-width: 56.25rem) {
   .home {
-    padding: 0 0.5rem 0 0.5rem;
     min-height: 100vh;
   }
 
