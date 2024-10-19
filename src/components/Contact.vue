@@ -63,7 +63,7 @@ import GitHub from "../assets/Github Logo.png";
     margin: 0;
 
     &__emphasis {
-      color: #8d20fa;
+      color: #ff6f61;
     }
   }
 

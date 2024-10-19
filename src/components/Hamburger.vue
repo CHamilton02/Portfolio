@@ -74,7 +74,7 @@ watchEffect(() => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #8d20fa;
+    background-color: #ff6f61;
     &__section {
       font-size: 1.5rem;
       transition: color 0.25s;

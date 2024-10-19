@@ -70,7 +70,7 @@ onMounted(() => {
 
   &__name {
     line-height: 1.2;
-    color: #8d20fa;
+    color: #ff6f61;
   }
 
   &__profile-picture {
