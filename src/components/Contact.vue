@@ -46,11 +46,6 @@ import GitHub from "../assets/Github Logo.png";
 
 <style lang="scss">
 .contact {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0 1rem 0 1rem;
 }
 
@@ -102,8 +97,11 @@ import GitHub from "../assets/Github Logo.png";
 }
 
 @media only screen and (max-width: 40rem) {
+  .contact {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+
   .contact-container {
-    margin-top: 15rem;
     margin-bottom: 3rem;
 
     &__message {

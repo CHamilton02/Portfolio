@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home__text">
-      <h1>
+      <h1 class="home__introduction">
         Hello, I'm
         <span id="name" class="home__name"> </span>
       </h1>
@@ -55,8 +55,10 @@ onMounted(() => {
     loop: true,
   })
     .go()
+    .pause(2000)
     .delete(6)
-    .type("キャムデン");
+    .type("キャムデン")
+    .pause(2000);
 });
 </script>
 
@@ -67,6 +69,10 @@ onMounted(() => {
   justify-content: center;
   color: white;
   min-height: 90vh;
+
+  &__introduction {
+    margin-top: 0;
+  }
 
   &__name {
     line-height: 1.2;

@@ -41,7 +41,7 @@
           >
         </p>
         <div class="about__cta">
-          <button class="btn" @click="$emit('toggleExperience')">
+          <button class="link-button" @click="$emit('toggleExperience')">
             Check out what I've worked on!
           </button>
         </div>
@@ -54,13 +54,7 @@
 
 <style lang="scss" scoped>
 .about {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-
+  padding: 10rem 1rem;
   &__body {
     display: flex;
     gap: 2rem;
@@ -88,41 +82,25 @@
   &__cta {
     margin-top: 1rem;
   }
-
-  .btn {
-    background-color: #23153c;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: 0.15rem solid #ff6f61;
-    border-radius: 1rem;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background-color: #ff6f61;
-      cursor: pointer;
-    }
-  }
 }
 
 @media (max-width: 40rem) {
   .about {
+    padding: 2.5rem 0.5rem 0 0.5rem;
+
     &__body {
       display: block;
-      text-align: center;
     }
 
     &__intro {
       font-size: 1.25rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     &__cta {
       text-align: center;
     }
-  }
-
-  .btn {
-    font-size: 1rem;
   }
 }
 </style>
