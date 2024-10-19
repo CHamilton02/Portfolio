@@ -85,5 +85,9 @@ function scrollToElement(elementId: string) {
   .navbar {
     display: none;
   }
+
+  .background {
+    height: 200vh;
+  }
 }
 </style>
