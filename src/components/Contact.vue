@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <footer>Website built with love by Camdyn Hamilton</footer>
+    <footer>Designed & Built by Camdyn Hamilton</footer>
   </div>
 </template>
 
@@ -63,7 +63,7 @@ import GitHub from "../assets/Github Logo.png";
     margin: 0;
 
     &__emphasis {
-      color: #ff3f81;
+      color: #8d20fa;
     }
   }
 

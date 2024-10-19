@@ -46,6 +46,8 @@ onMounted(() => {
     minWidth: 200.0,
     scale: 1.0,
     scaleMobile: 1.0,
+    // color: 0xb16ef5,
+    color: 0x3e2a63,
   });
 });
 

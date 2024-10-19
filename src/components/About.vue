@@ -82,7 +82,7 @@
 
   .highlight {
     font-weight: bold;
-    color: #ff3f81;
+    color: #8d20fa;
   }
 
   &__cta {
@@ -93,12 +93,12 @@
     background-color: #23153c;
     color: white;
     padding: 0.5rem 1rem;
-    border: 0.15rem solid #ff3f81;
+    border: 0.15rem solid #8d20fa;
     border-radius: 1rem;
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: #ff3f81;
+      background-color: #8d20fa;
       cursor: pointer;
     }
   }

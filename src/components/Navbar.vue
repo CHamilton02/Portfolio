@@ -34,7 +34,7 @@ nav {
 }
 
 .section:hover {
-  color: #ff73a4;
+  color: #8d20fa;
   cursor: pointer;
 }
 </style>

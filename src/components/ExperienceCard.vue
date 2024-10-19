@@ -73,7 +73,7 @@ defineProps({
       font-size: 0.8rem;
       min-width: 9rem;
       margin-right: 2rem;
-      color: #ff3f81;
+      color: #8d20fa;
     }
     &__links {
       display: flex;
@@ -92,7 +92,7 @@ defineProps({
       font-size: 1.25rem;
 
       &__company {
-        color: #ff3f81;
+        color: #8d20fa;
       }
     }
 
@@ -102,7 +102,7 @@ defineProps({
       gap: 1rem;
 
       &__item {
-        background-color: #ff3f81;
+        background-color: #8d20fa;
         font-family: "Inter Tight", Arial, Helvetica, sans-serif;
         border: none;
         color: white;
