@@ -130,7 +130,6 @@ window.addEventListener("resize", () => {
   .experience-card {
     display: block;
     height: auto;
-    padding: 0.5rem;
   }
   .experience-card__dates-and-links {
     flex-direction: row;

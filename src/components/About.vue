@@ -54,8 +54,11 @@
 
 <style lang="scss" scoped>
 .about {
-  padding-top: 1.5rem;
-  margin-bottom: 10rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__body {
     display: flex;
     gap: 2rem;
@@ -85,10 +88,17 @@
   }
 }
 
-@media (max-width: 40rem) {
+@media only screen and (max-width: 56.25rem) {
   .about {
+    height: auto;
+    display: block;
+    padding-top: 5rem;
     margin-bottom: 10rem;
+  }
+}
 
+@media only screen and (max-width: 40rem) {
+  .about {
     &__body {
       display: block;
     }
@@ -96,7 +106,7 @@
     &__intro {
       font-size: 1.25rem;
       margin-bottom: 1rem;
-      text-align: center;
+      // text-align: center;
     }
 
     &__cta {

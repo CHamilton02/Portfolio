@@ -58,7 +58,7 @@ footer {
 
 @media only screen and (max-width: 56.25rem) {
   body {
-    padding: 0 0.5rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
 
@@ -66,6 +66,7 @@ footer {
   .header {
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-align: start;
   }
 
   p {

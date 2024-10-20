@@ -100,14 +100,13 @@ import GitHub from "../assets/Github Logo.png";
     margin-bottom: 3rem;
 
     &__message {
-      text-align: center;
       font-size: 3rem;
     }
 
     &__message2-container {
       display: block;
       &__message2 {
-        text-align: center;
+        text-align: start;
         width: auto;
         font-size: 0.8rem;
         font-weight: normal;
@@ -132,7 +131,6 @@ import GitHub from "../assets/Github Logo.png";
 
   .contact-button {
     font-size: 0.8rem;
-    text-align: center;
   }
 }
 </style>

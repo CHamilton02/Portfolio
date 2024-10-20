@@ -26,7 +26,7 @@ console.log(experienceStore.experiences);
 
 <style lang="scss">
 .experience {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   margin-bottom: 10rem;
 
   &__title {
@@ -46,6 +46,7 @@ console.log(experienceStore.experiences);
 
 @media only screen and (max-width: 56.25rem) {
   .experience {
+    padding-top: 5rem;
     &__title {
       font-size: 2rem;
     }

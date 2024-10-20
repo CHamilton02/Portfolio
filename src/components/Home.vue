@@ -108,7 +108,7 @@ onMounted(() => {
   .home {
     min-height: auto;
     padding-top: 5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
 
   .home__profile-picture {
@@ -119,6 +119,17 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .home {
+    display: block;
+  }
+
+  .home__text {
+    align-items: baseline;
+    text-align: start;
   }
 }
 </style>
