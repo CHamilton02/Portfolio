@@ -1,4 +1,4 @@
-export interface ExperienceDetails {
+export interface Experience {
   date: string;
   title: string;
   organization?: string;

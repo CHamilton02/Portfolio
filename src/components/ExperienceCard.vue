@@ -2,41 +2,31 @@
   <div class="experience-card">
     <div class="experience-card__dates-and-links">
       <p class="experience-card__dates-and-links__dates">
-        {{ experience.date }}
+        {{ date }}
       </p>
       <div v-show="!mobileView" class="experience-card__dates-and-links__links">
-        <a
-          v-show="experience.website"
-          :href="experience.website"
-          target="_blank"
-          class="link-button"
-        >
+        <a v-show="website" :href="website" target="_blank" class="link-button">
           View Website
         </a>
-        <a
-          v-show="experience.code"
-          :href="experience.code"
-          target="_blank"
-          class="link-button"
-        >
+        <a v-show="code" :href="code" target="_blank" class="link-button">
           View Code
         </a>
       </div>
     </div>
     <div class="experience-card__details">
       <h2 class="experience-card__details__title">
-        {{ experience.title }},
+        {{ title }},
         <span class="experience-card__details__title__company">{{
-          experience.organization ? experience.organization : "Personal Project"
+          organization ? organization : "Personal Project"
         }}</span>
       </h2>
       <p class="experience-card__details__description">
-        {{ experience.description }}
+        {{ description }}
       </p>
       <div class="experience-card__details__skills-container">
         <button
           class="experience-card__details__skills-container__item"
-          v-for="skill in experience.skills"
+          v-for="skill in skills"
         >
           {{ skill }}
         </button>
@@ -46,20 +36,10 @@
       v-show="mobileView"
       class="experience-card__dates-and-links__links-mobile"
     >
-      <a
-        v-show="experience.website"
-        :href="experience.website"
-        target="_blank"
-        class="link-button"
-      >
+      <a v-show="website" :href="website" target="_blank" class="link-button">
         View Website
       </a>
-      <a
-        v-show="experience.code"
-        :href="experience.code"
-        target="_blank"
-        class="link-button"
-      >
+      <a v-show="code" :href="code" target="_blank" class="link-button">
         View Code
       </a>
     </div>
@@ -68,13 +48,15 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { ExperienceDetails } from "../types/experience";
 
-defineProps({
-  experience: {
-    type: Object as () => ExperienceDetails,
-    required: true,
-  },
+const props = defineProps({
+  date: String,
+  website: String,
+  code: String,
+  title: String,
+  organization: String,
+  description: String,
+  skills: Array,
 });
 
 const mobileView = ref(window.innerWidth <= 640);
