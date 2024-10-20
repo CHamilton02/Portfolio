@@ -21,7 +21,6 @@ import ExperienceCard from "./ExperienceCard.vue";
 import { useExperienceStore } from "../stores/experience";
 
 const experienceStore = useExperienceStore();
-console.log(experienceStore.experiences);
 </script>
 
 <style lang="scss">

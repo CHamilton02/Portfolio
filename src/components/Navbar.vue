@@ -13,7 +13,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const sections = ref(["Home", "About", "Experience", "Contact"]);
+const sections = ref<("Home" | "About" | "Experience" | "Contact")[]>([
+  "Home",
+  "About",
+  "Experience",
+  "Contact",
+]);
 </script>
 
 <style>

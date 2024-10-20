@@ -5,6 +5,7 @@
     "organization": "RBC",
     "description": "Contributed to the development of an internal application powered by machine learning using TypeScript, Vue.js, and Pinia. In collaboration with a cross-functional team consisting of designers, developers, and product managers, I worked on delivering eight new full features that improved user interfaces and functionality. Operating in an agile environment, we ensured the application adhered to high standards of web accessibility and quality, allowing for smooth user experiences.",
     "skills": [
+      "Axios",
       "Express.js",
       "HTML",
       "Node.js",
@@ -19,7 +20,16 @@
     "title": "Portfolio",
     "description": "Developed a personal portfolio to showcase my software development skills. The portfolio highlights interactive animations using TypeScript, Vue.js, and Vanta.js, and features advanced JavaScript animation libraries like TypeIt to create engaging user experiences. Through this project, I demonstrated my ability to build visually dynamic, responsive web applications that emphasize both technical precision and creative design.",
     "code": "https://github.com/CHamilton02/Portfolio",
-    "skills": ["HTML", "SCSS", "Typeit", "TypeScript", "Vue", "Vanta"]
+    "skills": [
+      "Axios",
+      "HTML",
+      "SCSS",
+      "Pinia",
+      "Typeit",
+      "TypeScript",
+      "Vue",
+      "Vanta"
+    ]
   },
   {
     "date": "JUL. 2024",

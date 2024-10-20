@@ -29,6 +29,7 @@ const sections = ref<("Home" | "About" | "Experience" | "Contact")[]>([
   "Experience",
   "Contact",
 ]);
+
 const emit = defineEmits([
   "toggleHome",
   "toggleAbout",
