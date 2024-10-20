@@ -1,5 +1,5 @@
-# Vue 3 + TypeScript + Vite
+# Portfolio Website
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This portfolio website is built using TypeScript, SCSS, and Vue.js, with animations powered by libraries like TypeIt and Vanta.js.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Currently, experience data is stored in a public folder and accessed via Axios and Pinia. In the future, I plan to implement a small backend to manage this data dynamically.
