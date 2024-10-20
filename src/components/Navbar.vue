@@ -4,6 +4,9 @@
       v-for="section in sections"
       class="section"
       @click="$emit(`toggle${section}`)"
+      @keydown.enter="$emit(`toggle${section}`)"
+      @keydown.space="$emit(`toggle${section}`)"
+      tabindex="0"
     >
       {{ section }}
     </h1>

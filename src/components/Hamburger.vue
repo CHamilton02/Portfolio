@@ -4,17 +4,23 @@
       class="hamburger__image"
       src="../assets/Hamburger Icon.png"
       @click="showNavbar = !showNavbar"
+      @keydown.enter="toggleHamburger"
+      @keydown.space="toggleHamburger"
+      tabindex="0"
     />
     <Transition name="slide-left-in">
-      <div class="hamburger__sections" v-show="showNavbar">
+      <nav class="hamburger__sections" v-show="showNavbar">
         <h1
           v-for="section in sections"
           class="hamburger__sections__section"
           @click="toggleSection(section)"
+          @keydown.enter="toggleSection(section)"
+          @keydown.space="toggleSection(section)"
+          tabindex="0"
         >
           {{ section }}
         </h1>
-      </div>
+      </nav>
     </Transition>
   </div>
 </template>
@@ -36,6 +42,10 @@ const emit = defineEmits([
   "toggleExperience",
   "toggleContact",
 ]);
+
+function toggleHamburger() {
+  showNavbar.value = !showNavbar.value;
+}
 
 function toggleSection(section: "Home" | "About" | "Experience" | "Contact") {
   showNavbar.value = false;

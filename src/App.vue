@@ -49,6 +49,7 @@ onMounted(() => {
 });
 
 function scrollToElement(elementId: string) {
+  (document.activeElement as HTMLElement).blur();
   document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>

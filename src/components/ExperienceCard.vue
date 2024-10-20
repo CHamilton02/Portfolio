@@ -27,6 +27,7 @@
         <button
           class="experience-card__details__skills-container__item"
           v-for="skill in skills"
+          tabindex="-1"
         >
           {{ skill }}
         </button>
