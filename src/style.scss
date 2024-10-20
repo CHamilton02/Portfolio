@@ -34,7 +34,8 @@ h2 {
   text-align: center;
 }
 
-.link-button:hover {
+.link-button:hover,
+.link-button:focus {
   background-color: #ff6f61;
   cursor: pointer;
 }

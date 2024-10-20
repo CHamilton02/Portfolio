@@ -91,7 +91,8 @@ watchEffect(() => {
       transition: color 0.25s;
     }
 
-    &__section:hover {
+    &__section:hover,
+    &__section:focus {
       color: #e2e2e2;
       cursor: pointer;
     }

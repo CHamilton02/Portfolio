@@ -41,7 +41,8 @@ nav {
   transition: color 0.25s;
 }
 
-.section:hover {
+.section:hover,
+.section:focus {
   color: #ff6f61;
   cursor: pointer;
 }
