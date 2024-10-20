@@ -1,4 +1,4 @@
-import type { Experience } from "../types/Experience";
+import type { Experience } from "../types/ExperienceTypes";
 import axios from "axios";
 
 export class ExperienceService {

@@ -1,6 +1,6 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
-import { Experience } from "../types/Experience";
+import { Experience } from "../types/ExperienceTypes";
 import ExperienceService from "../services/experience.service";
 
 export const useExperienceStore = defineStore("experience", () => {
