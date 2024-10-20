@@ -4,7 +4,7 @@
       <p class="experience-card__dates-and-links__dates">
         {{ experience.date }}
       </p>
-      <div class="experience-card__dates-and-links__links">
+      <div v-show="!mobileView" class="experience-card__dates-and-links__links">
         <a
           v-show="experience.website"
           :href="experience.website"
@@ -42,10 +42,32 @@
         </button>
       </div>
     </div>
+    <div
+      v-show="mobileView"
+      class="experience-card__dates-and-links__links-mobile"
+    >
+      <a
+        v-show="experience.website"
+        :href="experience.website"
+        target="_blank"
+        class="link-button"
+      >
+        View Website
+      </a>
+      <a
+        v-show="experience.code"
+        :href="experience.code"
+        target="_blank"
+        class="link-button"
+      >
+        View Code
+      </a>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { ExperienceDetails } from "../types/experience";
 
 defineProps({
@@ -53,6 +75,16 @@ defineProps({
     type: Object as () => ExperienceDetails,
     required: true,
   },
+});
+
+const mobileView = ref(window.innerWidth <= 640);
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 640) {
+    mobileView.value = true;
+  } else {
+    mobileView.value = false;
+  }
 });
 </script>
 
@@ -123,9 +155,11 @@ defineProps({
     align-items: end;
     margin-bottom: 0.5rem;
 
-    &__links {
+    &__links-mobile {
+      display: flex;
       flex-direction: row;
-      gap: 0.25rem;
+      gap: 1rem;
+      margin-top: 1rem;
     }
   }
 
