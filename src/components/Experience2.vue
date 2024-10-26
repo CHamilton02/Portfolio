@@ -28,15 +28,6 @@
           >
         </button>
       </div>
-
-      <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
-        <button class="glide__bullet" data-glide-dir="=0"></button>
-        <button class="glide__bullet" data-glide-dir="=1"></button>
-        <button class="glide__bullet" data-glide-dir="=2"></button>
-        <button class="glide__bullet" data-glide-dir="=3"></button>
-        <button class="glide__bullet" data-glide-dir="=4"></button>
-        <button class="glide__bullet" data-glide-dir="=5"></button>
-      </div> -->
     </div>
   </div>
 </template>
@@ -56,14 +47,16 @@ const experiences = [
     description:
       "My first co-op where I gained lots of web development experience and skills.",
     skills: [
+      "TypeScript",
+      "Vue",
+      "SCSS",
+      "FastAPI",
+      "Node.js",
       "Axios",
       "Express.js",
       "HTML",
-      "Node.js",
+
       "Pinia",
-      "SCSS",
-      "TypeScript",
-      "Vue",
     ],
     image: "RBC.jpg",
   },
@@ -71,16 +64,17 @@ const experiences = [
     date: "SEP. 2024 - OCT. 2024",
     title: "Portfolio",
     description:
-      "Developed a personal portfolio to showcase my software development skills.",
+      "A personal portfolio to showcase my software development skills.",
     code: "https://github.com/CHamilton02/Portfolio",
     skills: [
-      "Axios",
-      "HTML",
-      "SCSS",
-      "Pinia",
-      "Typeit",
       "TypeScript",
       "Vue",
+      "SCSS",
+      "Glide",
+      "Axios",
+      "HTML",
+      "Pinia",
+      "Typeit",
       "Vanta",
     ],
     image: "Portfolio.png",
@@ -88,7 +82,7 @@ const experiences = [
   {
     date: "JUL. 2024",
     title: "SportIQs",
-    description: "A Sports trivia website (made with React).",
+    description: "A Sports trivia website.",
     skills: ["CSS", "HTML", "JavaScript", "React", "Vite"],
     website: "https://chamilton02.github.io/SportIQs/",
     code: "https://github.com/CHamilton02/SportIQs",
@@ -109,14 +103,13 @@ const experiences = [
     description: "Password Manager application built in Python",
     skills: ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     code: "https://github.com/CHamilton02/Password-Manager",
-    image: "RBC.jpg",
+    image: "PasswordManager.png",
   },
   {
     date: "MAR. 2024 - MAY 2024",
     title: "Front-End Developer",
     organization: "Stone Row Farm Inc.",
-    description:
-      "Developed business web pages using HTML, CSS, Bootstrap, and JavaScript.",
+    description: "My first real-world front-end experience",
     skills: ["Bootstrap", "CSS", "HTML", "JavaScript"],
     image: "StoneRowFarm.png",
   },
@@ -149,13 +142,14 @@ onMounted(() => {
 
 <style lang="scss">
 .experience2-container {
+  margin-top: 0;
   margin-bottom: 10rem;
 }
 
 .glide__slides {
-  height: 610px;
+  height: 510px;
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 
 .glide__slide {
@@ -180,7 +174,13 @@ onMounted(() => {
 }
 
 .glide__arrow {
-  border: none;
-  background-color: #ff6f61;
+  text-align: center;
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+}
+
+.glide__arrow:hover {
+  border-color: #ff6f61;
 }
 </style>

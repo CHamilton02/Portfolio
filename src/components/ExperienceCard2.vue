@@ -1,12 +1,15 @@
 <template>
   <div class="card-container">
     <img :src="images[`../assets/experienceImages/${image}`]" class="image" />
-    <h2 class="experience-title">
-      {{ title }},
-      <span class="experience-card__details__title__company">
-        {{ organization ? organization : "Personal Project" }}</span
-      >
-    </h2>
+    <div class="experience-title-container">
+      <h2 class="experience-title">
+        {{ title }},
+        <span class="experience-card__details__title__company">
+          {{ organization ? organization : "Personal Project" }}</span
+        >
+      </h2>
+    </div>
+    <p class="experience-date">{{ date }}</p>
     <p class="experience-mini-description">
       {{ description }}
     </p>
@@ -24,14 +27,13 @@
         {{ skill }}
       </button>
     </div>
-    <div class="link-button_container">
-      <button
-        class="link-button"
-        :class="active ? '' : 'inactive'"
-        @click="toggleModal"
-      >
-        Learn More
-      </button>
+    <div class="link-container">
+      <a v-show="website" :href="website" target="_blank" class="link-button">
+        View Website
+      </a>
+      <a v-show="code" :href="code" target="_blank" class="link-button">
+        View Code
+      </a>
     </div>
   </div>
 </template>
@@ -56,6 +58,8 @@ const props = defineProps({
   active: Boolean,
 });
 
+// console.log(props.title + " " + props.date);
+
 const showModal = ref<boolean>(false);
 
 function toggleModal() {
@@ -72,17 +76,30 @@ function toggleModal() {
   height: 500px;
 }
 
-.experience-title {
-  font-size: 1.5rem;
-  margin: 0;
+.experience-title-container {
   height: 4rem;
+  display: flex;
+  align-items: center;
 }
 
+.experience-title {
+  font-size: 1.25rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.experience-date,
 .experience-mini-description {
   font-size: 1rem;
   font-weight: normal;
   height: 4rem;
   margin: 0;
+}
+
+.experience-date {
+  font-size: 0.75rem;
+  color: #ff6f61;
+  height: auto;
+  margin-bottom: 0.15rem;
 }
 
 .image {
@@ -95,7 +112,7 @@ function toggleModal() {
   display: flex;
   gap: 0.5rem;
   flex-flow: wrap;
-  height: 6rem;
+  height: 5rem;
 }
 
 .skill {
@@ -103,13 +120,14 @@ function toggleModal() {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   border: none;
   color: white;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.75rem;
   border-radius: 1rem;
   height: 2rem;
 }
 
-.link-button_container {
-  text-align: center;
+.link-container {
+  display: flex;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 

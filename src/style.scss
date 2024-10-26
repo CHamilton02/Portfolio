@@ -24,7 +24,8 @@ h2 {
   text-align: center;
 }
 
-.link-button {
+.link-button,
+.glide__arrow {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
   font-weight: bold;
@@ -41,7 +42,8 @@ h2 {
 }
 
 .link-button:hover,
-.link-button:focus {
+.link-button:focus,
+.glide__arrow:hover {
   background-color: #ff6f61;
   cursor: pointer;
 }
