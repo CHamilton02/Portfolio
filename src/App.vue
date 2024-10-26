@@ -1,13 +1,13 @@
 <template>
   <div id="background" class="background"></div>
-  <Hamburger
-    class="hamburger"
-    @toggleHome="scrollToElement('home-section')"
-    @toggleAbout="scrollToElement('about-section')"
-    @toggleExperience="scrollToElement('experience-section')"
-    @toggleContact="scrollToElement('contact-section')"
-  />
   <div class="app-container">
+    <Hamburger
+      class="hamburger"
+      @toggleHome="scrollToElement('home-section')"
+      @toggleAbout="scrollToElement('about-section')"
+      @toggleExperience="scrollToElement('experience-section')"
+      @toggleContact="scrollToElement('contact-section')"
+    />
     <Navbar
       @toggleHome="scrollToElement('home-section')"
       @toggleAbout="scrollToElement('about-section')"
@@ -20,7 +20,7 @@
       id="about-section"
       @toggleExperience="scrollToElement('experience-section')"
     />
-    <Experience id="experience-section" />
+    <Experience2 id="experience-section" />
     <Contact id="contact-section" />
   </div>
 </template>
@@ -30,6 +30,7 @@ import { onMounted } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
+import Experience2 from "./components/Experience2.vue";
 import Experience from "./components/Experience.vue";
 import Contact from "./components/Contact.vue";
 //@ts-ignore
@@ -68,9 +69,6 @@ function scrollToElement(elementId: string) {
 }
 
 .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 60rem;
 }
 @media only screen and (min-width: 56.26rem) {
