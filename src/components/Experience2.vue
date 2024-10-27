@@ -1,24 +1,26 @@
 <template>
   <div class="experience2-container">
     <h2 class="header">My Experience</h2>
-    <carousel v-bind="config">
-      <slide v-for="experience in experiences" :key="experience.title">
-        <ExperienceCard2
-          :date="experience.date"
-          :website="experience.website"
-          :code="experience.code"
-          :title="experience.title"
-          :organization="experience.organization"
-          :description="experience.description"
-          :skills="experience.skills"
-          :image="experience.image"
-        />
-      </slide>
+    <div class="carousel-wrapper">
+      <carousel v-bind="config">
+        <slide v-for="experience in experiences" :key="experience.title">
+          <ExperienceCard2
+            :date="experience.date"
+            :website="experience.website"
+            :code="experience.code"
+            :title="experience.title"
+            :organization="experience.organization"
+            :description="experience.description"
+            :skills="experience.skills"
+            :image="experience.image"
+          />
+        </slide>
 
-      <template #addons>
-        <navigation />
-      </template>
-    </carousel>
+        <template #addons>
+          <navigation />
+        </template>
+      </carousel>
+    </div>
   </div>
 </template>
 
@@ -134,12 +136,13 @@ const config = {
   margin-bottom: 10rem;
 }
 
-.carousel__slide {
-  padding: 5;
+.carousel-wrapper {
+  max-width: 100vw;
+  overflow: hidden;
 }
 
-.carousel__viewport {
-  perspective: 2000px;
+.carousel__slide {
+  padding: 5;
 }
 
 .carousel__track {
