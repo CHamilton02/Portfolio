@@ -4,7 +4,7 @@
     <div class="experience-title-container">
       <h2 class="experience-title">
         {{ title }},
-        <span class="experience-card__details__title__company">
+        <span class="company">
           {{ organization ? organization : "Personal Project" }}</span
         >
       </h2>
@@ -39,8 +39,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
   as: "url",
@@ -54,19 +52,11 @@ const props = defineProps({
   organization: String,
   description: String,
   skills: { type: Array, required: true },
-  image: String,
+  image: { type: String, required: true },
   active: Boolean,
 });
 
-// console.log(props.title + " " + props.date);
-
-const showModal = ref<boolean>(false);
-
-function toggleModal() {
-  if (props.active) {
-    showModal.value = true;
-  }
-}
+console.log(props.image);
 </script>
 
 <style lang="scss">
@@ -87,12 +77,16 @@ function toggleModal() {
   margin: 0.25rem 0 0 0;
 }
 
+.company {
+  color: #ff6f61;
+}
+
 .experience-date,
 .experience-mini-description {
   font-size: 1rem;
   font-weight: normal;
   height: 4rem;
-  margin: 0;
+  margin: 0 0 0.25rem 0;
 }
 
 .experience-date {
@@ -134,5 +128,11 @@ function toggleModal() {
 .inactive:hover {
   cursor: default;
   background-color: #23153c;
+}
+
+@media only screen and (max-width: 500px) {
+  .card-container {
+    padding: 1.5rem;
+  }
 }
 </style>

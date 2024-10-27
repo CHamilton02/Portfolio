@@ -1,49 +1,37 @@
 <template>
   <div class="experience2-container">
     <h2 class="header">My Experience</h2>
-    <div class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <li v-for="(experience, index) in experiences" class="glide__slide">
-            <ExperienceCard2
-              :date="experience.date"
-              :website="experience.website"
-              :code="experience.code"
-              :title="experience.title"
-              :organization="experience.organization"
-              :description="experience.description"
-              :skills="experience.skills"
-              :image="experience.image"
-              :active="currentActiveCard === index"
-            />
-          </li>
-        </ul>
-      </div>
+    <carousel v-bind="config">
+      <slide v-for="experience in experiences" :key="experience.title">
+        <ExperienceCard2
+          :date="experience.date"
+          :website="experience.website"
+          :code="experience.code"
+          :title="experience.title"
+          :organization="experience.organization"
+          :description="experience.description"
+          :skills="experience.skills"
+          :image="experience.image"
+        />
+      </slide>
 
-      <div class="glide__arrows" data-glide-el="controls">
-        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-          <
-        </button>
-        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-          >
-        </button>
-      </div>
-    </div>
+      <template #addons>
+        <navigation />
+      </template>
+    </carousel>
   </div>
 </template>
 
 <script setup lang="ts">
-import Glide from "@glidejs/glide";
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 import ExperienceCard2 from "./ExperienceCard2.vue";
-import { ref, onMounted } from "vue";
-
-const currentActiveCard = ref<number>(0);
 
 const experiences = [
   {
     date: "SEPT. 2024 - PRESENT",
     title: "Developer Co-Op",
-    organization: "RBC",
+    organization: "Royal Bank of Canada",
     description:
       "My first co-op where I gained lots of web development experience and skills.",
     skills: [
@@ -55,7 +43,6 @@ const experiences = [
       "Axios",
       "Express.js",
       "HTML",
-
       "Pinia",
     ],
     image: "RBC.jpg",
@@ -64,25 +51,25 @@ const experiences = [
     date: "SEP. 2024 - OCT. 2024",
     title: "Portfolio",
     description:
-      "A personal portfolio to showcase my software development skills.",
+      "A personal portfolio showcasing my software development abilities, with a focus on interactive features.",
     code: "https://github.com/CHamilton02/Portfolio",
     skills: [
       "TypeScript",
       "Vue",
       "SCSS",
-      "Glide",
+      "Vanta",
       "Axios",
       "HTML",
       "Pinia",
       "Typeit",
-      "Vanta",
     ],
     image: "Portfolio.png",
   },
   {
     date: "JUL. 2024",
     title: "SportIQs",
-    description: "A Sports trivia website.",
+    description:
+      "A dynamic sports trivia website developed to offer an engaging experience with interactive quizzes.",
     skills: ["CSS", "HTML", "JavaScript", "React", "Vite"],
     website: "https://chamilton02.github.io/SportIQs/",
     code: "https://github.com/CHamilton02/SportIQs",
@@ -91,7 +78,8 @@ const experiences = [
   {
     date: "MAY 2024 - JUN. 2024",
     title: "Djibouti",
-    description: "A country version of Wordle!",
+    description:
+      "An educational game inspired by Wordle, designed to help players learn about countries through daily puzzles.",
     skills: ["CSS", "HTML", "JavaScript", "Jasmine"],
     website: "https://chamilton02.github.io/Djibouti/",
     code: "https://github.com/CHamilton02/Djibouti",
@@ -100,7 +88,8 @@ const experiences = [
   {
     date: "MAY 2024",
     title: "Password Manager",
-    description: "Password Manager application built in Python",
+    description:
+      "A secure password manager application built in Python to store and encrypt user credentials.",
     skills: ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     code: "https://github.com/CHamilton02/Password-Manager",
     image: "PasswordManager.png",
@@ -109,78 +98,91 @@ const experiences = [
     date: "MAR. 2024 - MAY 2024",
     title: "Front-End Developer",
     organization: "Stone Row Farm Inc.",
-    description: "My first real-world front-end experience",
+    description:
+      "Worked with business stakeholders to build and maintain web pages, applying design feedback to improve usability.",
     skills: ["Bootstrap", "CSS", "HTML", "JavaScript"],
     image: "StoneRowFarm.png",
   },
 ];
 
-onMounted(() => {
-  const glide = new Glide(".glide", {
-    type: "carousel",
-    focusAt: "center",
-    perView: 3,
-  }).mount();
-
-  glide.on("run.after", (move) => {
-    if (move.direction === "<") {
-      if (currentActiveCard.value - 1 < 0) {
-        currentActiveCard.value = experiences.length - 1;
-      } else {
-        currentActiveCard.value -= 1;
-      }
-    } else {
-      if (currentActiveCard.value + 1 >= experiences.length) {
-        currentActiveCard.value = 0;
-      } else {
-        currentActiveCard.value += 1;
-      }
-    }
-  });
-});
+const config = {
+  breakpoints: {
+    0: {
+      itemsToShow: 1,
+    },
+    400: {
+      itemsToShow: 1.5,
+    },
+    600: {
+      itemsToShow: 2,
+    },
+    750: {
+      itemsToShow: 2.5,
+    },
+    850: {
+      itemsToShow: 3,
+    },
+  },
+  wrapAround: true,
+  transition: 500,
+};
 </script>
 
 <style lang="scss">
 .experience2-container {
-  margin-top: 0;
+  padding-top: 2.5rem;
   margin-bottom: 10rem;
 }
 
-.glide__slides {
-  height: 510px;
-  display: flex;
-  align-items: end;
+.carousel__slide {
+  padding: 5;
 }
 
-.glide__slide {
-  text-align: center;
-  height: 500px;
-  color: #fff;
-  background-color: #2e1a4d;
-  font-size: 1em;
-  font-weight: 900;
-  border-radius: 1rem;
-  opacity: 50%;
+.carousel__viewport {
+  perspective: 2000px;
 }
 
-.glide__slide[class*="active"] {
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
   transition: 0.5s;
-  opacity: 100%;
 }
 
-.glide__slide[class*="active"]:hover {
-  background-color: #371f5d;
-  transform: translate(0, -10px);
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
 }
 
-.glide__arrow {
-  text-align: center;
-  height: 2rem;
-  width: 2rem;
-  padding: 0;
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
 }
 
-.glide__arrow:hover {
-  border-color: #ff6f61;
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1);
+}
+
+.carousel__prev {
+  margin-left: 0;
+}
+
+.carousel__next {
+  margin-right: 0;
+}
+
+.carousel__icon {
+  fill: #ff6f61;
 }
 </style>
