@@ -1,54 +1,119 @@
 <template>
-  <div class="experience">
+  <div class="experience-container">
     <h2 class="header">My Experience</h2>
-    <div class="experience__card-container">
-      <ExperienceCard
-        v-for="experience in experienceStore.experiences"
-        :date="experience.date"
-        :website="experience.website"
-        :code="experience.code"
-        :title="experience.title"
-        :organization="experience.organization"
-        :description="experience.description"
-        :skills="experience.skills"
-      />
+    <div class="carousel-wrapper">
+      <carousel v-bind="config">
+        <slide
+          v-for="experience in experienceStore.experiences"
+          :key="experience.title"
+        >
+          <ExperienceCard
+            :date="experience.date"
+            :website="experience.website"
+            :code="experience.code"
+            :title="experience.title"
+            :organization="experience.organization"
+            :description="experience.description"
+            :skills="experience.skills"
+            :image="experience.image"
+          />
+        </slide>
+
+        <template #addons>
+          <navigation />
+        </template>
+      </carousel>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 import ExperienceCard from "./ExperienceCard.vue";
 import { useExperienceStore } from "../stores/experience";
 
 const experienceStore = useExperienceStore();
+
+const config = {
+  breakpoints: {
+    0: {
+      itemsToShow: 1,
+    },
+    500: {
+      itemsToShow: 1.5,
+    },
+    600: {
+      itemsToShow: 2,
+    },
+    750: {
+      itemsToShow: 2.5,
+    },
+    850: {
+      itemsToShow: 3,
+    },
+  },
+  wrapAround: true,
+  transition: 500,
+};
 </script>
 
 <style lang="scss">
-.experience {
+.experience-container {
   padding-top: 2.5rem;
   margin-bottom: 10rem;
-
-  &__title {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  &__card-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 4rem;
-  }
 }
 
-@media only screen and (max-width: 56.25rem) {
-  .experience {
-    padding-top: 5rem;
-    &__title {
-      font-size: 2rem;
-    }
-  }
+.carousel-wrapper {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.carousel__slide {
+  padding: 5;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
+}
+
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1);
+}
+
+.carousel__prev {
+  margin-left: 0;
+}
+
+.carousel__next {
+  margin-right: 0;
+}
+
+.carousel__icon {
+  fill: #ff6f61;
 }
 </style>

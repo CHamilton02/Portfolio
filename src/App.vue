@@ -20,7 +20,7 @@
       id="about-section"
       @toggleExperience="scrollToElement('experience-section')"
     />
-    <Experience2 id="experience-section" />
+    <Experience id="experience-section" />
     <Contact id="contact-section" />
   </div>
 </template>
@@ -30,7 +30,7 @@ import { onMounted } from "vue";
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
-import Experience2 from "./components/Experience2.vue";
+import Experience from "./components/Experience.vue";
 import Contact from "./components/Contact.vue";
 //@ts-ignore
 import NET from "vanta/dist/vanta.net.min";
