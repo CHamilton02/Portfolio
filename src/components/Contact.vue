@@ -18,7 +18,10 @@
       </div>
 
       <div class="contact-container__contact-me-container">
-        <a href="Resume.pdf" target="_blank" class="link-button contact-button"
+        <a
+          href="Camdyn Hamilton Resume.pdf"
+          target="_blank"
+          class="link-button contact-button"
           >Check Out My Resume</a
         >
         <a href="mailto:c02hamil@gmail.com" class="link-button contact-button"
