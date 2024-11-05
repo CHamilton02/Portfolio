@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <div class="card-container" :class="{ active: active }" @click="toggleModal">
     <img :src="images[`../assets/experienceImages/${image}`]" class="image" />
     <div class="experience-title-container">
       <h2 class="experience-title">
@@ -35,16 +35,23 @@
         View Code
       </a>
     </div>
+
+    <teleport to="body">
+      <ExperienceModal v-show="showModal" :title="title" />
+    </teleport>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import ExperienceModal from "./ExperienceModal.vue";
+
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
   as: "url",
 });
 
-defineProps({
+const props = defineProps({
   date: String,
   website: String,
   code: String,
@@ -55,6 +62,14 @@ defineProps({
   image: { type: String, required: true },
   active: Boolean,
 });
+
+const showModal = ref<boolean>(false);
+
+function toggleModal() {
+  if (props.active) {
+    showModal.value = !showModal.value;
+  }
+}
 </script>
 
 <style lang="scss">
@@ -62,6 +77,10 @@ defineProps({
   text-align: start;
   padding: 1rem;
   min-height: 500px;
+}
+
+.active {
+  cursor: pointer;
 }
 
 .experience-title-container {
@@ -122,11 +141,6 @@ defineProps({
   display: flex;
   gap: 0.5rem;
   margin-top: 1rem;
-}
-
-.inactive:hover {
-  cursor: default;
-  background-color: #23153c;
 }
 
 @media only screen and (max-width: 500px) {

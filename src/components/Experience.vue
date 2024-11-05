@@ -2,10 +2,10 @@
   <div class="experience-container">
     <h2 class="header">My Experience</h2>
     <div class="carousel-wrapper">
-      <carousel v-bind="config">
+      <carousel v-bind="config" @slide-end="onSlideChange">
         <slide
-          v-for="experience in experienceStore.experiences"
-          :key="experience.title"
+          v-for="(experience, index) in experienceStore.experiences"
+          :key="index"
         >
           <ExperienceCard
             :date="experience.date"
@@ -16,6 +16,7 @@
             :description="experience.description"
             :skills="experience.skills"
             :image="experience.image"
+            :active="index === currentSlide"
           />
         </slide>
 
@@ -32,6 +33,10 @@ import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Navigation } from "vue3-carousel";
 import ExperienceCard from "./ExperienceCard.vue";
 import { useExperienceStore } from "../stores/experience";
+import SlideEndEvent from "../types/Carousel";
+import { ref } from "vue";
+
+const currentSlide = ref<Number>(0);
 
 const experienceStore = useExperienceStore();
 
@@ -55,6 +60,10 @@ const config = {
   },
   wrapAround: true,
   transition: 500,
+};
+
+const onSlideChange = (index: unknown) => {
+  currentSlide.value = (index as SlideEndEvent).currentSlideIndex;
 };
 </script>
 
