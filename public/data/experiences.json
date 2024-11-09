@@ -3,7 +3,7 @@
     "date": "SEP. 2024 - PRESENT",
     "title": "Developer Co-Op",
     "organization": "Royal Bank of Canada",
-    "description": "My first co-op, where I developed as a full-stack developer, gaining practical skills and valuable experience.",
+    "miniDescription": "My first co-op, where I developed as a full-stack developer, gaining practical skills and valuable experience.",
     "skills": [
       "TypeScript",
       "Vue",
@@ -15,12 +15,17 @@
       "HTML",
       "Pinia"
     ],
-    "image": "RBC.jpg"
+    "image": "RBC.jpg",
+    "description": [
+      "Contributed to the development of a <strong>machine-learning-powered advisor insights web application</strong>, using TypeScript, Vue.js, SCSS, and FastAPI to enhance functionality and user experience.",
+      "Developed <strong>8 new full features</strong>, including a <strong>global search function</strong> and <strong>back-end functionality for favouriting advisor opportunities</strong>, directly supporting business intelligence and decision-making for advisors.",
+      "Worked in an <strong>agile environment</strong> with a <strong>cross-functional team</strong> of designers, developers, and product managers to ensure <strong>high-quality and accessible web applications</strong>."
+    ]
   },
   {
     "date": "SEP. 2024 - OCT. 2024",
     "title": "Portfolio",
-    "description": "A personal portfolio showcasing my software development abilities, with a focus on interactive features.",
+    "miniDescription": "A personal portfolio showcasing my software development abilities, with a focus on interactive features.",
     "code": "https://github.com/CHamilton02/Portfolio",
     "skills": [
       "TypeScript",
@@ -32,40 +37,66 @@
       "Pinia",
       "Typeit"
     ],
-    "image": "Portfolio.png"
+    "image": "Portfolio.png",
+    "description": [
+      "Designed and developed a personal portfolio website using <strong>Vue.js</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong> to showcase projects and technical skills.",
+      "Enhanced user engagement with <strong>dynamic background animations</strong> using Vanta.js.",
+      "Implemented <strong>responsive design</strong> for optimal performance across devices, including mobile.",
+      "Added <strong>accessibility features</strong> and used <strong>Axios</strong> and <strong>Pinia</strong> for efficient data management."
+    ]
   },
   {
     "date": "JUL. 2024",
     "title": "SportIQs",
-    "description": "A dynamic sports trivia website developed to offer an engaging experience with interactive quizzes.",
+    "miniDescription": "A dynamic sports trivia website developed to offer an engaging experience with interactive quizzes.",
     "skills": ["CSS", "HTML", "JavaScript", "React", "Vite"],
     "website": "https://chamilton02.github.io/SportIQs/",
     "code": "https://github.com/CHamilton02/SportIQs",
-    "image": "SportIQs.png"
+    "image": "SportIQs.png",
+    "description": [
+      "Engineered a <strong>sports trivia game</strong> using <strong>React</strong>, providing interactive quizzes and dynamic updates.",
+      "Utilized <strong>Vite</strong> for efficient building and fast development cycles.",
+      "Implemented <strong>state management</strong> to handle user interactions and quiz progress seamlessly."
+    ]
   },
   {
     "date": "MAY 2024 - JUN. 2024",
     "title": "Djibouti",
-    "description": "An educational game inspired by Wordle, designed to help players learn about countries through daily puzzles.",
+    "miniDescription": "An educational game inspired by Wordle, designed to help players learn about countries through daily puzzles.",
     "skills": ["CSS", "HTML", "JavaScript", "Jasmine"],
     "website": "https://chamilton02.github.io/Djibouti/",
     "code": "https://github.com/CHamilton02/Djibouti",
-    "image": "Djibouti.png"
+    "image": "Djibouti.png",
+    "description": [
+      "Developed <strong>Djibouti</strong>, an educational game inspired by Wordle to teach players about countries.",
+      "Created <strong>daily puzzles</strong> that encourage learning about geography in an interactive format.",
+      "Used <strong>Jasmine</strong> for testing to ensure a reliable user experience."
+    ]
   },
   {
     "date": "MAY 2024",
     "title": "Password Manager",
-    "description": "A secure password manager application built in Python to store and encrypt user credentials.",
+    "miniDescription": "A secure password manager application built in Python to store and encrypt user credentials.",
     "skills": ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     "code": "https://github.com/CHamilton02/Password-Manager",
-    "image": "PasswordManager.png"
+    "image": "PasswordManager.png",
+    "description": [
+      "Built a <strong>Password Manager</strong> application in Python to securely store user credentials.",
+      "Utilized <strong>cryptographic techniques</strong> such as password-based key derivation and Fernet encryption for enhanced security.",
+      "Implemented functionalities for <strong>viewing, adding, and generating passwords</strong> securely with a user-friendly interface."
+    ]
   },
   {
     "date": "MAR. 2024 - MAY 2024",
     "title": "Front-End Developer",
     "organization": "Stone Row Farm Inc.",
-    "description": "Worked with business stakeholders to build and maintain web pages, applying design feedback to improve usability.",
+    "miniDescription": "Worked with business stakeholders to build and maintain web pages, applying design feedback to improve usability.",
     "skills": ["Bootstrap", "CSS", "HTML", "JavaScript"],
-    "image": "StoneRowFarm.png"
+    "image": "StoneRowFarm.png",
+    "description": [
+      "Assisted in building and maintaining business web pages for a local small business using <strong>HTML, CSS, Bootstrap</strong>, and <strong>JavaScript</strong>.",
+      "Communicated with company owners to gather feedback and adjust interface designs, improving usability and online presence.",
+      "Proposed design solutions to align with evolving business needs, contributing to the website strategy during its initial stages."
+    ]
   }
 ]
