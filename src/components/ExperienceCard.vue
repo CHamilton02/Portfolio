@@ -11,7 +11,7 @@
     </div>
     <p class="experience-date">{{ date }}</p>
     <p class="experience-mini-description">
-      {{ description }}
+      {{ miniDescription }}
     </p>
     <div class="skills-container">
       <button
@@ -28,10 +28,22 @@
       </button>
     </div>
     <div class="link-container">
-      <a v-show="website" :href="website" target="_blank" class="link-button">
+      <a
+        v-show="website"
+        :href="website"
+        target="_blank"
+        class="link-button"
+        @click.stop
+      >
         View Website
       </a>
-      <a v-show="code" :href="code" target="_blank" class="link-button">
+      <a
+        v-show="code"
+        :href="code"
+        target="_blank"
+        class="link-button"
+        @click.stop
+      >
         View Code
       </a>
     </div>
@@ -44,7 +56,10 @@
         :organization="organization"
         :date="date"
         :skills="skills"
-        @close="showModal = false"
+        :description="description"
+        :website="website"
+        :code="code"
+        @close="toggleModal"
       />
     </teleport>
   </div>
@@ -59,13 +74,14 @@ const images = import.meta.glob("../assets/experienceImages/*", {
   as: "url",
 });
 
-const props = defineProps({
+defineProps({
   date: String,
   website: String,
   code: String,
   title: String,
   organization: String,
-  description: String,
+  miniDescription: String,
+  description: Array,
   skills: { type: Array, required: true },
   image: { type: String, required: true },
   active: Boolean,
@@ -74,9 +90,13 @@ const props = defineProps({
 const showModal = ref<boolean>(false);
 
 function toggleModal() {
-  if (props.active) {
-    showModal.value = !showModal.value;
+  if (showModal.value) {
+    document.body.style.overflow = "auto";
+  } else {
+    document.body.style.overflow = "hidden";
   }
+
+  showModal.value = !showModal.value;
 }
 </script>
 

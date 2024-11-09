@@ -13,6 +13,7 @@
             :code="experience.code"
             :title="experience.title"
             :organization="experience.organization"
+            :miniDescription="experience.miniDescription"
             :description="experience.description"
             :skills="experience.skills"
             :image="experience.image"

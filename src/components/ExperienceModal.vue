@@ -1,5 +1,6 @@
 <template>
   <div class="experience-modal-container">
+    <div class="experience-modal__background" @click="emit('close')"></div>
     <div class="experience-modal">
       <button class="close-button" @click="emit('close')">
         <img :src="CloseIcon" />
@@ -17,30 +18,24 @@
         </h2>
       </div>
       <p class="experience-date">{{ date }}</p>
-      <h3>Skills</h3>
-      <div class="skills-container">
+      <h3 class="section-title">Skills</h3>
+      <div class="experience-modal__skills-container">
         <button class="skill" v-for="skill in skills" tabindex="-1">
           {{ skill }}
         </button>
       </div>
-      <h3>Responsibilities</h3>
-      <ul>
-        <li>
-          Contributed to the development of a machine-learning-powered advisor
-          insights web application, using TypeScript, Vue.js, SCSS, and FastAPI
-          to enhance functionality and user experience
-        </li>
-        <li>
-          Developed 8 new full features, including a global search function and
-          back-end functionality for favouriting advisor opportunities, directly
-          supporting business intelligence and decision-making for advisors.
-        </li>
-        <li>
-          Worked in an agile environment with a cross-functional team of
-          designers, developers, and product managers to ensure high-quality and
-          accessible web applications
-        </li>
+      <h3 class="section-title">Responsibilities</h3>
+      <ul class="description-list" v-for="desc in description">
+        <li v-html="desc"></li>
       </ul>
+      <div class="experience-modal__link-container">
+        <a v-show="website" :href="website" target="_blank" class="link-button">
+          View Website
+        </a>
+        <a v-show="code" :href="code" target="_blank" class="link-button">
+          View Code
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -58,7 +53,10 @@ defineProps({
   image: String,
   organization: String,
   date: String,
+  description: Array,
   skills: { type: Array, required: true },
+  website: String,
+  code: String,
 });
 
 const emit = defineEmits(["close"]);
@@ -71,7 +69,6 @@ const emit = defineEmits(["close"]);
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +86,16 @@ const emit = defineEmits(["close"]);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  z-index: 10;
+
+  &__background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   &__image {
     height: 60%;
@@ -100,22 +107,28 @@ const emit = defineEmits(["close"]);
     margin-bottom: 0.25rem;
   }
 
-  &__title,
-  &__company {
+  &__title {
     font-size: 1.5rem;
+    margin-bottom: 0.15rem;
   }
 
   &__company {
     color: #ff6f61;
     font-weight: bold;
   }
-}
 
-.skills-container {
-  display: flex;
-  gap: 0.5rem;
-  flex-flow: wrap;
-  min-height: 5rem;
+  &__skills-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-flow: wrap;
+  }
+
+  &__link-container {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    justify-content: center;
+  }
 }
 
 .skill {
@@ -127,6 +140,15 @@ const emit = defineEmits(["close"]);
   border-radius: 1rem;
   height: 2rem;
 }
+
+.section-title {
+  margin-bottom: 0.5rem;
+}
+
+.description-list {
+  margin: 0;
+}
+
 .close-button {
   position: fixed;
   right: 1rem;
@@ -135,5 +157,9 @@ const emit = defineEmits(["close"]);
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+strong {
+  color: #ff6f61;
 }
 </style>
