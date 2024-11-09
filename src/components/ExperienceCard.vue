@@ -40,6 +40,10 @@
       <ExperienceModal
         v-show="showModal"
         :title="title"
+        :image="image"
+        :organization="organization"
+        :date="date"
+        :skills="skills"
         @close="showModal = false"
       />
     </teleport>
