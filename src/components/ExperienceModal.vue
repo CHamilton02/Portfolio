@@ -1,13 +1,21 @@
 <template>
   <div class="experience-modal-container">
-    <div class="experience-modal">{{ title }}</div>
+    <div class="experience-modal">
+      <button class="close-button" @click="emit('close')">
+        <img :src="CloseIcon" />
+      </button>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import CloseIcon from "../assets/Close Icon.svg";
+
 defineProps({
   title: String,
 });
+
+const emit = defineEmits(["close"]);
 </script>
 
 <style lang="scss">
@@ -27,5 +35,16 @@ defineProps({
   width: 60rem;
   height: 40rem;
   background-color: purple;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
 }
 </style>

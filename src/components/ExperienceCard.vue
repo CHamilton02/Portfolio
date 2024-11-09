@@ -37,7 +37,11 @@
     </div>
 
     <teleport to="body">
-      <ExperienceModal v-show="showModal" :title="title" />
+      <ExperienceModal
+        v-show="showModal"
+        :title="title"
+        @close="showModal = false"
+      />
     </teleport>
   </div>
 </template>
