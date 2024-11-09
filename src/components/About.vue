@@ -54,11 +54,9 @@
 
 <style lang="scss" scoped>
 .about {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-top: 5rem;
+  margin-bottom: 20rem;
+
   &__body {
     display: flex;
     gap: 2rem;
@@ -90,9 +88,6 @@
 
 @media only screen and (max-width: 56.25rem) {
   .about {
-    height: auto;
-    display: block;
-    padding-top: 5rem;
     margin-bottom: 10rem;
   }
 }

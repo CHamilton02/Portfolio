@@ -2,9 +2,11 @@
   <div class="experience-modal-container">
     <div class="experience-modal__background" @click="emit('close')"></div>
     <div class="experience-modal">
-      <button class="close-button" @click="emit('close')">
-        <img :src="CloseIcon" />
-      </button>
+      <div class="close-button-container">
+        <button class="close-button" @click="emit('close')">
+          <img :src="CloseIcon" />
+        </button>
+      </div>
       <img
         :src="images[`../assets/experienceImages/${image}`]"
         class="experience-modal__image"
@@ -79,6 +81,7 @@ const emit = defineEmits(["close"]);
   width: 75%;
   max-width: 40rem;
   height: 75%;
+  max-height: 35rem;
   border-radius: 1rem;
   padding: 3rem;
   background-color: #23153c;
@@ -149,10 +152,17 @@ const emit = defineEmits(["close"]);
   margin: 0;
 }
 
+.close-button-container {
+  position: sticky;
+  top: 0rem;
+  right: 0rem;
+  z-index: 20;
+}
+
 .close-button {
-  position: fixed;
-  right: 1rem;
-  top: 1rem;
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
   background: none;
   border: none;
   padding: 0;

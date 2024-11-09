@@ -8,4 +8,5 @@ export interface Experience {
   website?: string;
   code?: string;
   image: string;
+  modalImage: string;
 }

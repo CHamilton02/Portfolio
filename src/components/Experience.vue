@@ -17,6 +17,7 @@
             :description="experience.description"
             :skills="experience.skills"
             :image="experience.image"
+            :modalImage="experience.modalImage"
             :active="index === currentSlide"
           />
         </slide>
@@ -71,7 +72,7 @@ const onSlideChange = (index: unknown) => {
 <style lang="scss">
 .experience-container {
   padding-top: 2.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
 }
 
 .carousel-wrapper {
@@ -125,5 +126,11 @@ const onSlideChange = (index: unknown) => {
 
 .carousel__icon {
   fill: #ff6f61;
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .experience-container {
+    margin-bottom: 10rem;
+  }
 }
 </style>

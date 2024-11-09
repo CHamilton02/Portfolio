@@ -16,6 +16,7 @@
       "Pinia"
     ],
     "image": "RBC.jpg",
+    "modalImage": "RBC Modal Image.png",
     "description": [
       "Contributed to the development of a <strong>machine-learning-powered advisor insights web application</strong>, using TypeScript, Vue.js, SCSS, and FastAPI to enhance functionality and user experience.",
       "Developed <strong>8 new full features</strong>, including a <strong>global search function</strong> and <strong>back-end functionality for favouriting advisor opportunities</strong>, directly supporting business intelligence and decision-making for advisors.",
@@ -38,6 +39,7 @@
       "Typeit"
     ],
     "image": "Portfolio.png",
+    "modalImage": "Portfolio Modal Image.png",
     "description": [
       "Designed and developed a personal portfolio website using <strong>Vue.js</strong>, <strong>TypeScript</strong>, and <strong>SCSS</strong> to showcase projects and technical skills.",
       "Enhanced user engagement with <strong>dynamic background animations</strong> using Vanta.js.",
@@ -53,6 +55,7 @@
     "website": "https://chamilton02.github.io/SportIQs/",
     "code": "https://github.com/CHamilton02/SportIQs",
     "image": "SportIQs.png",
+    "modalImage": "SportIQs Modal Image.png",
     "description": [
       "Engineered a <strong>sports trivia game</strong> using <strong>React</strong>, providing interactive quizzes and dynamic updates.",
       "Utilized <strong>Vite</strong> for efficient building and fast development cycles.",
@@ -67,6 +70,7 @@
     "website": "https://chamilton02.github.io/Djibouti/",
     "code": "https://github.com/CHamilton02/Djibouti",
     "image": "Djibouti.png",
+    "modalImage": "Djibouti Modal Image.png",
     "description": [
       "Developed <strong>Djibouti</strong>, an educational game inspired by Wordle to teach players about countries.",
       "Created <strong>daily puzzles</strong> that encourage learning about geography in an interactive format.",
@@ -80,6 +84,7 @@
     "skills": ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     "code": "https://github.com/CHamilton02/Password-Manager",
     "image": "PasswordManager.png",
+    "modalImage": "PasswordManager Modal Image.png",
     "description": [
       "Built a <strong>Password Manager</strong> application in Python to securely store user credentials.",
       "Utilized <strong>cryptographic techniques</strong> such as password-based key derivation and Fernet encryption for enhanced security.",
@@ -93,6 +98,7 @@
     "miniDescription": "Worked with business stakeholders to build and maintain web pages, applying design feedback to improve usability.",
     "skills": ["Bootstrap", "CSS", "HTML", "JavaScript"],
     "image": "StoneRowFarm.png",
+    "modalImage": "StoneRowFarm Modal Image.png",
     "description": [
       "Assisted in building and maintaining business web pages for a local small business using <strong>HTML, CSS, Bootstrap</strong>, and <strong>JavaScript</strong>.",
       "Communicated with company owners to gather feedback and adjust interface designs, improving usability and online presence.",

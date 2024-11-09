@@ -52,7 +52,7 @@
       <ExperienceModal
         v-show="showModal"
         :title="title"
-        :image="image"
+        :image="modalImage"
         :organization="organization"
         :date="date"
         :skills="skills"
@@ -74,7 +74,7 @@ const images = import.meta.glob("../assets/experienceImages/*", {
   as: "url",
 });
 
-defineProps({
+const props = defineProps({
   date: String,
   website: String,
   code: String,
@@ -84,12 +84,16 @@ defineProps({
   description: Array,
   skills: { type: Array, required: true },
   image: { type: String, required: true },
+  modalImage: { type: String, required: true },
   active: Boolean,
 });
 
 const showModal = ref<boolean>(false);
 
 function toggleModal() {
+  if (!props.active) {
+    return;
+  }
   if (showModal.value) {
     document.body.style.overflow = "auto";
   } else {
