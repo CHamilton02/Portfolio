@@ -8,7 +8,14 @@
         </button>
       </div>
       <img
-        :src="images[`../assets/experienceImages/${image}`]"
+        :src="
+          images[
+            `../assets/experienceImages/${(organization
+              ? organization
+              : title
+            )?.replace('.', '')} Modal Image.png`
+          ]
+        "
         class="experience-modal__image"
       />
       <div class="experience-modal__title-container">
@@ -52,7 +59,6 @@ const images = import.meta.glob("../assets/experienceImages/*", {
 
 defineProps({
   title: String,
-  image: String,
   organization: String,
   date: String,
   description: Array,
@@ -171,5 +177,15 @@ const emit = defineEmits(["close"]);
 
 strong {
   color: #ff6f61;
+}
+
+@media only screen and (max-width: 56.25rem) {
+  .experience-modal {
+    padding: 2rem;
+  }
+  .close-button {
+    top: -1.25rem;
+    right: -1.25rem;
+  }
 }
 </style>

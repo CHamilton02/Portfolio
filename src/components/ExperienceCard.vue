@@ -1,6 +1,16 @@
 <template>
   <div class="card-container" :class="{ active: active }" @click="toggleModal">
-    <img :src="images[`../assets/experienceImages/${image}`]" class="image" />
+    <img
+      :src="
+        images[
+          `../assets/experienceImages/${(organization
+            ? organization
+            : title
+          )?.replace('.', '')}.png`
+        ]
+      "
+      class="image"
+    />
     <div class="experience-title-container">
       <h2 class="experience-title">
         {{ title }}
@@ -52,7 +62,6 @@
       <ExperienceModal
         v-show="showModal"
         :title="title"
-        :image="modalImage"
         :organization="organization"
         :date="date"
         :skills="skills"
@@ -83,8 +92,6 @@ const props = defineProps({
   miniDescription: String,
   description: Array,
   skills: { type: Array, required: true },
-  image: { type: String, required: true },
-  modalImage: { type: String, required: true },
   active: Boolean,
 });
 

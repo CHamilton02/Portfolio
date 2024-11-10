@@ -16,8 +16,6 @@
             :miniDescription="experience.miniDescription"
             :description="experience.description"
             :skills="experience.skills"
-            :image="experience.image"
-            :modalImage="experience.modalImage"
             :active="index === currentSlide"
           />
         </slide>
