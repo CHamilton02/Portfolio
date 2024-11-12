@@ -1,20 +1,34 @@
 <template>
-  <div class="card-container" :class="{ active: active }" @click="toggleModal">
-    <img
-      :src="
-        images[
-          `../assets/experienceImages/${(organization
-            ? organization
-            : title
-          )?.replace('.', '')}.png`
-        ]
-      "
-      class="image"
-    />
+  <div class="card-container" @click="toggleModal">
+    <div class="image-container">
+      <img
+        :src="
+          images[
+            `../assets/experienceImages/${(organization
+              ? organization
+              : title
+            )?.replace('.', '')}.png`
+          ]
+        "
+        class="image"
+      />
+    </div>
+
     <div class="experience-title-container">
-      <h2 class="experience-title">
-        {{ title }}
-      </h2>
+      <div class="experience-header">
+        <h2 class="experience-title">
+          {{ title }}
+        </h2>
+        <div class="link-container">
+          <a v-show="website" :href="website" target="_blank" @click.stop
+            ><img class="icon" src="../assets/Link Icon.png"
+          /></a>
+          <a v-show="code" :href="code" target="_blank" @click.stop>
+            <img class="icon" src="../assets/Github Logo.png" />
+          </a>
+        </div>
+      </div>
+
       <h2 class="company">
         {{ organization ? organization : "Personal Project" }}
       </h2>
@@ -36,26 +50,6 @@
       <button v-else class="skill" v-for="skill in skills" tabindex="-1">
         {{ skill }}
       </button>
-    </div>
-    <div class="link-container">
-      <a
-        v-show="website"
-        :href="website"
-        target="_blank"
-        class="link-button"
-        @click.stop
-      >
-        View Website
-      </a>
-      <a
-        v-show="code"
-        :href="code"
-        target="_blank"
-        class="link-button"
-        @click.stop
-      >
-        View Code
-      </a>
     </div>
 
     <teleport to="body">
@@ -83,7 +77,7 @@ const images = import.meta.glob("../assets/experienceImages/*", {
   as: "url",
 });
 
-const props = defineProps({
+defineProps({
   date: String,
   website: String,
   code: String,
@@ -92,15 +86,11 @@ const props = defineProps({
   miniDescription: String,
   description: Array,
   skills: { type: Array, required: true },
-  active: Boolean,
 });
 
 const showModal = ref<boolean>(false);
 
 function toggleModal() {
-  if (!props.active) {
-    return;
-  }
   if (showModal.value) {
     document.body.style.overflow = "auto";
   } else {
@@ -115,10 +105,6 @@ function toggleModal() {
 .card-container {
   text-align: start;
   padding: 1rem;
-  min-height: 500px;
-}
-
-.active {
   cursor: pointer;
 }
 
@@ -127,6 +113,13 @@ function toggleModal() {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0.25rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
 }
 
 .experience-title,
@@ -143,27 +136,42 @@ function toggleModal() {
 .experience-mini-description {
   font-size: 1rem;
   font-weight: normal;
-  min-height: 4rem;
-  margin: 0 0 0.25rem 0;
+}
+
+.experience-mini-description {
+  margin: 0 0 1rem 0;
 }
 
 .experience-date {
   font-size: 0.75rem;
   color: #ff6f61;
-  min-height: auto;
+  margin: 0 0 0.25rem 0;
+}
+
+.image-container {
+  width: 100%;
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-  height: 10rem;
-  width: 100%;
+  width: 125%;
+  aspect-ratio: 2/1;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image:hover {
+  transform: scale(0.85);
 }
 
 .skills-container {
   display: flex;
   gap: 0.5rem;
   flex-flow: wrap;
-  min-height: 5rem;
 }
 
 .skill {
@@ -179,7 +187,6 @@ function toggleModal() {
 .link-container {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 500px) {
