@@ -5,6 +5,7 @@
       <ExperienceCard
         v-if="experiencesLength <= 4"
         v-for="experience in experienceStore.experiences"
+        :key="`${experience.title}-${experience.organization}`"
         :date="experience.date"
         :website="experience.website"
         :code="experience.code"
@@ -18,6 +19,9 @@
         v-else
         v-if="experienceStore.experiences"
         v-for="i in numberOfViewableExperiences"
+        :key="`${experienceStore.experiences[i - 1].title}-${
+          experienceStore.experiences[i - 1].organization
+        }`"
         :date="experienceStore.experiences[i - 1].date"
         :website="experienceStore.experiences[i - 1].website"
         :code="experienceStore.experiences[i - 1].code"
@@ -33,6 +37,7 @@
       class="toggle-experiences"
     >
       <button
+        id="view-more-button"
         class="toggle-experiences__button"
         @click="toggleNumberOfViewableExperiences"
       >
@@ -42,6 +47,7 @@
     </div>
     <div v-else class="toggle-experiences">
       <button
+        id="view-less-button"
         class="toggle-experiences__button"
         @click="toggleNumberOfViewableExperiences"
       >

@@ -1,5 +1,10 @@
 <template>
-  <div class="card-container" @click="toggleModal">
+  <div
+    class="card-container"
+    @click="toggleModal"
+    tabindex="0"
+    @keydown.enter="toggleModal"
+  >
     <div class="image-container">
       <img
         :src="
@@ -46,7 +51,9 @@
       >
         {{ skill }}
       </button>
-      <button v-if="skills.length > 5" class="skill">And More!</button>
+      <button v-if="skills.length > 5" class="skill" tabindex="-1">
+        And More!
+      </button>
       <button v-else class="skill" v-for="skill in skills" tabindex="-1">
         {{ skill }}
       </button>
@@ -96,6 +103,8 @@ function toggleModal() {
   } else {
     document.body.style.overflow = "hidden";
   }
+
+  console.log(document.body);
 
   showModal.value = !showModal.value;
 }
