@@ -69,12 +69,6 @@ defineProps({
 });
 
 const emit = defineEmits(["close"]);
-
-onMounted(() => {
-  const modal = document.querySelector("div");
-  modal?.focus();
-  console.log(document.activeElement);
-});
 </script>
 
 <style lang="scss">

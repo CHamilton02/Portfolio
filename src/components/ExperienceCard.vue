@@ -195,6 +195,7 @@ function toggleModal() {
   padding: 0.3rem 0.75rem 0.3rem 0.75rem;
   border-radius: 1rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 .link-container {
