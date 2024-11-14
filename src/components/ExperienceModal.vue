@@ -50,7 +50,6 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
 import CloseIcon from "../assets/Close Icon.svg";
 
 const images = import.meta.glob("../assets/experienceImages/*", {
