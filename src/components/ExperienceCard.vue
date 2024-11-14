@@ -104,8 +104,6 @@ function toggleModal() {
     document.body.style.overflow = "hidden";
   }
 
-  console.log(document.body);
-
   showModal.value = !showModal.value;
 }
 </script>
@@ -115,6 +113,11 @@ function toggleModal() {
   text-align: start;
   padding: 1rem;
   cursor: pointer;
+}
+
+.card-container:hover .image,
+.card-container:focus .image {
+  transform: scale(0.85);
 }
 
 .experience-title-container {
@@ -171,10 +174,6 @@ function toggleModal() {
   aspect-ratio: 2/1;
   object-fit: cover;
   transition: transform 0.5s ease;
-}
-
-.image:hover {
-  transform: scale(0.85);
 }
 
 .skills-container {
