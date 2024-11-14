@@ -1,7 +1,7 @@
 <template>
   <div class="experience-modal-container">
     <div class="experience-modal__background" @click="emit('close')"></div>
-    <div class="experience-modal">
+    <div id="experience-modal" class="experience-modal" tabindex="0">
       <div class="close-button-container">
         <button class="close-button" @click="emit('close')">
           <img :src="CloseIcon" />
@@ -50,6 +50,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
 import CloseIcon from "../assets/Close Icon.svg";
 
 const images = import.meta.glob("../assets/experienceImages/*", {
@@ -68,6 +69,12 @@ defineProps({
 });
 
 const emit = defineEmits(["close"]);
+
+onMounted(() => {
+  const modal = document.querySelector("div");
+  modal?.focus();
+  console.log(document.activeElement);
+});
 </script>
 
 <style lang="scss">

@@ -61,7 +61,7 @@
 
     <teleport to="body">
       <ExperienceModal
-        v-show="showModal"
+        v-if="showModal"
         :title="title"
         :organization="organization"
         :date="date"
@@ -98,10 +98,15 @@ defineProps({
 const showModal = ref<boolean>(false);
 
 function toggleModal() {
-  if (showModal.value) {
-    document.body.style.overflow = "auto";
-  } else {
-    document.body.style.overflow = "hidden";
+  const appContainer = document.getElementById("app-container");
+  if (appContainer) {
+    if (showModal.value) {
+      document.body.style.overflow = "auto";
+      appContainer.inert = false;
+    } else {
+      document.body.style.overflow = "hidden";
+      appContainer.inert = true;
+    }
   }
 
   showModal.value = !showModal.value;

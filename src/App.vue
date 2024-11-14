@@ -1,6 +1,6 @@
 <template>
   <div id="background" class="background"></div>
-  <div class="app-container">
+  <div id="app-container" class="app-container">
     <Hamburger
       class="hamburger"
       @toggleHome="scrollToElement('home-section')"
