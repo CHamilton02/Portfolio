@@ -61,7 +61,7 @@
 
     <teleport to="body">
       <ExperienceModal
-        v-if="showModal"
+        v-show="showModal"
         :title="title"
         :organization="organization"
         :date="date"

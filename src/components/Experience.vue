@@ -3,22 +3,9 @@
     <h2 class="header">My Experience</h2>
     <div class="experience-card-container">
       <ExperienceCard
-        v-if="experiencesLength <= 4"
-        v-for="experience in experienceStore.experiences"
-        :key="`${experience.title}-${experience.organization}`"
-        :date="experience.date"
-        :website="experience.website"
-        :code="experience.code"
-        :title="experience.title"
-        :organization="experience.organization"
-        :miniDescription="experience.miniDescription"
-        :description="experience.description"
-        :skills="experience.skills"
-      />
-      <ExperienceCard
-        v-else
         v-if="experienceStore.experiences"
-        v-for="i in numberOfViewableExperiences"
+        v-for="i in experienceStore.experiences.length"
+        v-show="i - 1 < numberOfViewableExperiences"
         :key="`${experienceStore.experiences[i - 1].title}-${
           experienceStore.experiences[i - 1].organization
         }`"
