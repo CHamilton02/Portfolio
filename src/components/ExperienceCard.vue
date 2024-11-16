@@ -179,6 +179,7 @@ function toggleModal() {
   aspect-ratio: 2/1;
   object-fit: cover;
   transition: transform 0.5s ease;
+  z-index: -1;
 }
 
 .skills-container {
