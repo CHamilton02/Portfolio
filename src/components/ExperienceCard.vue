@@ -60,17 +60,19 @@
     </div>
 
     <teleport to="body">
-      <ExperienceModal
-        v-show="showModal"
-        :title="title"
-        :organization="organization"
-        :date="date"
-        :skills="skills"
-        :description="description"
-        :website="website"
-        :code="code"
-        @close="toggleModal"
-      />
+      <Transition>
+        <ExperienceModal
+          v-show="showModal"
+          :title="title"
+          :organization="organization"
+          :date="date"
+          :skills="skills"
+          :description="description"
+          :website="website"
+          :code="code"
+          @close="toggleModal"
+        />
+      </Transition>
     </teleport>
   </div>
 </template>
@@ -203,6 +205,16 @@ function toggleModal() {
 .link-container {
   display: flex;
   gap: 0.5rem;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.35s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 
 @media only screen and (max-width: 500px) {

@@ -108,22 +108,4 @@ watchEffect(() => {
 .slide-left-in-leave-to {
   transform: translateX(-50rem);
 }
-
-@keyframes left-slide {
-  0% {
-    left: -5rem;
-  }
-  100% {
-    left: 0;
-  }
-}
-
-@keyframes right-slide {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -5rem;
-  }
-}
 </style>
