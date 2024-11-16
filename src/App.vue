@@ -27,6 +27,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
+import Hamburger from "./components/Hamburger.vue";
 import Navbar from "./components/Navbar.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
@@ -34,7 +35,6 @@ import Experience from "./components/Experience.vue";
 import Contact from "./components/Contact.vue";
 //@ts-ignore
 import NET from "vanta/dist/vanta.net.min";
-import Hamburger from "./components/Hamburger.vue";
 
 onMounted(() => {
   NET({
@@ -56,7 +56,7 @@ function scrollToElement(elementId: string) {
 
 <style scoped>
 .background {
-  z-index: -1;
+  z-index: -10;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,16 +67,19 @@ function scrollToElement(elementId: string) {
   overflow: hidden;
 }
 
+.hamburger {
+  display: none;
+}
+
 .app-container {
   max-width: 60rem;
 }
-@media only screen and (min-width: 56.26rem) {
-  .hamburger {
-    display: none;
-  }
-}
 
 @media only screen and (max-width: 56.25rem) {
+  .hamburger {
+    display: initial;
+  }
+
   .navbar {
     display: none;
   }

@@ -16,9 +16,9 @@
       "Jira"
     ],
     "description": [
-      "Contributed to the development of a <strong>machine-learning-powered advisor insights web application</strong>, using TypeScript, Vue.js, SCSS, and FastAPI to enhance functionality and user experience.",
-      "Developed <strong>8 new full features</strong>, including a <strong>global search function</strong> and <strong>back-end functionality for favouriting advisor opportunities</strong>, directly supporting business intelligence and decision-making for advisors.",
-      "Worked in an <strong>agile environment</strong> with a <strong>cross-functional team</strong> of designers, developers, and product managers to ensure <strong>high-quality and accessible web applications</strong>."
+      "Contributed to the development of a <span class=\"highlight\">machine-learning-powered advisor insights web application</span>, using TypeScript, Vue.js, SCSS, and FastAPI to enhance functionality and user experience.",
+      "Developed <span class=\"highlight\">8 new full features</span>, including a <span class=\"highlight\">global search function</span> and <span class=\"highlight\">back-end functionality for favouriting advisor opportunities</span>, directly supporting business intelligence and decision-making for advisors.",
+      "Worked in an <span class=\"highlight\">agile environment</span> with a <span class=\"highlight\">cross-functional team</span> of designers, developers, and product managers to ensure <span class=\"highlight\">high-quality and accessible web applications</span>."
     ]
   },
   {
@@ -37,9 +37,9 @@
       "Typeit"
     ],
     "description": [
-      "Developed and deployed a <strong>personal portfolio website</strong> using <strong>TypeScript, Vue.js, and Vanta.js</strong>, showcasing <strong>interactive animations</strong> and advanced <strong>JavaScript libraries</strong> like <strong>TypeIt</strong> for a <strong>dynamic user experience</strong>.",
-      "Created a <strong>responsive carousel</strong> with a <strong>pop-up modal</strong> to feature and provide <strong>detailed descriptions</strong> of individual project experiences, <strong>improving user engagement and navigation</strong> across mobile and desktop devices.",
-      "Added <strong>accessibility features</strong> and utilized <strong>Axios</strong> and <strong>Pinia</strong> for <strong>efficient data storage and access</strong>."
+      "Developed and deployed a <span class=\"highlight\">personal portfolio website</span> using <span class=\"highlight\">TypeScript, Vue.js, and Vanta.js</span>, showcasing <span class=\"highlight\">interactive animations</span> and advanced <span class=\"highlight\">JavaScript libraries</span> like <span class=\"highlight\">TypeIt</span> for a <span class=\"highlight\">dynamic user experience</span>.",
+      "Created a <span class=\"highlight\">responsive carousel</span> with a <span class=\"highlight\">pop-up modal</span> to feature and provide <span class=\"highlight\">detailed descriptions</span> of individual project experiences, <span class=\"highlight\">improving user engagement and navigation</span> across mobile and desktop devices.",
+      "Added <span class=\"highlight\">accessibility features</span> and utilized <span class=\"highlight\">Axios</span> and <span class=\"highlight\">Pinia</span> for <span class=\"highlight\">efficient data storage and access</span>."
     ]
   },
   {
@@ -50,9 +50,9 @@
     "website": "https://chamilton02.github.io/SportIQs/",
     "code": "https://github.com/CHamilton02/SportIQs",
     "description": [
-      "Engineered a <strong>sports trivia game</strong> using <strong>React</strong>, providing interactive quizzes and dynamic updates.",
-      "Utilized <strong>Vite</strong> for efficient building and fast development cycles.",
-      "Implemented <strong>state management</strong> to handle user interactions and quiz progress seamlessly."
+      "Engineered a <span class=\"highlight\">sports trivia game</span> using <span class=\"highlight\">React</span>, providing interactive quizzes and dynamic updates.",
+      "Utilized <span class=\"highlight\">Vite</span> for efficient building and fast development cycles.",
+      "Implemented <span class=\"highlight\">state management</span> to handle user interactions and quiz progress seamlessly."
     ]
   },
   {
@@ -63,9 +63,9 @@
     "website": "https://chamilton02.github.io/Djibouti/",
     "code": "https://github.com/CHamilton02/Djibouti",
     "description": [
-      "Developed <strong>Djibouti</strong>, an educational game inspired by Wordle to teach players about countries.",
-      "Created <strong>daily puzzles</strong> that encourage learning about geography in an interactive format.",
-      "Used <strong>Jasmine</strong> for testing to ensure a reliable user experience."
+      "Developed <span class=\"highlight\">Djibouti</span>, an educational game inspired by Wordle to teach players about countries.",
+      "Created <span class=\"highlight\">daily puzzles</span> that encourage learning about geography in an interactive format.",
+      "Used <span class=\"highlight\">Jasmine</span> for testing to ensure a reliable user experience."
     ]
   },
   {
@@ -75,9 +75,9 @@
     "skills": ["Base64.py", "Cryptography.py", "Python", "Tkinter.py"],
     "code": "https://github.com/CHamilton02/Password-Manager",
     "description": [
-      "Built a <strong>Password Manager</strong> application in Python to securely store user credentials.",
-      "Utilized <strong>cryptographic techniques</strong> such as password-based key derivation and Fernet encryption for enhanced security.",
-      "Implemented functionalities for <strong>viewing, adding, and generating passwords</strong> securely with a user-friendly interface."
+      "Built a <span class=\"highlight\">Password Manager</span> application in Python to securely store user credentials.",
+      "Utilized <span class=\"highlight\">cryptographic techniques</span> such as password-based key derivation and Fernet encryption for enhanced security.",
+      "Implemented functionalities for <span class=\"highlight\">viewing, adding, and generating passwords</span> securely with a user-friendly interface."
     ]
   },
   {
@@ -87,7 +87,7 @@
     "miniDescription": "Worked with business stakeholders to build and maintain web pages, applying design feedback to improve usability.",
     "skills": ["Bootstrap", "CSS", "HTML", "JavaScript"],
     "description": [
-      "Assisted in building and maintaining business web pages for a local small business using <strong>HTML, CSS, Bootstrap</strong>, and <strong>JavaScript</strong>.",
+      "Assisted in building and maintaining business web pages for a local small business using <span class=\"highlight\">HTML, CSS, Bootstrap</span>, and <span class=\"highlight\">JavaScript</span>.",
       "Communicated with company owners to gather feedback and adjust interface designs, improving usability and online presence.",
       "Proposed design solutions to align with evolving business needs, contributing to the website strategy during its initial stages."
     ]

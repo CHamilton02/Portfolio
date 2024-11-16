@@ -1,9 +1,3 @@
-// Required Core Stylesheet
-@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-// Optional Theme Stylesheet
-@import "../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
-
 body {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   color: white;
@@ -24,10 +18,14 @@ h2 {
   text-align: center;
 }
 
-.link-button,
-.glide__arrow {
+.highlight {
+  font-weight: bold;
+  color: #ff6f61;
+}
+
+.link-button {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
   color: white;
   background-color: #23153c;
@@ -42,8 +40,7 @@ h2 {
 }
 
 .link-button:hover,
-.link-button:focus,
-.glide__arrow:hover {
+.link-button:focus {
   background-color: #ff6f61;
   cursor: pointer;
 }
@@ -81,6 +78,10 @@ footer {
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: start;
+  }
+
+  .link-button {
+    font-size: 0.9rem;
   }
 
   footer {

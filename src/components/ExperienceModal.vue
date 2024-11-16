@@ -1,6 +1,9 @@
 <template>
   <div class="experience-modal-container">
-    <div class="experience-modal__background" @click="emit('close')"></div>
+    <div
+      class="experience-modal-container__background"
+      @click="emit('close')"
+    ></div>
     <div id="experience-modal" class="experience-modal" tabindex="0">
       <div class="close-button-container">
         <button class="close-button" @click="emit('close')">
@@ -14,7 +17,7 @@
               ? organization
               : title
             )?.replace('.', '')} Modal Image.png`
-          ]
+          ] as string
         "
         class="experience-modal__image"
       />
@@ -54,7 +57,8 @@ import CloseIcon from "../assets/Close Icon.svg";
 
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
-  as: "url",
+  query: "?url",
+  import: "default",
 });
 
 defineProps({
@@ -81,6 +85,15 @@ const emit = defineEmits(["close"]);
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  &__background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .experience-modal {
@@ -96,15 +109,6 @@ const emit = defineEmits(["close"]);
   flex-direction: column;
   overflow-y: auto;
   z-index: 10;
-
-  &__background {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
 
   &__image {
     height: 60%;

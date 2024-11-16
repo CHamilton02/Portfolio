@@ -71,7 +71,7 @@ function toggleNumberOfViewableExperiences() {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .experience-container {
   padding-top: 2.5rem;
   margin-bottom: 20rem;

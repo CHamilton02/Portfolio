@@ -13,7 +13,7 @@
               ? organization
               : title
             )?.replace('.', '')}.png`
-          ]
+          ] as string
         "
         class="image"
       />
@@ -81,7 +81,8 @@ import ExperienceModal from "./ExperienceModal.vue";
 
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
-  as: "url",
+  query: "?url",
+  import: "default",
 });
 
 defineProps({

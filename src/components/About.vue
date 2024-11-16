@@ -52,7 +52,7 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .about {
   padding-top: 5rem;
   margin-bottom: 20rem;
@@ -76,11 +76,6 @@
     margin: 0 0 0.75rem 0;
   }
 
-  .highlight {
-    font-weight: bold;
-    color: #ff6f61;
-  }
-
   &__cta {
     margin-top: 1rem;
   }
@@ -101,7 +96,6 @@
     &__intro {
       font-size: 1.25rem;
       margin-bottom: 1rem;
-      // text-align: center;
     }
 
     &__cta {
