@@ -94,7 +94,7 @@ defineProps({
   title: String,
   organization: String,
   miniDescription: String,
-  description: Array,
+  description: String,
   skills: { type: Array, required: true },
 });
 

@@ -30,16 +30,13 @@
         </h2>
       </div>
       <p class="experience-date">{{ date }}</p>
+      <p class="description" v-html="description"></p>
       <h3 class="section-title">Skills</h3>
       <div class="experience-modal__skills-container">
         <button class="skill" v-for="skill in skills" tabindex="-1">
           {{ skill }}
         </button>
       </div>
-      <h3 class="section-title">Responsibilities</h3>
-      <ul class="description-list" v-for="desc in description">
-        <li v-html="desc"></li>
-      </ul>
       <div class="experience-modal__link-container">
         <a v-show="website" :href="website" target="_blank" class="link-button">
           View Website
@@ -65,7 +62,7 @@ defineProps({
   title: String,
   organization: String,
   date: String,
-  description: Array,
+  description: String,
   skills: { type: Array, required: true },
   website: String,
   code: String,
@@ -158,7 +155,7 @@ const emit = defineEmits(["close"]);
   margin-bottom: 0.5rem;
 }
 
-.description-list {
+.description {
   margin: 0;
 }
 

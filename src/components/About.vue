@@ -12,26 +12,28 @@
           programming class, and I’ve been hooked ever since. I've worked on
           projects both academically and as a hobby, and now I’m gaining
           real-world experience as a
-          <span class="highlight">Developer Co-op</span> at
+          <span class="highlight">Full-Stack Developer Co-op</span> at
           <span class="highlight">RBC</span>.
         </p>
         <p class="about__text">
-          I’ve honed my front-end skills with technologies like
+          I’ve honed my skills in both front-end and back-end development with
+          technologies like
           <span class="highlight">JavaScript</span>,
           <span class="highlight">TypeScript</span>,
-          <span class="highlight">React</span>, and
-          <span class="highlight">Vue</span>, but my long-term dream is to dive
-          into <span class="highlight">operating systems</span> and eventually
-          <span class="highlight">lead a team to new heights</span>.
+          <span class="highlight">React</span>,
+          <span class="highlight">Vue</span>, and
+          <span class="highlight">FastAPI</span>, and I’m excited to continue
+          expanding my expertise in full-stack development. My long-term dream
+          is to dive into <span class="highlight">operating systems</span> and
+          eventually <span class="highlight">lead a team to new heights</span>.
         </p>
         <p class="about__text">
           So far, I've had the chance to deliver exciting projects, whether
           personal creations like this
           <span class="highlight">portfolio</span> or
-          <span class="highlight"
-            >building front-end interfaces to interact with AI/ML projects</span
-          >
-          at RBC.
+          <span class="highlight">building full-stack web applications</span>
+          at RBC, including AI/ML-driven features that directly support business
+          intelligence and decision-making.
         </p>
         <p class="about__text">
           I’m always eager to grow and would be thrilled to bring my passion and
