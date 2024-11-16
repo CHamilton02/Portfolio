@@ -20,6 +20,28 @@
           <img :src="GitHub" class="socials__icon" />
         </a>
       </div>
+      <h2 class="home__title">Skills</h2>
+      <div class="skills" :class="showAllSkills ? 'show-all-skills' : ''">
+        <button
+          v-for="skill in skillsArray"
+          :title="skill.name"
+          class="skills__button"
+        >
+          <img :src="skill.imageLink" class="skills__icon" />
+        </button>
+      </div>
+      <div v-if="!showAllSkills" class="toggle-view">
+        <button class="toggle-view__button" @click="toggleAllSkills">
+          <img src="../assets/Down Arrow Icon.png" class="icon" />
+          View More
+        </button>
+      </div>
+      <div v-else class="toggle-view">
+        <button class="toggle-view__button" @click="toggleAllSkills">
+          <img src="../assets/Up Arrow Icon.png" class="icon" />
+          View Less
+        </button>
+      </div>
     </div>
     <div class="home__profile-picture">
       <img
@@ -46,6 +68,95 @@ import GitHub from "../assets/Github Logo.png";
 import TypeIt from "typeit";
 
 const showCat = ref(false);
+const showAllSkills = ref(false);
+
+const skillsArray = ref([
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    name: "HTML5",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    name: "CSS3",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    name: "JavaScript",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+    name: "TypeScript",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+    name: "Vue.js",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+    name: "Angular",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    name: "React",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+    name: "Bootstrap",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+    name: "Sass",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg",
+    name: "Node.js",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg",
+    name: "FastAPI",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+    name: "MySQL",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    name: "PostgreSQL",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    name: "Python",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    name: "Java",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+    name: "Git",
+  },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+    name: "GitHub",
+  },
+]);
 
 onMounted(() => {
   new TypeIt("#name", {
@@ -60,16 +171,21 @@ onMounted(() => {
     .type("キャムデン")
     .pause(2000);
 });
+
+function toggleAllSkills() {
+  showAllSkills.value = !showAllSkills.value;
+}
 </script>
 
 <style lang="scss" scoped>
 .home {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-around;
   color: white;
-  min-height: 95vh;
   width: 100%;
+  height: 50rem;
+  padding-top: 5rem;
 
   &__introduction {
     margin-top: 0;
@@ -104,13 +220,46 @@ onMounted(() => {
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 56.25rem) {
-  .home {
-    min-height: auto;
-    padding-top: 5rem;
-    margin-bottom: 6rem;
+.skills {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-height: 5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+  &__button {
+    background-color: #2e1a4d;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  &__icon {
+    width: 3.5rem;
+    height: auto;
+  }
+}
+
+.show-all-skills {
+  max-height: max-content;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.35s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 56.25rem) {
   .home__profile-picture {
     display: none;
   }
@@ -120,16 +269,25 @@ onMounted(() => {
     align-items: center;
     text-align: center;
   }
+
+  .skills {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 40rem) {
   .home {
     display: block;
+    height: 60rem;
   }
 
   .home__text {
     align-items: baseline;
     text-align: start;
+  }
+
+  .skills {
+    justify-content: start;
   }
 }
 </style>

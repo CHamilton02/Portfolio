@@ -60,6 +60,22 @@ h2 {
   width: auto;
 }
 
+.toggle-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__button {
+    background: none;
+    border: none;
+    display: flex;
+    color: #ff6f61;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+}
+
 footer {
   text-align: center;
   font-size: 1rem;

@@ -21,21 +21,21 @@
     </div>
     <div
       v-if="numberOfViewableExperiences < experiencesLength"
-      class="toggle-experiences"
+      class="toggle-view"
     >
       <button
         id="view-more-button"
-        class="toggle-experiences__button"
+        class="toggle-view__button"
         @click="toggleNumberOfViewableExperiences"
       >
         <img src="../assets/Down Arrow Icon.png" class="icon" />
         View More
       </button>
     </div>
-    <div v-else class="toggle-experiences">
+    <div v-else class="toggle-view">
       <button
         id="view-less-button"
-        class="toggle-experiences__button"
+        class="toggle-view__button"
         @click="toggleNumberOfViewableExperiences"
       >
         <img src="../assets/Up Arrow Icon.png" class="icon" />
@@ -81,22 +81,6 @@ function toggleNumberOfViewableExperiences() {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-}
-
-.toggle-experiences {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__button {
-    background: none;
-    border: none;
-    display: flex;
-    color: #ff6f61;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1rem;
-  }
 }
 
 @media only screen and (max-width: 56.25rem) {
