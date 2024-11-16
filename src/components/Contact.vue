@@ -6,7 +6,7 @@
       </h2>
 
       <div class="contact-container__message2-container">
-        <h3 class="contact-container__message2-container__message2">
+        <p class="contact-container__message2-container__message2">
           I'm always eager to grow and learn as a software developer, with the
           ambition of leading a team one day. If you're considering hiring for a
           co-op position next summer, I would love to connect with you and
@@ -14,7 +14,7 @@
           through my social media accounts, and if you are interested in
           collaborating or offering guidance, please don't hesitate to reach
           out.
-        </h3>
+        </p>
       </div>
 
       <div class="contact-container__contact-me-container">
@@ -111,7 +111,6 @@ import GitHub from "../assets/Github Logo.png";
       &__message2 {
         text-align: start;
         width: auto;
-        font-size: 0.8rem;
         font-weight: normal;
       }
     }
