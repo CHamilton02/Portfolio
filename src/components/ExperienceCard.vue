@@ -9,9 +9,9 @@
       <img
         :src="
           images[
-            `../assets/experienceImages/${(organization
-              ? organization
-              : title
+            `../assets/experienceImages/${(experience.organization
+              ? experience.organization
+              : experience.title
             )?.replace('.', '')}.png`
           ] as string
         "
@@ -22,39 +22,55 @@
     <div class="experience-title-container">
       <div class="experience-header">
         <h2 class="experience-title">
-          {{ title }}
+          {{ experience.title }}
         </h2>
         <div class="link-container">
-          <a v-show="website" :href="website" target="_blank" @click.stop
+          <a
+            v-show="experience.website"
+            :href="experience.website"
+            target="_blank"
+            @click.stop
             ><img class="icon" src="../assets/Link Icon.png"
           /></a>
-          <a v-show="code" :href="code" target="_blank" @click.stop>
+          <a
+            v-show="experience.code"
+            :href="experience.code"
+            target="_blank"
+            @click.stop
+          >
             <img class="icon" src="../assets/Github Logo.png" />
           </a>
         </div>
       </div>
 
       <h2 class="company">
-        {{ organization ? organization : "Personal Project" }}
+        {{
+          experience.organization ? experience.organization : "Personal Project"
+        }}
       </h2>
     </div>
-    <p class="experience-date">{{ date }}</p>
+    <p class="experience-date">{{ experience.date }}</p>
     <p class="experience-mini-description">
-      {{ miniDescription }}
+      {{ experience.miniDescription }}
     </p>
     <div class="skills-container">
       <button
-        v-if="skills.length > 5"
+        v-if="experience.skills.length > 5"
         class="skill"
-        v-for="skill in skills.slice(0, 5)"
+        v-for="skill in experience.skills.slice(0, 5)"
         tabindex="-1"
       >
         {{ skill }}
       </button>
-      <button v-if="skills.length > 5" class="skill" tabindex="-1">
+      <button v-if="experience.skills.length > 5" class="skill" tabindex="-1">
         And More!
       </button>
-      <button v-else class="skill" v-for="skill in skills" tabindex="-1">
+      <button
+        v-else
+        class="skill"
+        v-for="skill in experience.skills"
+        tabindex="-1"
+      >
         {{ skill }}
       </button>
     </div>
@@ -63,13 +79,7 @@
       <Transition>
         <ExperienceModal
           v-show="showModal"
-          :title="title"
-          :organization="organization"
-          :date="date"
-          :skills="skills"
-          :description="description"
-          :website="website"
-          :code="code"
+          :index="index"
           @close="toggleModal"
         />
       </Transition>
@@ -80,22 +90,23 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import ExperienceModal from "./ExperienceModal.vue";
+import { useExperienceStore } from "../stores/experience";
+import { Experience } from "../types/ExperienceTypes";
+
+const props = defineProps({
+  index: { type: Number, required: true },
+});
+
+const experienceStore = useExperienceStore();
+let experience: Experience;
+if (experienceStore.experiences) {
+  experience = experienceStore.experiences[props.index];
+}
 
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
   query: "?url",
   import: "default",
-});
-
-defineProps({
-  date: String,
-  website: String,
-  code: String,
-  title: String,
-  organization: String,
-  miniDescription: String,
-  description: String,
-  skills: { type: Array, required: true },
 });
 
 const showModal = ref<boolean>(false);

@@ -13,9 +13,9 @@
       <img
         :src="
           images[
-            `../assets/experienceImages/${(organization
-              ? organization
-              : title
+            `../assets/experienceImages/${(experience.organization
+              ? experience.organization
+              : experience.title
             )?.replace('.', '')} Modal Image.png`
           ] as string
         "
@@ -23,25 +23,39 @@
       />
       <div class="experience-modal__title-container">
         <h2 class="experience-modal__title">
-          {{ title + ", " }}
+          {{ experience.title + ", " }}
           <span class="experience-modal__company">
-            {{ organization ? organization : "Personal Project" }}
+            {{
+              experience.organization
+                ? experience.organization
+                : "Personal Project"
+            }}
           </span>
         </h2>
       </div>
-      <p class="experience-date">{{ date }}</p>
-      <p class="description" v-html="description"></p>
+      <p class="experience-date">{{ experience.date }}</p>
+      <p class="description" v-html="experience.description"></p>
       <h3 class="section-title">Skills</h3>
       <div class="experience-modal__skills-container">
-        <button class="skill" v-for="skill in skills" tabindex="-1">
+        <button class="skill" v-for="skill in experience.skills" tabindex="-1">
           {{ skill }}
         </button>
       </div>
       <div class="experience-modal__link-container">
-        <a v-show="website" :href="website" target="_blank" class="link-button">
+        <a
+          v-show="experience.website"
+          :href="experience.website"
+          target="_blank"
+          class="link-button"
+        >
           View Website
         </a>
-        <a v-show="code" :href="code" target="_blank" class="link-button">
+        <a
+          v-show="experience.code"
+          :href="experience.code"
+          target="_blank"
+          class="link-button"
+        >
           View Code
         </a>
       </div>
@@ -51,6 +65,8 @@
 
 <script setup lang="ts">
 import CloseIcon from "../assets/Close Icon.svg";
+import { useExperienceStore } from "../stores/experience";
+import { Experience } from "../types/ExperienceTypes";
 
 const images = import.meta.glob("../assets/experienceImages/*", {
   eager: true,
@@ -58,15 +74,15 @@ const images = import.meta.glob("../assets/experienceImages/*", {
   import: "default",
 });
 
-defineProps({
-  title: String,
-  organization: String,
-  date: String,
-  description: String,
-  skills: { type: Array, required: true },
-  website: String,
-  code: String,
+const props = defineProps({
+  index: { type: Number, required: true },
 });
+
+const experienceStore = useExperienceStore();
+let experience: Experience;
+if (experienceStore.experiences) {
+  experience = experienceStore.experiences[props.index];
+}
 
 const emit = defineEmits(["close"]);
 </script>

@@ -6,17 +6,8 @@
         v-if="experienceStore.experiences"
         v-for="i in experienceStore.experiences.length"
         v-show="i - 1 < numberOfViewableExperiences"
-        :key="`${experienceStore.experiences[i - 1].title}-${
-          experienceStore.experiences[i - 1].organization
-        }`"
-        :date="experienceStore.experiences[i - 1].date"
-        :website="experienceStore.experiences[i - 1].website"
-        :code="experienceStore.experiences[i - 1].code"
-        :title="experienceStore.experiences[i - 1].title"
-        :organization="experienceStore.experiences[i - 1].organization"
-        :miniDescription="experienceStore.experiences[i - 1].miniDescription"
-        :description="experienceStore.experiences[i - 1].description"
-        :skills="experienceStore.experiences[i - 1].skills"
+        :key="i"
+        :index="i - 1"
       />
     </div>
     <div
