@@ -27,6 +27,7 @@
           v-for="skill in skillsArray"
           :title="skill.name"
           class="skills__button"
+          tabindex="-1"
         >
           <img :src="skill.imageLink" class="skills__icon" />
         </button>
@@ -243,7 +244,8 @@ function toggleAllSkills() {
     cursor: pointer;
   }
 
-  &__button:hover {
+  &__button:hover,
+  &__button:focus {
     opacity: 100%;
   }
 
@@ -296,6 +298,10 @@ function toggleAllSkills() {
 
   .skills {
     justify-content: start;
+
+    &__button {
+      opacity: 100%;
+    }
   }
 }
 </style>
