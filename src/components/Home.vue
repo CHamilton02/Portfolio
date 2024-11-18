@@ -23,14 +23,13 @@
       </div>
       <h2 class="home__title">Skills</h2>
       <div class="skills" :class="showAllSkills ? 'show-all-skills' : ''">
-        <button
+        <div
           v-for="skill in skillsArray"
           :title="skill.name"
-          class="skills__button"
-          tabindex="-1"
+          class="skills__frame"
         >
           <img :src="skill.imageLink" class="skills__icon" />
-        </button>
+        </div>
       </div>
       <div v-if="!showAllSkills" class="toggle-view">
         <button class="toggle-view__button" @click="toggleAllSkills">
@@ -230,10 +229,9 @@ function toggleAllSkills() {
   overflow: hidden;
   margin-bottom: 1rem;
 
-  &__button {
+  &__frame {
     background-color: #2e1a4d;
     opacity: 75%;
-    border: none;
     width: 5rem;
     height: 5rem;
     border-radius: 1rem;
@@ -244,8 +242,7 @@ function toggleAllSkills() {
     cursor: pointer;
   }
 
-  &__button:hover,
-  &__button:focus {
+  &__frame:hover {
     opacity: 100%;
   }
 
@@ -299,7 +296,7 @@ function toggleAllSkills() {
   .skills {
     justify-content: start;
 
-    &__button {
+    &__frame {
       opacity: 100%;
     }
   }
