@@ -2,7 +2,6 @@
   <div id="background" class="background"></div>
   <div class="loader-container" v-show="!isLoaded">
     <div class="loader"></div>
-    <h1>Loading</h1>
   </div>
   <div id="app-container" class="app-container" v-show="isLoaded">
     <Hamburger

@@ -7,7 +7,6 @@
         v-show="i - 1 < numberOfViewableExperiences"
         :key="i"
         :index="i - 1"
-        loading="eager"
       />
     </div>
     <div
