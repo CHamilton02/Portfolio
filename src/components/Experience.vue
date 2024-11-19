@@ -3,15 +3,15 @@
     <h2 class="header">My Experience</h2>
     <div class="experience-card-container">
       <ExperienceCard
-        v-if="experienceStore.experiences"
         v-for="i in experienceStore.experiences.length"
         v-show="i - 1 < numberOfViewableExperiences"
         :key="i"
         :index="i - 1"
+        loading="eager"
       />
     </div>
     <div
-      v-if="numberOfViewableExperiences < experiencesLength"
+      v-if="numberOfViewableExperiences < experienceStore.experiences.length"
       class="toggle-view"
     >
       <button
@@ -39,22 +39,21 @@
 <script setup lang="ts">
 import ExperienceCard from "./ExperienceCard.vue";
 import { useExperienceStore } from "../stores/experience";
-import { computed, ref } from "vue";
+import { ref } from "vue";
 
 const experienceStore = useExperienceStore();
-const experiencesLength = computed(() => {
-  if (experienceStore.experiences) {
-    return experienceStore.experiences.length;
-  }
-  return 0;
-});
 
 const numberOfViewableExperiences = ref(4);
 
 function toggleNumberOfViewableExperiences() {
-  if (numberOfViewableExperiences.value < experiencesLength.value - 1) {
+  if (
+    numberOfViewableExperiences.value <
+    experienceStore.experiences.length - 1
+  ) {
     numberOfViewableExperiences.value += 2;
-  } else if (numberOfViewableExperiences.value < experiencesLength.value) {
+  } else if (
+    numberOfViewableExperiences.value < experienceStore.experiences.length
+  ) {
     numberOfViewableExperiences.value += 1;
   } else {
     numberOfViewableExperiences.value = 4;

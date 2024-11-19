@@ -4,7 +4,7 @@ import { Experience } from "../types/ExperienceTypes";
 import ExperienceService from "../services/experience.service";
 
 export const useExperienceStore = defineStore("experience", () => {
-  const experiences = ref<Experience[]>();
+  const experiences = ref<Experience[]>([]);
 
   async function load() {
     experiences.value = await ExperienceService.getExperiences();
