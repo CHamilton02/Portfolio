@@ -26,6 +26,7 @@
     <Experience id="experience-section" />
     <Contact id="contact-section" />
   </div>
+  <footer>Designed & Built by Camdyn Hamilton</footer>
 </template>
 
 <script setup lang="ts">

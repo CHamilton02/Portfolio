@@ -36,7 +36,6 @@
       </div>
     </div>
   </div>
-  <footer>Designed & Built by Camdyn Hamilton</footer>
 </template>
 
 <script setup lang="ts">
