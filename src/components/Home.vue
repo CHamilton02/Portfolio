@@ -221,6 +221,10 @@ function toggleAllSkills() {
   border-radius: 50%;
 }
 
+.profile-picture:hover {
+  cursor: pointer;
+}
+
 .skills {
   display: flex;
   gap: 1rem;
