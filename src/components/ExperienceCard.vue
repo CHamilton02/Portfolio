@@ -228,9 +228,9 @@ function toggleModal() {
   opacity: 0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 40rem) {
   .card-container {
-    padding: 1.5rem;
+    padding: 0;
   }
 }
 </style>
