@@ -12,7 +12,7 @@
             `../assets/experienceImages/${(experience.organization
               ? experience.organization
               : experience.title
-            )?.replace('.', '')}.png`
+            )?.replace('.', '')}.jpg`
           ] as string
         "
         class="image"
