@@ -62,7 +62,7 @@ function toggleNumberOfViewableExperiences() {
 
 <style scoped lang="scss">
 .experience-container {
-  padding: 2.5rem 0 2.5rem 0;
+  padding-top: 2.5rem;
   margin-bottom: 20rem;
 }
 
@@ -85,6 +85,7 @@ function toggleNumberOfViewableExperiences() {
 @media only screen and (max-width: 40rem) {
   .experience-card-container {
     grid-template-columns: 1fr;
+    margin-bottom: 1rem;
   }
 }
 </style>
