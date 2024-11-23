@@ -53,7 +53,7 @@
       />
       <img
         v-show="showCat"
-        src="../assets/Totoro.png"
+        src="../assets/Totoro.jpg"
         class="profile-picture"
         @click="showCat = false"
       />
