@@ -157,6 +157,11 @@ const skillsArray = ref([
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
     name: "GitHub",
   },
+  {
+    imageLink:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
+    name: "Jira",
+  },
 ]);
 
 onMounted(() => {
