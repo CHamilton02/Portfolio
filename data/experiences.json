@@ -14,7 +14,8 @@
       "Node.js",
       "Axios",
       "HTML",
-      "Jira"
+      "Jira",
+      "Azure Data Studio"
     ],
     "description": "At RBC, I contributed to a machine-learning-powered advisor insights web application, enhancing its <span class=\"highlight\">functionality</span> and <span class=\"highlight\">user experience</span> using <span class=\"highlight\">TypeScript</span>, <span class=\"highlight\">Vue.js</span>, <span class=\"highlight\">SCSS</span>, <span class=\"highlight\">Python</span>, and <span class=\"highlight\">FastAPI</span>. I developed <span class=\"highlight\">8 new features</span>, including a <span class=\"highlight\">global search function</span> and <span class=\"highlight\">full-stack functionality</span> for favouriting advisor opportunities. These features directly support business intelligence and decision-making for advisors. Working in an <span class=\"highlight\">agile environment</span>, I collaborated with cross-functional teams to ensure high-quality, <span class=\"highlight\">accessible</span> web applications."
   },
