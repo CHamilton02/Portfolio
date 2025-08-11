@@ -30,37 +30,23 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import Hamburger from "./components/Hamburger.vue";
-import Navbar from "./components/Navbar.vue";
-import Home from "./components/Home.vue";
-import About from "./components/About.vue";
-import Experience from "./components/Experience.vue";
-import Contact from "./components/Contact.vue";
-//@ts-ignore
-import NET from "vanta/dist/vanta.net.min";
+import { ref } from 'vue'
+import Hamburger from './components/Hamburger.vue'
+import Navbar from './components/Navbar.vue'
+import Home from './components/Home.vue'
+import About from './components/About.vue'
+import Experience from './components/Experience.vue'
+import Contact from './components/Contact.vue'
 
-const isLoaded = ref(false);
+const isLoaded = ref(false)
 
-window.addEventListener("load", () => {
-  isLoaded.value = true;
-});
-
-onMounted(() => {
-  NET({
-    el: "#background",
-    mouseControls: false,
-    touchControls: false,
-    gyroControls: false,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    color: 0x3e2a63,
-  });
-});
+window.addEventListener('load', () => {
+  isLoaded.value = true
+})
 
 function scrollToElement(elementId: string) {
-  (document.activeElement as HTMLElement).blur();
-  document.getElementById(elementId)?.scrollIntoView({ behavior: "smooth" });
+  ;(document.activeElement as HTMLElement).blur()
+  document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
@@ -75,6 +61,28 @@ function scrollToElement(elementId: string) {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #1a0f2e 0%,
+    #2d1b4e 25%,
+    #3e2a63 50%,
+    #2d1b4e 75%,
+    #1a0f2e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hamburger {

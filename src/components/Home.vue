@@ -47,7 +47,7 @@
     <div class="home__profile-picture">
       <img
         v-show="!showCat"
-        src="../assets/Profile Picture.png"
+        src="../assets/Profile Picture.jpeg"
         class="profile-picture"
         @click="showCat = true"
       />
@@ -63,110 +63,110 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import LinkedIn from "../assets/LinkedIn Logo.png";
-import GitHub from "../assets/Github Logo.png";
-import TypeIt from "typeit";
+import { ref, onMounted } from 'vue'
+import LinkedIn from '../assets/LinkedIn Logo.png'
+import GitHub from '../assets/Github Logo.png'
+import TypeIt from 'typeit'
 
-const showCat = ref(false);
-const showAllSkills = ref(false);
+const showCat = ref(false)
+const showAllSkills = ref(false)
 
 const skillsArray = ref([
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    name: "HTML5",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+    name: 'HTML5',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-    name: "CSS3",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+    name: 'CSS3',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    name: "JavaScript",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+    name: 'JavaScript',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    name: "TypeScript",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+    name: 'TypeScript',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
-    name: "Vue.js",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
+    name: 'Vue.js',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
-    name: "Angular",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
+    name: 'Angular',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    name: "React",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    name: 'React',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
-    name: "Bootstrap",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+    name: 'Bootstrap',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
-    name: "Sass",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
+    name: 'Sass',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg",
-    name: "Node.js",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg',
+    name: 'Node.js',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg",
-    name: "FastAPI",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg',
+    name: 'FastAPI',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-    name: "MySQL",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+    name: 'MySQL',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    name: "PostgreSQL",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
+    name: 'PostgreSQL',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    name: "Python",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+    name: 'Python',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    name: "Java",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+    name: 'Java',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-    name: "Git",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+    name: 'Git',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
-    name: "GitHub",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+    name: 'GitHub',
   },
   {
     imageLink:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
-    name: "Jira",
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg',
+    name: 'Jira',
   },
-]);
+])
 
 onMounted(() => {
-  new TypeIt("#name", {
-    strings: "Camdyn",
+  new TypeIt('#name', {
+    strings: 'Camdyn',
     speed: 400,
     waitUntilVisible: true,
     loop: true,
@@ -174,12 +174,12 @@ onMounted(() => {
     .go()
     .pause(2000)
     .delete(6)
-    .type("キャムデン")
-    .pause(2000);
-});
+    .type('キャムデン')
+    .pause(2000)
+})
 
 function toggleAllSkills() {
-  showAllSkills.value = !showAllSkills.value;
+  showAllSkills.value = !showAllSkills.value
 }
 </script>
 

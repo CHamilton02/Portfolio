@@ -24,17 +24,8 @@
     "title": "Portfolio",
     "miniDescription": "A personal portfolio showcasing my software development abilities, with a focus on interactive features.",
     "code": "https://github.com/CHamilton02/Portfolio",
-    "skills": [
-      "TypeScript",
-      "Vue",
-      "SCSS",
-      "Vanta",
-      "Axios",
-      "HTML",
-      "Pinia",
-      "Typeit"
-    ],
-    "description": "I created a personal portfolio using <span class=\"highlight\">TypeScript</span>, <span class=\"highlight\">Vue.js</span>, and <span class=\"highlight\">Vanta.js</span>, featuring <span class=\"highlight\">interactive animations</span> and a <span class=\"highlight\">responsive layout</span> for a seamless user experience. I implemented a <span class=\"highlight\">modal feature</span> for detailed project info and used advanced libraries like <span class=\"highlight\">TypeIt</span> to enhance interactivity."
+    "skills": ["TypeScript", "Vue", "SCSS", "Axios", "HTML", "Pinia", "Typeit"],
+    "description": "I created a personal portfolio using <span class=\"highlight\">TypeScript</span> and <span class=\"highlight\">Vue.js</span>, featuring <span class=\"highlight\">interactive animations</span> and a <span class=\"highlight\">responsive layout</span> for a seamless user experience. I implemented a <span class=\"highlight\">modal feature</span> for detailed project info and used advanced libraries like <span class=\"highlight\">TypeIt</span> to enhance interactivity."
   },
   {
     "date": "JUL. 2024",
