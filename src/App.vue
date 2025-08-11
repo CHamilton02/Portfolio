@@ -61,28 +61,7 @@ function scrollToElement(elementId: string) {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    #1a0f2e 0%,
-    #2d1b4e 25%,
-    #3e2a63 50%,
-    #2d1b4e 75%,
-    #1a0f2e 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background: #1b262c;
 }
 
 .hamburger {

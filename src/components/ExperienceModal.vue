@@ -23,12 +23,12 @@
       />
       <div class="experience-modal__title-container">
         <h2 class="experience-modal__title">
-          {{ experience.title + ", " }}
+          {{ experience.title + ', ' }}
           <span class="experience-modal__company">
             {{
               experience.organization
                 ? experience.organization
-                : "Personal Project"
+                : 'Personal Project'
             }}
           </span>
         </h2>
@@ -64,27 +64,27 @@
 </template>
 
 <script setup lang="ts">
-import CloseIcon from "../assets/Close Icon.svg";
-import { useExperienceStore } from "../stores/experience";
-import { Experience } from "../types/ExperienceTypes";
+import CloseIcon from '../assets/Close Icon.svg'
+import { useExperienceStore } from '../stores/experience'
+import { Experience } from '../types/ExperienceTypes'
 
-const images = import.meta.glob("../assets/experienceImages/*", {
+const images = import.meta.glob('../assets/experienceImages/*', {
   eager: true,
-  query: "?url",
-  import: "default",
-});
+  query: '?url',
+  import: 'default',
+})
 
 const props = defineProps({
   index: { type: Number, required: true },
-});
+})
 
-const experienceStore = useExperienceStore();
-let experience: Experience;
+const experienceStore = useExperienceStore()
+let experience: Experience
 if (experienceStore.experiences) {
-  experience = experienceStore.experiences[props.index];
+  experience = experienceStore.experiences[props.index]
 }
 
-const emit = defineEmits(["close"]);
+const emit = defineEmits(['close'])
 </script>
 
 <style lang="scss">
@@ -116,7 +116,7 @@ const emit = defineEmits(["close"]);
   max-height: 35rem;
   border-radius: 1rem;
   padding: 3rem;
-  background-color: #23153c;
+  background-color: #0f4c75;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@ const emit = defineEmits(["close"]);
   }
 
   &__company {
-    color: #ff6f61;
+    color: #3282b8;
     font-weight: bold;
   }
 
@@ -158,10 +158,10 @@ const emit = defineEmits(["close"]);
 }
 
 .skill {
-  background-color: #ff6f61;
-  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  background-color: #3282b8;
+  font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
   border: none;
-  color: white;
+  color: #bbe1fa;
   padding: 0.3rem 0.75rem 0.3rem 0.75rem;
   border-radius: 1rem;
   height: 2rem;
@@ -193,7 +193,7 @@ const emit = defineEmits(["close"]);
 }
 
 strong {
-  color: #ff6f61;
+  color: #3282b8;
 }
 
 @media only screen and (max-width: 56.25rem) {

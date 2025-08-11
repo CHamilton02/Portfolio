@@ -1,6 +1,6 @@
 body {
-  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
-  color: white;
+  font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
+  color: #bbe1fa;
   margin: 0;
   padding: 0 3rem;
   display: flex;
@@ -20,18 +20,18 @@ h2 {
 
 .highlight {
   font-weight: bold;
-  color: #ff6f61;
+  color: #3282b8;
 }
 
 .link-button {
-  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  color: white;
-  background-color: #23153c;
+  color: #bbe1fa;
+  background-color: #0f4c75;
   text-decoration: none;
   border: solid;
-  border-color: #ff6f61;
+  border-color: #3282b8;
   border-width: 0.15rem;
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -41,7 +41,7 @@ h2 {
 
 .link-button:hover,
 .link-button:focus {
-  background-color: #ff6f61;
+  background-color: #3282b8;
   cursor: pointer;
 }
 

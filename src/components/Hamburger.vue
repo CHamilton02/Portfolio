@@ -26,39 +26,39 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from "vue";
+import { ref, watchEffect } from 'vue'
 
-const showNavbar = ref(false);
-const sections = ref<("Home" | "About" | "Experience" | "Contact")[]>([
-  "Home",
-  "About",
-  "Experience",
-  "Contact",
-]);
+const showNavbar = ref(false)
+const sections = ref<('Home' | 'About' | 'Experience' | 'Contact')[]>([
+  'Home',
+  'About',
+  'Experience',
+  'Contact',
+])
 
 const emit = defineEmits([
-  "toggleHome",
-  "toggleAbout",
-  "toggleExperience",
-  "toggleContact",
-]);
+  'toggleHome',
+  'toggleAbout',
+  'toggleExperience',
+  'toggleContact',
+])
 
 function toggleHamburger() {
-  showNavbar.value = !showNavbar.value;
+  showNavbar.value = !showNavbar.value
 }
 
-function toggleSection(section: "Home" | "About" | "Experience" | "Contact") {
-  showNavbar.value = false;
-  emit(`toggle${section}`);
+function toggleSection(section: 'Home' | 'About' | 'Experience' | 'Contact') {
+  showNavbar.value = false
+  emit(`toggle${section}`)
 }
 
 watchEffect(() => {
   if (showNavbar.value) {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden'
   } else {
-    document.body.style.overflow = "";
+    document.body.style.overflow = ''
   }
-});
+})
 </script>
 
 <style lang="scss">
@@ -85,7 +85,7 @@ watchEffect(() => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ff6f61;
+    background-color: #3282b8;
     &__section {
       font-size: 1.5rem;
       transition: color 0.25s;

@@ -14,14 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const sections = ref<("Home" | "About" | "Experience" | "Contact")[]>([
-  "Home",
-  "About",
-  "Experience",
-  "Contact",
-]);
+const sections = ref<('Home' | 'About' | 'Experience' | 'Contact')[]>([
+  'Home',
+  'About',
+  'Experience',
+  'Contact',
+])
 </script>
 
 <style>
@@ -37,13 +37,13 @@ nav {
 }
 
 .section {
-  color: white;
+  color: #bbe1fa;
   transition: color 0.25s;
 }
 
 .section:hover,
 .section:focus {
-  color: #ff6f61;
+  color: #3282b8;
   cursor: pointer;
 }
 </style>

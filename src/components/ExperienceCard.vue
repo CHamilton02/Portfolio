@@ -45,7 +45,7 @@
 
       <h2 class="company">
         {{
-          experience.organization ? experience.organization : "Personal Project"
+          experience.organization ? experience.organization : 'Personal Project'
         }}
       </h2>
     </div>
@@ -88,42 +88,42 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import ExperienceModal from "./ExperienceModal.vue";
-import { useExperienceStore } from "../stores/experience";
-import { Experience } from "../types/ExperienceTypes";
+import { ref } from 'vue'
+import ExperienceModal from './ExperienceModal.vue'
+import { useExperienceStore } from '../stores/experience'
+import { Experience } from '../types/ExperienceTypes'
 
 const props = defineProps({
   index: { type: Number, required: true },
-});
+})
 
-const experienceStore = useExperienceStore();
-let experience: Experience;
+const experienceStore = useExperienceStore()
+let experience: Experience
 if (experienceStore.experiences) {
-  experience = experienceStore.experiences[props.index];
+  experience = experienceStore.experiences[props.index]
 }
 
-const images = import.meta.glob("../assets/experienceImages/*", {
+const images = import.meta.glob('../assets/experienceImages/*', {
   eager: true,
-  query: "?url",
-  import: "default",
-});
+  query: '?url',
+  import: 'default',
+})
 
-const showModal = ref<boolean>(false);
+const showModal = ref<boolean>(false)
 
 function toggleModal() {
-  const appContainer = document.getElementById("app-container");
+  const appContainer = document.getElementById('app-container')
   if (appContainer) {
     if (showModal.value) {
-      document.body.style.overflow = "auto";
-      appContainer.inert = false;
+      document.body.style.overflow = 'auto'
+      appContainer.inert = false
     } else {
-      document.body.style.overflow = "hidden";
-      appContainer.inert = true;
+      document.body.style.overflow = 'hidden'
+      appContainer.inert = true
     }
   }
 
-  showModal.value = !showModal.value;
+  showModal.value = !showModal.value
 }
 </script>
 
@@ -160,7 +160,7 @@ function toggleModal() {
 }
 
 .company {
-  color: #ff6f61;
+  color: #3282b8;
 }
 
 .experience-date,
@@ -175,7 +175,7 @@ function toggleModal() {
 
 .experience-date {
   font-size: 0.75rem;
-  color: #ff6f61;
+  color: #3282b8;
   margin: 0 0 0.25rem 0;
 }
 
@@ -203,10 +203,10 @@ function toggleModal() {
 }
 
 .skill {
-  background-color: #ff6f61;
-  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+  background-color: #3282b8;
+  font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
   border: none;
-  color: white;
+  color: #bbe1fa;
   padding: 0.3rem 0.75rem 0.3rem 0.75rem;
   border-radius: 1rem;
   height: 2rem;

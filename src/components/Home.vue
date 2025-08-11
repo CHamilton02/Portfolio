@@ -199,7 +199,7 @@ function toggleAllSkills() {
 
   &__name {
     line-height: 1.2;
-    color: #ff6f61;
+    color: #3282b8;
   }
 
   &__profile-picture {
@@ -239,7 +239,7 @@ function toggleAllSkills() {
   margin-bottom: 1rem;
 
   &__frame {
-    background-color: #2e1a4d;
+    background-color: #0f4c75;
     opacity: 75%;
     width: 5rem;
     height: 5rem;
