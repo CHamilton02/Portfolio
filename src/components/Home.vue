@@ -95,6 +95,16 @@ const skillsArray = ref([
   },
   {
     imageLink:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+    name: 'Python',
+  },
+  {
+    imageLink:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+    name: 'Java',
+  },
+  {
+    imageLink:
       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
     name: 'Vue.js',
   },
@@ -125,8 +135,18 @@ const skillsArray = ref([
   },
   {
     imageLink:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg',
+    name: 'Express',
+  },
+  {
+    imageLink:
       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original-wordmark.svg',
     name: 'FastAPI',
+  },
+  {
+    imageLink:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
+    name: 'Spring',
   },
   {
     imageLink:
@@ -140,13 +160,8 @@ const skillsArray = ref([
   },
   {
     imageLink:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
-    name: 'Python',
-  },
-  {
-    imageLink:
-      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
-    name: 'Java',
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg',
+    name: 'MongoDB',
   },
   {
     imageLink:
@@ -157,6 +172,11 @@ const skillsArray = ref([
     imageLink:
       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
     name: 'GitHub',
+  },
+  {
+    imageLink:
+      'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg',
+    name: 'Docker',
   },
   {
     imageLink:

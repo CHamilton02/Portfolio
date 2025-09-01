@@ -3,44 +3,37 @@
     <h2 class="header">About Me</h2>
     <div class="about__body">
       <h3 class="about__intro">
-        Hey there, I'm Camdyn! I love bringing ideas to life through code and
-        being a teamplayer.
+        Hey there, I’m Camdyn, and I love bringing ideas to life through code!
       </h3>
       <div class="about__content">
         <p class="about__text">
-          My coding journey kicked off in 2018 during my first computer
-          programming class, and I’ve been hooked ever since. I've worked on
-          projects both academically and as a hobby, and now I’m gaining
-          real-world experience as a
-          <span class="highlight">Full-Stack Developer Co-op</span> at
-          <span class="highlight">RBC</span>.
+          My coding journey began in 2018 with my first programming class, and
+          I’ve been hooked ever since. I’ve built everything from full-stack
+          AI-powered applications at
+          <span class="highlight">RBC Borealis</span> to personal projects like
+          <span class="highlight">Hatsumai</span>, a GPT-4o powered web app that
+          helps CS students generate new project ideas.
         </p>
         <p class="about__text">
-          I’ve honed my skills in both front-end and back-end development with
-          technologies like
-          <span class="highlight">JavaScript</span>,
-          <span class="highlight">TypeScript</span>,
-          <span class="highlight">React</span>,
-          <span class="highlight">Vue</span>, and
-          <span class="highlight">FastAPI</span>, and I’m excited to continue
-          expanding my expertise in full-stack development. My long-term dream
-          is to dive into <span class="highlight">operating systems</span> and
-          eventually <span class="highlight">lead a team to new heights</span>.
+          Along the way, I have sharpened my skills in both front-end and
+          back-end development, working with
+          <span class="highlight"
+            >Angular, Vue, TypeScript, Express, and Postgres</span
+          >
+          to deliver clean and scalable solutions. My long-term goal is to
+          become a strong technical leader and guide a team toward building
+          impactful products.
         </p>
         <p class="about__text">
-          So far, I've had the chance to deliver exciting projects, whether
-          personal creations like this
-          <span class="highlight">portfolio</span> or
-          <span class="highlight">building full-stack web applications</span>
-          at RBC, including AI/ML-driven features that directly support business
-          intelligence and decision-making.
+          Outside of coding, I enjoy problem-solving games such as Wordle and
+          the LinkedIn puzzles, watching sports with baseball and American
+          football being my current favourites, and exploring films and
+          single-player games.
         </p>
         <p class="about__text">
-          I’m always eager to grow and would be thrilled to bring my passion and
-          skills to your team through an exciting co-op opportunity. Feel free
-          to reach out—<span class="highlight"
-            >I'd love to chat about how I can contribute to your company</span
-          >.
+          I am eager to continue growing as a developer and would be excited to
+          bring my skills and creativity to your team. Let’s connect, I would
+          love to chat about how I can contribute to your company’s success.
         </p>
         <div class="about__cta">
           <button class="link-button" @click="$emit('toggleExperience')">
