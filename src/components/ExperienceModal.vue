@@ -116,7 +116,7 @@ const emit = defineEmits(['close'])
   max-height: 35rem;
   border-radius: 1rem;
   padding: 3rem;
-  background-color: #0f4c75;
+  background-color: #1b262c;
   position: relative;
   display: flex;
   flex-direction: column;
