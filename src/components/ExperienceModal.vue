@@ -16,7 +16,7 @@
             `../assets/experienceImages/${(experience.organization
               ? experience.organization
               : experience.title
-            )?.replace('.', '')} Modal Image.png`
+            )} Modal Image.png`
           ] as string
         "
         class="experience-modal__image"

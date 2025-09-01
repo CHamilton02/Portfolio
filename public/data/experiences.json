@@ -24,11 +24,37 @@
   {
     "date": "MAY 2025 - PRESENT",
     "title": "Hatsumai",
-    "miniDescription": "The evolution and improvement of Proj.ai",
+    "miniDescription": "The evolution and improvement of Proj.ai.",
     "website": "https://www.hatsumai.com/",
     "code": "https://github.com/CHamilton02/hatsumai-FE",
-    "skills": ["Vue.js", "TypeScript", "Express", "Docker", "Knex.js", "Vite"],
+    "skills": [
+      "Vue.js",
+      "TypeScript",
+      "Express",
+      "Docker",
+      "Knex.js",
+      "Vite",
+      "OpenAI GPT-4o"
+    ],
     "description": "After completing my work on <span class=\"highlight\">Proj.ai</span>, I felt both <span class=\"highlight\">satisfied and frustrated</span>. I was proud of creating my <span class=\"highlight\">first full-stack app</span> and watching it grow, but I wanted to take the <span class=\"highlight\">design in a new direction</span>. That’s when <span class=\"highlight\">Hatsumai was born</span>. The name comes from the <span class=\"highlight\">Japanese word 発明 (‘hatsumai’), meaning invention or creating something new</span>, combined with <span class=\"highlight\">AI</span. Hatsumai has, in my opinion, the <span class=\"highlight\">cleanest UI I’ve created</span>, along with a <span class=\"highlight\">well-organized backend</span> that greatly improves <span class=\"highlight\">scalability and maintainability</span>. I also wanted to improve on Proj.ai by implementing a <span class=\"highlight\">user authentication system</span>, allowing users to <span class=\"highlight\">sign in and view previously generated projects</span>. Overall, Hatsumai is the <span class=\"highlight\">culmination of everything I’ve learned</span> over the past year during my <span class=\"highlight\">co-op</span>, and I’m extremely proud of it."
+  },
+  {
+    "date": "DEC. 2024 - MAR. 2025",
+    "title": "Proj.ai",
+    "miniDescription": "An AI-powered project idea generator for CS students.",
+    "website": "https://proj-ai.onrender.com/",
+    "code": "https://github.com/CHamilton02/proj.ai",
+    "skills": [
+      "Angular",
+      "TypeScript",
+      "Express",
+      "Sass",
+      "Playwright",
+      "OpenAI GPT-4o",
+      "GitHub Actions",
+      "Google Analytics"
+    ],
+    "description": "While working at <span class=\"highlight\">RBC Borealis</span, I realized that my struggle to find a new project idea could become the idea itself. <span class=\"highlight\">Proj.ai</span> helps empower CS students by generating project ideas based on the topics they provide. This was also my first <span class=\"highlight\">full-stack application</span>, and I’m proud of how it helped me grow as a developer and set the stage for my best project so far, <span class=\"highlight\">Hatsumai</span>."
   },
   {
     "date": "SEP. 2024 - NOV. 2024",
