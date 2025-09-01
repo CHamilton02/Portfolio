@@ -22,6 +22,15 @@
     "description": "At RBC, I contributed to a machine-learning-powered advisor insights web application, enhancing its <span class=\"highlight\">functionality</span> and <span class=\"highlight\">user experience</span> using <span class=\"highlight\">TypeScript</span>, <span class=\"highlight\">Vue.js</span>, <span class=\"highlight\">SCSS</span>, <span class=\"highlight\">Python</span>, and <span class=\"highlight\">FastAPI</span>. I developed <span class=\"highlight\">8 new features</span>, including a <span class=\"highlight\">global search function</span> and <span class=\"highlight\">full-stack functionality</span> for favouriting advisor opportunities. These features directly support business intelligence and decision-making for advisors. Working in an <span class=\"highlight\">agile environment</span>, I collaborated with cross-functional teams to ensure high-quality, <span class=\"highlight\">accessible</span> web applications."
   },
   {
+    "date": "MAY 2025 - PRESENT",
+    "title": "Hatsumai",
+    "miniDescription": "The evolution and improvement of Proj.ai",
+    "website": "https://www.hatsumai.com/",
+    "code": "https://github.com/CHamilton02/hatsumai-FE",
+    "skills": ["Vue.js", "TypeScript", "Express", "Docker", "Knex.js", "Vite"],
+    "description": "After completing my work on <span class=\"highlight\">Proj.ai</span>, I felt both <span class=\"highlight\">satisfied and frustrated</span>. I was proud of creating my <span class=\"highlight\">first full-stack app</span> and watching it grow, but I wanted to take the <span class=\"highlight\">design in a new direction</span>. That’s when <span class=\"highlight\">Hatsumai was born</span>. The name comes from the <span class=\"highlight\">Japanese word 発明 (‘hatsumai’), meaning invention or creating something new</span>, combined with <span class=\"highlight\">AI</span. Hatsumai has, in my opinion, the <span class=\"highlight\">cleanest UI I’ve created</span>, along with a <span class=\"highlight\">well-organized backend</span> that greatly improves <span class=\"highlight\">scalability and maintainability</span>. I also wanted to improve on Proj.ai by implementing a <span class=\"highlight\">user authentication system</span>, allowing users to <span class=\"highlight\">sign in and view previously generated projects</span>. Overall, Hatsumai is the <span class=\"highlight\">culmination of everything I’ve learned</span> over the past year during my <span class=\"highlight\">co-op</span>, and I’m extremely proud of it."
+  },
+  {
     "date": "SEP. 2024 - NOV. 2024",
     "title": "Portfolio",
     "miniDescription": "A personal portfolio showcasing my software development abilities, with a focus on interactive features.",

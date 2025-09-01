@@ -7,11 +7,12 @@
       </h1>
       <h2 class="home__title">Student/Full-Stack Developer</h2>
       <h3 class="home__info">
-        Currently working at RBC as a Full-Stack Developer Co-op on the UX-Force
-        team.
+        Currently pursuing a Bachelor of Science in Computer Science at York
+        University.
       </h3>
       <h3 class="home__info">
-        Pursuing a Bachelor of Science in Computer Science at York University.
+        Previously worked as a Full-Stack Developer Co-op on the UX-Force and
+        Project Platform as a Service teams at RBC Borealis.
       </h3>
       <div class="socials">
         <a href="https://www.linkedin.com/in/c-hamilton02/" target="_blank">
