@@ -6,12 +6,12 @@
 
     <div class="contact-container__message-container">
       <p class="contact-container__message-container__message">
-        I'm always eager to grow and learn as a software developer, with the
-        ambition of leading a team one day. If you're considering hiring for a
-        co-op position next summer, I would love to connect with you and explore
-        potential opportunities. Feel free to follow my journey through my
-        social media accounts, and if you are interested in collaborating or
-        offering guidance, please don't hesitate to reach out.
+        I’m always eager to grow and learn as a software developer, with the
+        long-term goal of leading a team. If you’re hiring for a new-grad
+        position next summer, I’d love to connect and explore potential
+        opportunities. Feel free to follow my journey on social media, and if
+        you're interested in collaborating or offering guidance, please don’t
+        hesitate to reach out.
       </p>
     </div>
 
@@ -39,8 +39,8 @@
 </template>
 
 <script setup lang="ts">
-import LinkedIn from "../assets/LinkedIn Logo.png";
-import GitHub from "../assets/Github Logo.png";
+import LinkedIn from '../assets/LinkedIn Logo.png'
+import GitHub from '../assets/Github Logo.png'
 </script>
 
 <style scoped lang="scss">
