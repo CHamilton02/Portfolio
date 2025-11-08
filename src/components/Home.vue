@@ -269,7 +269,6 @@ function toggleAllSkills() {
     justify-content: center;
     align-items: center;
     transition: opacity 0.35s ease;
-    cursor: pointer;
   }
 
   &__frame:hover {
